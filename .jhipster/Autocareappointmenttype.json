@@ -1,0 +1,16 @@
+{
+  "annotations": {
+    "changelogDate": "20240820074534"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "typename",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Autocareappointmenttype",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

@@ -1,0 +1,52 @@
+{
+  "annotations": {
+    "changelogDate": "20241003073302"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "effectivefrom",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "effectiveto",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "percentage",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "fixedamount",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "ismanual",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "isactive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "Taxes",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity Autojobsinvoice.
+    -->
+    <changeSet id="20241004080820-1" author="jhipster">
+        <createTable tableName="autojobsinvoice">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="code" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="invoicedate" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="createddate" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="jobid" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="quoteid" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="orderid" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="delieverydate" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="autojobsrepid" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="autojobsrepname" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="delieverfrom" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="customerid" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="customername" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="customeraddress" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="deliveryaddress" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="subtotal" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="totaltax" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="totaldiscount" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="nettotal" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="message" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="lmu" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="lmd" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="paidamount" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="amountowing" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="isactive" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="locationid" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="locationcode" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="referencecode" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="createdbyid" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="createdbyname" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="autocarecompanyid" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="autojobsinvoice" columnName="invoicedate" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="autojobsinvoice" columnName="createddate" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="autojobsinvoice" columnName="delieverydate" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="autojobsinvoice" columnName="lmd" columnDataType="${datetimeType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20241004080820-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/autojobsinvoice.csv"
+                  separator=";"
+                  tableName="autojobsinvoice"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="code" type="string"/>
+            <column name="invoicedate" type="date"/>
+            <column name="createddate" type="date"/>
+            <column name="jobid" type="numeric"/>
+            <column name="quoteid" type="numeric"/>
+            <column name="orderid" type="numeric"/>
+            <column name="delieverydate" type="date"/>
+            <column name="autojobsrepid" type="numeric"/>
+            <column name="autojobsrepname" type="string"/>
+            <column name="delieverfrom" type="string"/>
+            <column name="customerid" type="numeric"/>
+            <column name="customername" type="string"/>
+            <column name="customeraddress" type="string"/>
+            <column name="deliveryaddress" type="string"/>
+            <column name="subtotal" type="numeric"/>
+            <column name="totaltax" type="numeric"/>
+            <column name="totaldiscount" type="numeric"/>
+            <column name="nettotal" type="numeric"/>
+            <column name="message" type="string"/>
+            <column name="lmu" type="numeric"/>
+            <column name="lmd" type="date"/>
+            <column name="paidamount" type="numeric"/>
+            <column name="amountowing" type="numeric"/>
+            <column name="isactive" type="boolean"/>
+            <column name="locationid" type="numeric"/>
+            <column name="locationcode" type="string"/>
+            <column name="referencecode" type="string"/>
+            <column name="createdbyid" type="numeric"/>
+            <column name="createdbyname" type="string"/>
+            <column name="autocarecompanyid" type="numeric"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

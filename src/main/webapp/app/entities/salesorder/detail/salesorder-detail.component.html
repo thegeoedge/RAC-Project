@@ -1,0 +1,134 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (salesorder()) {
+      <div>
+        <h2 data-cy="salesorderDetailsHeading"><span>Salesorder</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ salesorder()!.id }}</span>
+          </dd>
+          <dt><span>Code</span></dt>
+          <dd>
+            <span>{{ salesorder()!.code }}</span>
+          </dd>
+          <dt><span>Orderdate</span></dt>
+          <dd>
+            <span>{{ salesorder()!.orderdate | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Createddate</span></dt>
+          <dd>
+            <span>{{ salesorder()!.createddate | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Quoteid</span></dt>
+          <dd>
+            <span>{{ salesorder()!.quoteid }}</span>
+          </dd>
+          <dt><span>Salesrepid</span></dt>
+          <dd>
+            <span>{{ salesorder()!.salesrepid }}</span>
+          </dd>
+          <dt><span>Salesrepname</span></dt>
+          <dd>
+            <span>{{ salesorder()!.salesrepname }}</span>
+          </dd>
+          <dt><span>Delieverfrom</span></dt>
+          <dd>
+            <span>{{ salesorder()!.delieverfrom }}</span>
+          </dd>
+          <dt><span>Customerid</span></dt>
+          <dd>
+            <span>{{ salesorder()!.customerid }}</span>
+          </dd>
+          <dt><span>Customername</span></dt>
+          <dd>
+            <span>{{ salesorder()!.customername }}</span>
+          </dd>
+          <dt><span>Customeraddress</span></dt>
+          <dd>
+            <span>{{ salesorder()!.customeraddress }}</span>
+          </dd>
+          <dt><span>Deliveryaddress</span></dt>
+          <dd>
+            <span>{{ salesorder()!.deliveryaddress }}</span>
+          </dd>
+          <dt><span>Subtotal</span></dt>
+          <dd>
+            <span>{{ salesorder()!.subtotal }}</span>
+          </dd>
+          <dt><span>Totaltax</span></dt>
+          <dd>
+            <span>{{ salesorder()!.totaltax }}</span>
+          </dd>
+          <dt><span>Totaldiscount</span></dt>
+          <dd>
+            <span>{{ salesorder()!.totaldiscount }}</span>
+          </dd>
+          <dt><span>Nettotal</span></dt>
+          <dd>
+            <span>{{ salesorder()!.nettotal }}</span>
+          </dd>
+          <dt><span>Message</span></dt>
+          <dd>
+            <span>{{ salesorder()!.message }}</span>
+          </dd>
+          <dt><span>Isinvoiced</span></dt>
+          <dd>
+            <span>{{ salesorder()!.isinvoiced }}</span>
+          </dd>
+          <dt><span>Refinvoiceid</span></dt>
+          <dd>
+            <span>{{ salesorder()!.refinvoiceid }}</span>
+          </dd>
+          <dt><span>Lmu</span></dt>
+          <dd>
+            <span>{{ salesorder()!.lmu }}</span>
+          </dd>
+          <dt><span>Lmd</span></dt>
+          <dd>
+            <span>{{ salesorder()!.lmd | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Isfixed</span></dt>
+          <dd>
+            <span>{{ salesorder()!.isfixed }}</span>
+          </dd>
+          <dt><span>Isactive</span></dt>
+          <dd>
+            <span>{{ salesorder()!.isactive }}</span>
+          </dd>
+          <dt><span>Advancepayment</span></dt>
+          <dd>
+            <span>{{ salesorder()!.advancepayment }}</span>
+          </dd>
+          <dt><span>Advancepaymentreturnamount</span></dt>
+          <dd>
+            <span>{{ salesorder()!.advancepaymentreturnamount }}</span>
+          </dd>
+          <dt><span>Advancepaymentreturndate</span></dt>
+          <dd>
+            <span>{{ salesorder()!.advancepaymentreturndate | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Advancepaymentby</span></dt>
+          <dd>
+            <span>{{ salesorder()!.advancepaymentby }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/salesorder', salesorder()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

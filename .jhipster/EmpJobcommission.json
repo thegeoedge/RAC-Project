@@ -1,0 +1,42 @@
+{
+  "annotations": {
+    "changelogDate": "20241003061020"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "vehcatid",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "autojobcatid",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "firstcom",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "secondcom",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "thirdcom",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "EmpJobcommission",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

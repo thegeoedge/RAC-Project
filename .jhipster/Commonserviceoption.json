@@ -1,0 +1,44 @@
+{
+  "annotations": {
+    "changelogDate": "20241004100304"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "mainid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "value",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "isactive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Commonserviceoption",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

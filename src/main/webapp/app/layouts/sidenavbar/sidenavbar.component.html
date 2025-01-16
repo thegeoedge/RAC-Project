@@ -1,0 +1,357 @@
+<nav class="sidenav">
+  <ul class="sidenav-menu">
+    <li class="sidenav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a class="sidenav-link" routerLink="/"> <fa-icon icon="home"></fa-icon> Home </a>
+    </li>
+    @if (account() !== null) {
+      <!-- Entities Section (Expanded instead of Dropdown) -->
+      <li class="sidenav-item" (click)="isEntitiesExpanded = !isEntitiesExpanded">
+        <a class="sidenav-link" href="javascript:void(0);"> <fa-icon icon="th-list"></fa-icon> Entities </a>
+        <ul [ngbCollapse]="!isEntitiesExpanded" class="sidenav-submenu">
+          <li>
+            <a class="sidenav-link" routerLink="/customer" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Customer
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/customervehicle" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Customervehicle
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/servicecategory" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Servicecategory
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/autocarejob" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Autocarejob
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/vehicletype" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Vehicletype
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/autocareappointment" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Autocareappointment
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/autocarejobinimages" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Autocarejobinimages
+            </a>
+          </li>
+          <li>
+            <a
+              class="sidenav-link"
+              routerLink="/autocareappointmenttype"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Autocareappointmenttype
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/vehiclecategory" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Vehiclecategory
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/inventory" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Inventory
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/servicesubcategory" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Servicesubcategory
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/stocklocations" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Stocklocations
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/inventorybatches" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Inventorybatches
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/vehiclebrandname" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Vehiclebrandname
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/vehiclebrandmodel" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Vehiclebrandmodel
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/workshopworklist" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Workshopworklist
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/workshopvehiclework" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Workshopvehiclework
+            </a>
+          </li>
+          <li>
+            <a
+              class="sidenav-link"
+              routerLink="/autojobempallocation"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Autojobempallocation
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/autocarejobcategory" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Autocarejobcategory
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/emp-sectiontbl" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Emp Sectiontbl
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/emp-jobcommission" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Emp Jobcommission
+            </a>
+          </li>
+          <li>
+            <a
+              class="sidenav-link"
+              routerLink="/autocarecancelitemopt"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Autocarecancelitemopt
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/paymentterm" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Paymentterm
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/salesinvoice" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Salesinvoice
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/salesorder" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Salesorder
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/taxes" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Taxes
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/banks" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Banks
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/bankbranch" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Bankbranch
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/accounts" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Accounts
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/companybankaccount" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Companybankaccount
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/receipt" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
+              Receipt
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/locationbasedstock" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
+              Locationbasedstock
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/autojobsinvoice" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
+              Autojobsinvoice
+            </a>
+          </li>
+          <li>
+            <a
+              class="sidenav-link"
+              routerLink="/billingserviceoption"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
+              Billingserviceoption
+            </a>
+          </li>
+          <li>
+            <a
+              class="sidenav-link"
+              routerLink="/billingserviceoptionvalues"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
+              Billingserviceoptionvalues
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/commonserviceoption" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
+              Commonserviceoption
+            </a>
+          </li>
+          <li>
+            <a
+              class="sidenav-link"
+              routerLink="/nextserviceinstructions"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
+              Nextserviceinstructions
+            </a>
+          </li>
+          <li>
+            <a
+              class="sidenav-link"
+              routerLink="/lastserviceinstructions"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
+              Lastserviceinstructions
+            </a>
+          </li>
+          <li>
+            <a
+              class="sidenav-link"
+              routerLink="/autocareservicemillages"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
+              Autocareservicemillages
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/autocarecompany" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
+              Autocarecompany
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/autocarehoist" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
+              Auto Care Hoist
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/hoisttype" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
+              Hoist Type
+            </a>
+          </li>
+          <li>
+            <a class="sidenav-link" routerLink="/autocaretimetable" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
+              Auto Care Time Table
+            </a>
+          </li>
+        </ul>
+      </li>
+    }
+    <!-- Administration Section (Expanded instead of Dropdown) -->
+    <li *jhiHasAnyAuthority="'ROLE_ADMIN'" (click)="isAdminExpanded = !isAdminExpanded" class="sidenav-item">
+      <a class="sidenav-link" href="javascript:void(0);"> <fa-icon icon="users-cog"></fa-icon> Administration </a>
+      <ul [ngbCollapse]="!isAdminExpanded" class="sidenav-submenu">
+        <li>
+          <a class="sidenav-link" routerLink="/authority" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon> Authority
+          </a>
+        </li>
+        <li>
+          <a class="sidenav-link" routerLink="/admin/user-management" routerLinkActive="active">
+            <fa-icon icon="users" [fixedWidth]="true"></fa-icon> User Management
+          </a>
+        </li>
+        <li>
+          <a class="sidenav-link" routerLink="/admin/metrics" routerLinkActive="active">
+            <fa-icon icon="tachometer-alt" [fixedWidth]="true"></fa-icon> Metrics
+          </a>
+        </li>
+        <li>
+          <a class="sidenav-link" routerLink="/admin/health" routerLinkActive="active">
+            <fa-icon icon="heart" [fixedWidth]="true"></fa-icon> Health
+          </a>
+        </li>
+        <li>
+          <a class="sidenav-link" routerLink="/admin/configuration" routerLinkActive="active">
+            <fa-icon icon="cogs" [fixedWidth]="true"></fa-icon> Configuration
+          </a>
+        </li>
+        <li>
+          <a class="sidenav-link" routerLink="/admin/logs" routerLinkActive="active">
+            <fa-icon icon="tasks" [fixedWidth]="true"></fa-icon> Logs
+          </a>
+        </li>
+        <li *ngIf="openAPIEnabled">
+          <a class="sidenav-link" routerLink="/admin/docs" routerLinkActive="active">
+            <fa-icon icon="book" [fixedWidth]="true"></fa-icon> API
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Account Section -->
+    <li class="sidenav-item" (click)="isAccountExpanded = !isAccountExpanded">
+      <a class="sidenav-link" href="javascript:void(0);">
+        <ng-container *ngIf="!account()?.imageUrl; else loggedIn"> <fa-icon icon="user"></fa-icon> Account </ng-container>
+        <ng-template #loggedIn>
+          <img [src]="account()!.imageUrl" class="profile-image rounded-circle" alt="Avatar" />
+        </ng-template>
+      </a>
+      <ul [ngbCollapse]="!isAccountExpanded" class="sidenav-submenu">
+        <li *ngIf="account()">
+          <a class="sidenav-link" routerLink="/account/settings" routerLinkActive="active">
+            <fa-icon icon="wrench" [fixedWidth]="true"></fa-icon> Settings
+          </a>
+        </li>
+        <li *ngIf="account()">
+          <a class="sidenav-link" routerLink="/account/password" routerLinkActive="active">
+            <fa-icon icon="lock" [fixedWidth]="true"></fa-icon> Password
+          </a>
+        </li>
+        <li *ngIf="account()">
+          <a class="sidenav-link" (click)="logout()"> <fa-icon icon="sign-out-alt" [fixedWidth]="true"></fa-icon> Sign out </a>
+        </li>
+        <li *ngIf="!account()">
+          <a class="sidenav-link" (click)="login()"> <fa-icon icon="sign-in-alt" [fixedWidth]="true"></fa-icon> Sign in </a>
+        </li>
+        <li *ngIf="!account()">
+          <a class="sidenav-link" routerLink="/account/register" routerLinkActive="active">
+            <fa-icon icon="user-plus" [fixedWidth]="true"></fa-icon> Register
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>

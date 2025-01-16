@@ -1,0 +1,28 @@
+{
+  "annotations": {
+    "changelogDate": "20241002080536"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "empid",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "sectionid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "EmpSectiontbl",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

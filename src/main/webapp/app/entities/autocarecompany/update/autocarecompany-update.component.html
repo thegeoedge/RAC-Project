@@ -1,0 +1,161 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-autocarecompany-heading" data-cy="AutocarecompanyCreateUpdateHeading">Create or edit a Autocarecompany</h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_name">Name</label>
+          <input type="text" class="form-control" name="name" id="field_name" data-cy="name" formControlName="name" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_address">Address</label>
+          <input type="text" class="form-control" name="address" id="field_address" data-cy="address" formControlName="address" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_servicephone">Servicephone</label>
+          <input
+            type="text"
+            class="form-control"
+            name="servicephone"
+            id="field_servicephone"
+            data-cy="servicephone"
+            formControlName="servicephone"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_sparepartphone">Sparepartphone</label>
+          <input
+            type="text"
+            class="form-control"
+            name="sparepartphone"
+            id="field_sparepartphone"
+            data-cy="sparepartphone"
+            formControlName="sparepartphone"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_bodypaint">Bodypaint</label>
+          <input type="text" class="form-control" name="bodypaint" id="field_bodypaint" data-cy="bodypaint" formControlName="bodypaint" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_generalphone">Generalphone</label>
+          <input
+            type="text"
+            class="form-control"
+            name="generalphone"
+            id="field_generalphone"
+            data-cy="generalphone"
+            formControlName="generalphone"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_fax">Fax</label>
+          <input type="text" class="form-control" name="fax" id="field_fax" data-cy="fax" formControlName="fax" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_email">Email</label>
+          <input type="text" class="form-control" name="email" id="field_email" data-cy="email" formControlName="email" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_description">Description</label>
+          <input
+            type="text"
+            class="form-control"
+            name="description"
+            id="field_description"
+            data-cy="description"
+            formControlName="description"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lmu">Lmu</label>
+          <input type="number" class="form-control" name="lmu" id="field_lmu" data-cy="lmu" formControlName="lmu" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lmd">Lmd</label>
+          <div class="d-flex">
+            <input
+              id="field_lmd"
+              data-cy="lmd"
+              type="datetime-local"
+              class="form-control"
+              name="lmd"
+              formControlName="lmd"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_vatregnumber">Vatregnumber</label>
+          <input
+            type="text"
+            class="form-control"
+            name="vatregnumber"
+            id="field_vatregnumber"
+            data-cy="vatregnumber"
+            formControlName="vatregnumber"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_tinnumber">Tinnumber</label>
+          <input type="text" class="form-control" name="tinnumber" id="field_tinnumber" data-cy="tinnumber" formControlName="tinnumber" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_accountcode">Accountcode</label>
+          <input
+            type="text"
+            class="form-control"
+            name="accountcode"
+            id="field_accountcode"
+            data-cy="accountcode"
+            formControlName="accountcode"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_accountid">Accountid</label>
+          <input type="number" class="form-control" name="accountid" id="field_accountid" data-cy="accountid" formControlName="accountid" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span>Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span>Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

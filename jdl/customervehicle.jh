@@ -1,0 +1,28 @@
+ filter * 
+
+entity Customervehicle {
+    customerid Integer // CustomerId
+    vehiclenumber String // VehicleNumber
+    categoryid Integer // CategoryId
+    categoryname String // CategoryName
+    typeid Integer // TypeId
+    typename String // TypeName
+    makeid Integer // MakeId
+    makename String // MakeName
+    model String // Model
+    yom String // YOM
+    customercode String // CustomerCode
+    remarks String // Remarks
+    servicecount Integer // ServiceCount
+    engNo String // Eng_no
+    chaNo String // Cha_no
+    milage String // Milage
+    lastservicedate LocalDate // LastServiceDate
+    nextservicedate LocalDate // NextServiceDate
+    lmu Integer // LMU
+    lmd Instant // LMD
+    nextgearoilmilage String // NextGearOilMilage
+    nextmilage String // NextMilage
+    serviceperiod Integer // ServicePeriod
+}
+paginate * with pagination

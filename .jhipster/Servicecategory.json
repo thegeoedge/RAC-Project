@@ -1,0 +1,40 @@
+{
+  "annotations": {
+    "changelogDate": "20240820063249"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "showsecurity",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "sortorder",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "isactive",
+      "fieldType": "Boolean"
+    }
+  ],
+  "name": "Servicecategory",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

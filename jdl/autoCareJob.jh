@@ -1,0 +1,46 @@
+entity Autocarejob {
+    jobnumber Integer // JobNumber
+    vehicleid Integer // VehicleId
+    vehiclenumber String // VehicleNumber
+    millage Float // Millage
+    nextmillage Float // NextMillage
+    nextservicedate LocalDate // NextServiceDate
+    vehicletypeid Integer // VehicleTypeId
+    jobtypeid Integer // JobTypeId
+    jobtypename String // JobTypeName
+    jobopenby Integer // JobOpenBy
+    jobopentime Instant // JobOpenTime
+    lmu Integer // LMU
+    lmd Instant // LMD
+    specialrquirments String // SpecialRquirments
+    specialinstructions String // SpecialInstructions
+    remarks String // Remarks
+    nextserviceinstructions String // NextServiceInstructions
+    lastserviceinstructions String // LastServiceInstructions
+    isadvisorchecked Boolean // IsAdvisorChecked
+    isempallocated Boolean // IsEmpAllocated
+    jobclosetime Instant // JobCloseTime
+    isjobclose Boolean // IsJobClose
+    isfeedback Boolean // IsFeedback
+    feedbackstatusid Integer // FeedbackStatusId
+    customername String // CustomerName
+    customertel String // CustomerTel
+    customerid Integer // CustomerId
+    advisorfinalcheck Boolean // AdvisorFinalCheck
+    jobdate Instant // JobDate
+    iscompanyservice Boolean // IsCompanyService
+    freeservicenumber String // FreeServiceNumber
+    companyid Integer // CompanyId
+    updatetocustomer Boolean // UpdateToCustomer
+    nextgearoilmilage String // NextGearOilMilage
+    isjobinvoiced Boolean // IsJobInvoiced
+    iswaiting Boolean // IsWaiting
+    iscustomercomment Boolean // IsCustomerComment
+    imagefolder String // ImageFolder
+    frontimage String // FrontImage
+    leftimage String // LeftImage
+    rightimage String // RightImage
+    backimage String // BackImage
+    dashboardimage String // DashBoardImage
+}
+paginate * with pagination

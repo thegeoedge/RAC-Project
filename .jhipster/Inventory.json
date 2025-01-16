@@ -1,0 +1,188 @@
+{
+  "annotations": {
+    "changelogDate": "20240820102817"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "partnumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "classification1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "classification2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "classification3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "classification4",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "classification5",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "unitofmeasurement",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "decimalplaces",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "isassemblyunit",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "assemblyunitof",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "reorderlevel",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "lastcost",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "lastsellingprice",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "availablequantity",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "hasbatches",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "itemspecfilepath",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "itemimagepath",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "returnprice",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "activeitem",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "minstock",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "maxstock",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "dailyaverage",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "bufferlevel",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "leadtime",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "buffertime",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "saftydays",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "accountcode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "accountid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "casepackqty",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "isregistered",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "defaultstocklocationid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "rackno",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "barcodeimage",
+      "fieldType": "ImageBlob"
+    },
+    {
+      "fieldName": "commissionempid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "checktypeid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "checktype",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "reorderqty",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "notininvoice",
+      "fieldType": "Boolean"
+    }
+  ],
+  "name": "Inventory",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

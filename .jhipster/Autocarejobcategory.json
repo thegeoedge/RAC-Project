@@ -1,0 +1,36 @@
+{
+  "annotations": {
+    "changelogDate": "20240826053334"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "displayorder",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Autocarejobcategory",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

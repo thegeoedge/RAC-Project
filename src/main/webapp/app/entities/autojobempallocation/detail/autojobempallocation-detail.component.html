@@ -1,0 +1,82 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (autojobempallocation()) {
+      <div>
+        <h2 data-cy="autojobempallocationDetailsHeading"><span>Autojobempallocation</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ autojobempallocation()!.id }}</span>
+          </dd>
+          <dt><span>Jobid</span></dt>
+          <dd>
+            <span>{{ autojobempallocation()!.jobid }}</span>
+          </dd>
+          <dt><span>Categoryid</span></dt>
+          <dd>
+            <span>{{ autojobempallocation()!.categoryid }}</span>
+          </dd>
+          <dt><span>Empposition</span></dt>
+          <dd>
+            <span>{{ autojobempallocation()!.empposition }}</span>
+          </dd>
+          <dt><span>Empid</span></dt>
+          <dd>
+            <span>{{ autojobempallocation()!.empid }}</span>
+          </dd>
+          <dt><span>Empname</span></dt>
+          <dd>
+            <span>{{ autojobempallocation()!.empname }}</span>
+          </dd>
+          <dt><span>Allocatetime</span></dt>
+          <dd>
+            <span>{{ autojobempallocation()!.allocatetime | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Lmu</span></dt>
+          <dd>
+            <span>{{ autojobempallocation()!.lmu }}</span>
+          </dd>
+          <dt><span>Lmd</span></dt>
+          <dd>
+            <span>{{ autojobempallocation()!.lmd | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Jobdate</span></dt>
+          <dd>
+            <span>{{ autojobempallocation()!.jobdate | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Commission</span></dt>
+          <dd>
+            <span>{{ autojobempallocation()!.commission }}</span>
+          </dd>
+          <dt><span>Iscommissionpaid</span></dt>
+          <dd>
+            <span>{{ autojobempallocation()!.iscommissionpaid }}</span>
+          </dd>
+          <dt><span>Starttime</span></dt>
+          <dd>
+            <span>{{ autojobempallocation()!.starttime | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Endtime</span></dt>
+          <dd>
+            <span>{{ autojobempallocation()!.endtime | formatMediumDatetime }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/autojobempallocation', autojobempallocation()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

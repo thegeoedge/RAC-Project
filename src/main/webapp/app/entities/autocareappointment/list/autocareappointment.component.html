@@ -1,0 +1,313 @@
+<div>
+  <h2 id="page-heading" data-cy="AutocareappointmentHeading">
+    <span>Autocareappointments</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span>Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-autocareappointment"
+        [routerLink]="['/autocareappointment/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span>Create a new Autocareappointment</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (autocareappointments?.length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span>No Autocareappointments found</span>
+    </div>
+  }
+
+  @if (autocareappointments && autocareappointments.length > 0) {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [sortState]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span>ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="appointmenttype">
+              <div class="d-flex">
+                <span>Appointmenttype</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="appointmentdate">
+              <div class="d-flex">
+                <span>Appointmentdate</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="addeddate">
+              <div class="d-flex">
+                <span>Addeddate</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="conformdate">
+              <div class="d-flex">
+                <span>Conformdate</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="appointmentnumber">
+              <div class="d-flex">
+                <span>Appointmentnumber</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="vehiclenumber">
+              <div class="d-flex">
+                <span>Vehiclenumber</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="appointmenttime">
+              <div class="d-flex">
+                <span>Appointmenttime</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="isconformed">
+              <div class="d-flex">
+                <span>Isconformed</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="conformedby">
+              <div class="d-flex">
+                <span>Conformedby</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="lmd">
+              <div class="d-flex">
+                <span>Lmd</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="lmu">
+              <div class="d-flex">
+                <span>Lmu</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="customerid">
+              <div class="d-flex">
+                <span>Customerid</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="contactnumber">
+              <div class="d-flex">
+                <span>Contactnumber</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="customername">
+              <div class="d-flex">
+                <span>Customername</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="issued">
+              <div class="d-flex">
+                <span>Issued</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="hoistid">
+              <div class="d-flex">
+                <span>Hoistid</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="isarrived">
+              <div class="d-flex">
+                <span>Isarrived</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="iscancel">
+              <div class="d-flex">
+                <span>Iscancel</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="isnoanswer">
+              <div class="d-flex">
+                <span>Isnoanswer</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="missedappointmentcall">
+              <div class="d-flex">
+                <span>Missedappointmentcall</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="customermobileid">
+              <div class="d-flex">
+                <span>Customermobileid</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="customermobilevehicleid">
+              <div class="d-flex">
+                <span>Customermobilevehicleid</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="vehicleid">
+              <div class="d-flex">
+                <span>Vehicleid</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ismobileappointment">
+              <div class="d-flex">
+                <span>Ismobileappointment</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="advancepayment">
+              <div class="d-flex">
+                <span>Advancepayment</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="jobid">
+              <div class="d-flex">
+                <span>Jobid</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (autocareappointment of autocareappointments; track trackId) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/autocareappointment', autocareappointment.id, 'view']">{{ autocareappointment.id }}</a>
+              </td>
+              <td>{{ autocareappointment.appointmenttype }}</td>
+              <td>{{ autocareappointment.appointmentdate | formatMediumDatetime }}</td>
+              <td>{{ autocareappointment.addeddate | formatMediumDatetime }}</td>
+              <td>{{ autocareappointment.conformdate | formatMediumDatetime }}</td>
+              <td>{{ autocareappointment.appointmentnumber }}</td>
+              <td>{{ autocareappointment.vehiclenumber }}</td>
+              <td>{{ autocareappointment.appointmenttime | formatMediumDatetime }}</td>
+              <td>{{ autocareappointment.isconformed }}</td>
+              <td>{{ autocareappointment.conformedby }}</td>
+              <td>{{ autocareappointment.lmd | formatMediumDatetime }}</td>
+              <td>{{ autocareappointment.lmu }}</td>
+              <td>{{ autocareappointment.customerid }}</td>
+              <td>{{ autocareappointment.contactnumber }}</td>
+              <td>{{ autocareappointment.customername }}</td>
+              <td>{{ autocareappointment.issued }}</td>
+              <td>{{ autocareappointment.hoistid }}</td>
+              <td>{{ autocareappointment.isarrived }}</td>
+              <td>{{ autocareappointment.iscancel }}</td>
+              <td>{{ autocareappointment.isnoanswer }}</td>
+              <td>{{ autocareappointment.missedappointmentcall }}</td>
+              <td>{{ autocareappointment.customermobileid }}</td>
+              <td>{{ autocareappointment.customermobilevehicleid }}</td>
+              <td>{{ autocareappointment.vehicleid }}</td>
+              <td>{{ autocareappointment.ismobileappointment }}</td>
+              <td>{{ autocareappointment.advancepayment }}</td>
+              <td>{{ autocareappointment.jobid }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/autocareappointment', autocareappointment.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline">View</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/autocareappointment', autocareappointment.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline">Edit</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(autocareappointment)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+  @if (autocareappointments && autocareappointments.length > 0) {
+    <div>
+      <div class="d-flex justify-content-center">
+        <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <ngb-pagination
+          [collectionSize]="totalItems"
+          [page]="page"
+          [pageSize]="itemsPerPage"
+          [maxSize]="5"
+          [rotate]="true"
+          [boundaryLinks]="true"
+          (pageChange)="navigateToPage($event)"
+        ></ngb-pagination>
+      </div>
+    </div>
+  }
+</div>

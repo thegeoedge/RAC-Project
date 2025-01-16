@@ -1,0 +1,24 @@
+{
+  "annotations": {
+    "changelogDate": "20241029105625"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "hoisttypeid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "hoisttypename",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "hoisttime",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "Autocaretimetable",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

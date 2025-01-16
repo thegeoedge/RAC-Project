@@ -1,0 +1,7 @@
+entity Vehiclecategory {
+    vehiclecategory String // VehicleCategory
+    vehiclecategorydiscription String // VehicleCategoryDiscription
+    lmu Integer // LMU
+    lmd Instant // LMD
+}
+paginate * with pagination

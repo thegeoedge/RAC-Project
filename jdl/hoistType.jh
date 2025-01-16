@@ -1,0 +1,6 @@
+entity Hoisttype {
+    hoisttype String // maps to  
+    lmu Integer // maps to [LMU] [int]
+    lmd Instant // maps to [LMD] [datetime]
+}
+paginate * with pagination

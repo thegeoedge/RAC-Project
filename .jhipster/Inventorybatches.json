@@ -1,0 +1,80 @@
+{
+  "annotations": {
+    "changelogDate": "20240823075402"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "itemid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "txdate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "cost",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "costwithoutvat",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "pricewithoutvat",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "notes",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lineid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "manufacturedate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "expiredate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "quantity",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "addeddate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "costtotal",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "returnprice",
+      "fieldType": "Float"
+    }
+  ],
+  "name": "Inventorybatches",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

@@ -1,0 +1,18 @@
+entity Workshopvehiclework {
+    jobid Integer // JobId
+    vehicleid Integer // VehicleId
+    customerid Integer // CustomerId
+    customername String // CustomerName
+    contactno String // ContactNo
+    vehicleno String // VehicleNo
+    vehiclebrand String // VehicleBrand
+    vehiclemodel String // VehicleModel
+    mileage String // Mileage
+    addeddate Instant // AddedDate
+    iscalltocustomer Boolean // IsCallTocustomer
+    remarks String // Remarks
+    calldate Instant // CallDate
+    lmu Integer // LMU
+    lmd Instant // LMD
+}
+paginate * with pagination

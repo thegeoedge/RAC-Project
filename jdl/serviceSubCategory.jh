@@ -1,0 +1,10 @@
+entity Servicesubcategory {
+    name String // Name
+    description String // Description
+    mainid Integer // MainId
+    mainname String // MainName
+    lmu Integer // LMU
+    lmd Instant // LMD
+    isactive Boolean // IsActive
+}
+paginate * with pagination

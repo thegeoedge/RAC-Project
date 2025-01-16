@@ -1,0 +1,5 @@
+entity Paymentterm {
+    paymenttype String // PaymentType
+    forvoucher Boolean // ForVoucher
+}
+paginate * with pagination

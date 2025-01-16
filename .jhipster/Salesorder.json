@@ -1,0 +1,116 @@
+{
+  "annotations": {
+    "changelogDate": "20241003071023"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "orderdate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createddate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "quoteid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "salesrepid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "salesrepname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "delieverfrom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "customername",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customeraddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "deliveryaddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "subtotal",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "totaltax",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "totaldiscount",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "nettotal",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "message",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isinvoiced",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "refinvoiceid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "isfixed",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "isactive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "advancepayment",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "advancepaymentreturnamount",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "advancepaymentreturndate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "advancepaymentby",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Salesorder",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

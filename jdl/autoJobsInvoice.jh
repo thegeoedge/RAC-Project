@@ -1,0 +1,33 @@
+entity Autojobsinvoice {
+    code String // Code
+    invoicedate Instant // InvoiceDate
+    createddate Instant // CreatedDate
+    jobid Integer // JobId
+    quoteid Integer // QuoteID
+    orderid Integer // OrderID
+    delieverydate Instant // DelieveryDate
+    autojobsrepid Integer // AutoJobsRepID
+    autojobsrepname String // AutoJobsRepName
+    delieverfrom String // DelieverFrom
+    customerid Integer // CustomerID
+    customername String // CustomerName
+    customeraddress String // CustomerAddress
+    deliveryaddress String // DeliveryAddress
+    subtotal Float // SubTotal
+    totaltax Float // TotalTax
+    totaldiscount Float // TotalDiscount
+    nettotal Float // NetTotal
+    message String // Message
+    lmu Integer // LMU
+    lmd Instant // LMD
+    paidamount Float // PaidAmount
+    amountowing Float // AmountOwing
+    isactive Boolean // IsActive
+    locationid Integer // LocationID
+    locationcode String // LocationCode
+    referencecode String // ReferenceCode
+    createdbyid Integer // CreatedById
+    createdbyname String // CreatedByName
+    autocarecompanyid Integer // AutoCareCompanyId
+}
+paginate * with pagination

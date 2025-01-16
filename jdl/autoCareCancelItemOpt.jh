@@ -1,0 +1,4 @@
+entity Autocarecancelitemopt {
+    canceloption String // CancelOption
+}
+paginate * with pagination

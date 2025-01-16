@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <property name="now" value="GETDATE()" dbms="mssql"/>
+    <property name="floatType" value="float" dbms="mssql"/>
+    <property name="clobType" value="clob" dbms="mssql"/>
+    <property name="blobType" value="blob" dbms="mssql"/>
+    <property name="uuidType" value="uuid" dbms="mssql"/>
+    <property name="datetimeType" value="datetime" dbms="mssql"/>
+
+    <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <!-- <include file="config/liquibase/changelog/20240814131803_added_entity_Customer.xml" relativeToChangelogFile="false"/> -->
+    <include file="config/liquibase/changelog/20240820060841_added_entity_Customervehicle.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240820063249_added_entity_Servicecategory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240820064617_added_entity_Autocarejob.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240820070825_added_entity_Vehicletype.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240820072600_added_entity_Autocareappointment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240820073545_added_entity_Autocarejobinimages.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240820074534_added_entity_Autocareappointmenttype.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240820075216_added_entity_Vehiclecategory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240820102817_added_entity_Inventory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240821040929_added_entity_Servicesubcategory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240821042931_added_entity_Stocklocations.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240823075402_added_entity_Inventorybatches.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240823100212_added_entity_Vehiclebrandname.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240823104438_added_entity_Vehiclebrandmodel.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240823110351_added_entity_Workshopworklist.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240823112025_added_entity_Workshopvehiclework.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240826043756_added_entity_Autojobempallocation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240826053334_added_entity_Autocarejobcategory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241002080536_added_entity_EmpSectiontbl.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241003061020_added_entity_EmpJobcommission.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241003062736_added_entity_Autocarecancelitemopt.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241003063956_added_entity_Paymentterm.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241003065323_added_entity_Salesinvoice.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241003071023_added_entity_Salesorder.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241003073302_added_entity_Taxes.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241003080941_added_entity_Banks.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241003083148_added_entity_Bankbranch.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241003085351_added_entity_Accounts.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241003120039_added_entity_Companybankaccount.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241003125649_added_entity_Receipt.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241004063018_added_entity_Locationbasedstock.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241004080820_added_entity_Autojobsinvoice.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241004090310_added_entity_Billingserviceoption.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241004093352_added_entity_Billingserviceoptionvalues.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241004100304_added_entity_Commonserviceoption.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241004103156_added_entity_Nextserviceinstructions.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241004104344_added_entity_Lastserviceinstructions.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241004105944_added_entity_Autocareservicemillages.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241004114142_added_entity_Autocarecompany.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241021080814_added_entity_Autocarehoist.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241021092648_added_entity_Hoisttype.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20241029105625_added_entity_Autocaretimetable.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+    <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
+</databaseChangeLog>

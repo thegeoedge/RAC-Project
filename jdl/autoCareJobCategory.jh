@@ -1,0 +1,9 @@
+entity Autocarejobcategory {
+    code String // Code
+    name String // Name
+    description String // Description
+    lmu Integer // LMU
+    lmd Instant // LMD
+    displayorder Integer // DisplayOrder
+}
+paginate * with pagination

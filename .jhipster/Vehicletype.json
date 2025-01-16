@@ -1,0 +1,36 @@
+{
+  "annotations": {
+    "changelogDate": "20240820070825"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "vehicletype",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "vehicletypediscription",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "catid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "catname",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Vehicletype",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

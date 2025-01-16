@@ -1,0 +1,8 @@
+entity Billingserviceoptionvalues {
+    vehicletypeid Long // VehicleTypeId
+    billingserviceoptionid Long // BillingServiceOptionId
+    value Float // Value
+    lmd Instant // LMD
+    lmu Integer // LMU
+}
+paginate * with pagination

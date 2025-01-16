@@ -1,0 +1,149 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-companybankaccount-heading" data-cy="CompanybankaccountCreateUpdateHeading">Create or edit a Companybankaccount</h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_companyid">Companyid</label>
+          <input type="number" class="form-control" name="companyid" id="field_companyid" data-cy="companyid" formControlName="companyid" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_accountnumber">Accountnumber</label>
+          <input
+            type="text"
+            class="form-control"
+            name="accountnumber"
+            id="field_accountnumber"
+            data-cy="accountnumber"
+            formControlName="accountnumber"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_accountname">Accountname</label>
+          <input
+            type="text"
+            class="form-control"
+            name="accountname"
+            id="field_accountname"
+            data-cy="accountname"
+            formControlName="accountname"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_bankname">Bankname</label>
+          <input type="text" class="form-control" name="bankname" id="field_bankname" data-cy="bankname" formControlName="bankname" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_bankid">Bankid</label>
+          <input type="number" class="form-control" name="bankid" id="field_bankid" data-cy="bankid" formControlName="bankid" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_branchname">Branchname</label>
+          <input
+            type="text"
+            class="form-control"
+            name="branchname"
+            id="field_branchname"
+            data-cy="branchname"
+            formControlName="branchname"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_branchid">Branchid</label>
+          <input type="number" class="form-control" name="branchid" id="field_branchid" data-cy="branchid" formControlName="branchid" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_amount">Amount</label>
+          <input type="number" class="form-control" name="amount" id="field_amount" data-cy="amount" formControlName="amount" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_accountcode">Accountcode</label>
+          <input
+            type="text"
+            class="form-control"
+            name="accountcode"
+            id="field_accountcode"
+            data-cy="accountcode"
+            formControlName="accountcode"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_accountid">Accountid</label>
+          <input type="number" class="form-control" name="accountid" id="field_accountid" data-cy="accountid" formControlName="accountid" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lmd">Lmd</label>
+          <div class="d-flex">
+            <input
+              id="field_lmd"
+              data-cy="lmd"
+              type="datetime-local"
+              class="form-control"
+              name="lmd"
+              formControlName="lmd"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lmu">Lmu</label>
+          <input type="text" class="form-control" name="lmu" id="field_lmu" data-cy="lmu" formControlName="lmu" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_isactive">Isactive</label>
+          <input type="checkbox" class="form-check" name="isactive" id="field_isactive" data-cy="isactive" formControlName="isactive" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_accounttypeid">Accounttypeid</label>
+          <input
+            type="number"
+            class="form-control"
+            name="accounttypeid"
+            id="field_accounttypeid"
+            data-cy="accounttypeid"
+            formControlName="accounttypeid"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span>Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span>Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

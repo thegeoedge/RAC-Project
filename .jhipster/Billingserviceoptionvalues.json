@@ -1,0 +1,32 @@
+{
+  "annotations": {
+    "changelogDate": "20241004093352"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "vehicletypeid",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "billingserviceoptionid",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "value",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Billingserviceoptionvalues",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

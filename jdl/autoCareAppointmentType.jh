@@ -1,0 +1,4 @@
+entity Autocareappointmenttype {
+    typename String // TypeName
+}
+paginate * with pagination

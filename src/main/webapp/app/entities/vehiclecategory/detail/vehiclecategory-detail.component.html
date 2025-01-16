@@ -1,0 +1,46 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (vehiclecategory()) {
+      <div>
+        <h2 data-cy="vehiclecategoryDetailsHeading"><span>Vehiclecategory</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ vehiclecategory()!.id }}</span>
+          </dd>
+          <dt><span>Vehiclecategory</span></dt>
+          <dd>
+            <span>{{ vehiclecategory()!.vehiclecategory }}</span>
+          </dd>
+          <dt><span>Vehiclecategorydiscription</span></dt>
+          <dd>
+            <span>{{ vehiclecategory()!.vehiclecategorydiscription }}</span>
+          </dd>
+          <dt><span>Lmu</span></dt>
+          <dd>
+            <span>{{ vehiclecategory()!.lmu }}</span>
+          </dd>
+          <dt><span>Lmd</span></dt>
+          <dd>
+            <span>{{ vehiclecategory()!.lmd | formatMediumDatetime }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/vehiclecategory', vehiclecategory()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

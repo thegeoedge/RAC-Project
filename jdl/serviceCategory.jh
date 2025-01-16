@@ -1,0 +1,10 @@
+entity Servicecategory {
+    name String // Name
+    description String // Description
+    lmu Integer // LMU
+    lmd Instant // LMD
+    showsecurity Boolean // ShowSecurity
+    sortorder Integer // SortOrder
+    isactive Boolean // IsActive
+}
+paginate * with pagination

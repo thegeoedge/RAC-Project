@@ -1,0 +1,16 @@
+{
+  "annotations": {
+    "changelogDate": "20241003062736"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "canceloption",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Autocarecancelitemopt",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

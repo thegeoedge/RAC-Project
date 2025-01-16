@@ -1,0 +1,8 @@
+entity Banks {
+    code String // Code
+    name String // Name
+    description String // Description
+    lmu Integer // LMU
+    lmd Instant // LMD
+}
+paginate * with pagination

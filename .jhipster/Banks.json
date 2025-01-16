@@ -1,0 +1,32 @@
+{
+  "annotations": {
+    "changelogDate": "20241003080941"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "Banks",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

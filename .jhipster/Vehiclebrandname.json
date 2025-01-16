@@ -1,0 +1,32 @@
+{
+  "annotations": {
+    "changelogDate": "20240823100212"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "brandname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "companyid",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Vehiclebrandname",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

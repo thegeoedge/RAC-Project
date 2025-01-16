@@ -1,0 +1,132 @@
+{
+  "annotations": {
+    "changelogDate": "20241004080820"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "invoicedate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createddate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "jobid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "quoteid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "orderid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "delieverydate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "autojobsrepid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "autojobsrepname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "delieverfrom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "customername",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customeraddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "deliveryaddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "subtotal",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "totaltax",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "totaldiscount",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "nettotal",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "message",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "paidamount",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "amountowing",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "isactive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "locationid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "locationcode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "referencecode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdbyid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "createdbyname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "autocarecompanyid",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Autojobsinvoice",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

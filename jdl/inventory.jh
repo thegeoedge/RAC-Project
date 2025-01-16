@@ -1,0 +1,47 @@
+entity Inventory {
+    code String // Code
+    partnumber String // PartNumber
+    name String // Name
+    description String // Description
+    type Integer // Type
+    classification1 String // Classification1
+    classification2 String // Classification2
+    classification3 String // Classification3
+    classification4 String // Classification4
+    classification5 String // Classification5
+    unitofmeasurement String // UnitOfMeasurement
+    decimalplaces Integer // DecimalPlaces
+    isassemblyunit Boolean // IsAssemblyUnit
+    assemblyunitof Integer // AssemblyUnitOf
+    reorderlevel Float // ReOrderLevel
+    lastcost Float // LastCost
+    lastsellingprice Float // LastSellingPrice
+    lmu Integer // LMU
+    lmd Instant // LMD
+    availablequantity Float // AvailableQuantity
+    hasbatches Boolean // HasBatches
+    itemspecfilepath String // ItemSpecFilePath
+    itemimagepath String // ItemImagePath
+    returnprice Float // ReturnPrice
+    activeitem Boolean // ActiveItem
+    minstock Float // MinStock
+    maxstock Float // MaxStock
+    dailyaverage Float // DailyAverage
+    bufferlevel Float // BufferLevel
+    leadtime Float // LeadTime
+    buffertime Float // BufferTime
+    saftydays Float // SaftyDays
+    accountcode String // AccountCode
+    accountid Integer // AccountId
+    casepackqty Integer // CasePackQty
+    isregistered Boolean // IsRegistered
+    defaultstocklocationid Integer // DefaultStockLocationId
+    rackno String // RackNo
+    barcodeimage ImageBlob // BarcodeImage
+    commissionempid Integer // CommissionEmpId
+    checktypeid Integer // CheckTypeId
+    checktype String // CheckType
+    reorderqty Float // ReOrderQty
+    notininvoice Boolean // NotInInvoice
+}
+paginate * with pagination

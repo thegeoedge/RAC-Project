@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (autocaretimetable()) {
+      <div>
+        <h2 data-cy="autocaretimetableDetailsHeading"><span>Autocaretimetable</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ autocaretimetable()!.id }}</span>
+          </dd>
+          <dt><span>Hoisttypeid</span></dt>
+          <dd>
+            <span>{{ autocaretimetable()!.hoisttypeid }}</span>
+          </dd>
+          <dt><span>Hoisttypename</span></dt>
+          <dd>
+            <span>{{ autocaretimetable()!.hoisttypename }}</span>
+          </dd>
+          <dt><span>Hoisttime</span></dt>
+          <dd>
+            <span>{{ autocaretimetable()!.hoisttime | formatMediumDatetime }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/autocaretimetable', autocaretimetable()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

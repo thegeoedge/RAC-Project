@@ -1,0 +1,36 @@
+{
+  "annotations": {
+    "changelogDate": "20241021080814"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "hoistname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "hoistcode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "hoisttypeid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "hoisttypename",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "Autocarehoist",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

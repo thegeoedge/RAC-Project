@@ -1,0 +1,334 @@
+{
+  "annotations": {
+    "changelogDate": "20240814131803"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "customertype",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "namewithinitials",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fullname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "callingname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nicno",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nicissueddate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dateofbirth",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "bloodgroup",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "gender",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "maritalstatus",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "marrieddate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "nationality",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "territory",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "religion",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "team",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "businessname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "businessregdate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "businessregno",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "profilepicturepath",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "residencehouseno",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "residenceaddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "residencecity",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "residencephone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "businesslocationno",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "businessaddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "businesscity",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "businessphone1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "businessphone2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "businessmobile",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "businessfax",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "businessemail",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "businessprovinceid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "businessdistrictid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "contactpersonname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contactpersonphone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contactpersonmobile",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contactpersonemail",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rootmappath",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "website",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "registrationdate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "isactive",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "isinternalcustomer",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "maximumdiscount",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "creditlimit",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "hassecuritydeposit",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "securitydepositamount",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "paybycash",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "cashpaymentbeforeload",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "cashlastinvoicebeforeload",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "paybycredit",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "creditoneweekcheck",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "creditpaymentbydays",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "haspurchasingdeposit",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "hassecuritydepositbond",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "hasassestsdeposit",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "customerrootmappath",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "employername",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "employeraddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "employerphone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "employerdesignation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "previousemployername",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "previousemployeraddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "previousindustry",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "previousperiod",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "previouspositions",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "previousresionforleaving",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "hascreaditlimit",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "accountid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "accountcode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isregistered",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "vatregnumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tinnumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lat",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lon",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "creditperiod",
+      "fieldType": "Integer"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Customer",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

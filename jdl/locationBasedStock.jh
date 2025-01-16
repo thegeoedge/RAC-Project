@@ -1,0 +1,12 @@
+entity Locationbasedstock {
+    itemid Integer required // ItemID
+    code String // Code
+    name String // Name
+    locationid Integer required // LocationID
+    locationcode String // LocationCode
+    availablequantity Float // AvailableQuantity
+    hasbatches Boolean // HasBatches
+    lmu Integer // LMU
+    lmd Instant // LMD
+}
+paginate * with pagination

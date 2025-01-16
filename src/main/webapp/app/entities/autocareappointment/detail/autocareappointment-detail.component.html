@@ -1,0 +1,134 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (autocareappointment()) {
+      <div>
+        <h2 data-cy="autocareappointmentDetailsHeading"><span>Autocareappointment</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.id }}</span>
+          </dd>
+          <dt><span>Appointmenttype</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.appointmenttype }}</span>
+          </dd>
+          <dt><span>Appointmentdate</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.appointmentdate | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Addeddate</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.addeddate | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Conformdate</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.conformdate | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Appointmentnumber</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.appointmentnumber }}</span>
+          </dd>
+          <dt><span>Vehiclenumber</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.vehiclenumber }}</span>
+          </dd>
+          <dt><span>Appointmenttime</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.appointmenttime | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Isconformed</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.isconformed }}</span>
+          </dd>
+          <dt><span>Conformedby</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.conformedby }}</span>
+          </dd>
+          <dt><span>Lmd</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.lmd | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Lmu</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.lmu }}</span>
+          </dd>
+          <dt><span>Customerid</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.customerid }}</span>
+          </dd>
+          <dt><span>Contactnumber</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.contactnumber }}</span>
+          </dd>
+          <dt><span>Customername</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.customername }}</span>
+          </dd>
+          <dt><span>Issued</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.issued }}</span>
+          </dd>
+          <dt><span>Hoistid</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.hoistid }}</span>
+          </dd>
+          <dt><span>Isarrived</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.isarrived }}</span>
+          </dd>
+          <dt><span>Iscancel</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.iscancel }}</span>
+          </dd>
+          <dt><span>Isnoanswer</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.isnoanswer }}</span>
+          </dd>
+          <dt><span>Missedappointmentcall</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.missedappointmentcall }}</span>
+          </dd>
+          <dt><span>Customermobileid</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.customermobileid }}</span>
+          </dd>
+          <dt><span>Customermobilevehicleid</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.customermobilevehicleid }}</span>
+          </dd>
+          <dt><span>Vehicleid</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.vehicleid }}</span>
+          </dd>
+          <dt><span>Ismobileappointment</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.ismobileappointment }}</span>
+          </dd>
+          <dt><span>Advancepayment</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.advancepayment }}</span>
+          </dd>
+          <dt><span>Jobid</span></dt>
+          <dd>
+            <span>{{ autocareappointment()!.jobid }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/autocareappointment', autocareappointment()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,6 @@
+entity Stocklocations {
+    locationname String // LocationName
+    locationcode String // LocationCode
+    description String // Description
+}
+paginate * with pagination

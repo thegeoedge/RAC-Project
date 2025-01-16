@@ -1,0 +1,6 @@
+entity Bankbranch {
+    bankcode String // BankCode
+    branchcode String // BranchCode
+    branchname String // BranchName
+}
+paginate * with pagination

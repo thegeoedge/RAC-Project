@@ -1,0 +1,289 @@
+<div>
+  <h2 id="page-heading" data-cy="CustomervehicleHeading">
+    <span>Customervehicles</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span>Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-customervehicle"
+        [routerLink]="['/customervehicle/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span>Create a new Customervehicle</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (customervehicles?.length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span>No Customervehicles found</span>
+    </div>
+  }
+
+  @if (customervehicles && customervehicles.length > 0) {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [sortState]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span>ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="customerid">
+              <div class="d-flex">
+                <span>Customerid</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="vehiclenumber">
+              <div class="d-flex">
+                <span>Vehiclenumber</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="categoryid">
+              <div class="d-flex">
+                <span>Categoryid</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="categoryname">
+              <div class="d-flex">
+                <span>Categoryname</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="typeid">
+              <div class="d-flex">
+                <span>Typeid</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="typename">
+              <div class="d-flex">
+                <span>Typename</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="makeid">
+              <div class="d-flex">
+                <span>Makeid</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="makename">
+              <div class="d-flex">
+                <span>Makename</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="model">
+              <div class="d-flex">
+                <span>Model</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="yom">
+              <div class="d-flex">
+                <span>Yom</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="customercode">
+              <div class="d-flex">
+                <span>Customercode</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="remarks">
+              <div class="d-flex">
+                <span>Remarks</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="servicecount">
+              <div class="d-flex">
+                <span>Servicecount</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="engNo">
+              <div class="d-flex">
+                <span>Eng No</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="chaNo">
+              <div class="d-flex">
+                <span>Cha No</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="milage">
+              <div class="d-flex">
+                <span>Milage</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="lastservicedate">
+              <div class="d-flex">
+                <span>Lastservicedate</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nextservicedate">
+              <div class="d-flex">
+                <span>Nextservicedate</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="lmu">
+              <div class="d-flex">
+                <span>Lmu</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="lmd">
+              <div class="d-flex">
+                <span>Lmd</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nextgearoilmilage">
+              <div class="d-flex">
+                <span>Nextgearoilmilage</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nextmilage">
+              <div class="d-flex">
+                <span>Nextmilage</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="serviceperiod">
+              <div class="d-flex">
+                <span>Serviceperiod</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (customervehicle of customervehicles; track trackId) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/customervehicle', customervehicle.id, 'view']">{{ customervehicle.id }}</a>
+              </td>
+              <td>{{ customervehicle.customerid }}</td>
+              <td>{{ customervehicle.vehiclenumber }}</td>
+              <td>{{ customervehicle.categoryid }}</td>
+              <td>{{ customervehicle.categoryname }}</td>
+              <td>{{ customervehicle.typeid }}</td>
+              <td>{{ customervehicle.typename }}</td>
+              <td>{{ customervehicle.makeid }}</td>
+              <td>{{ customervehicle.makename }}</td>
+              <td>{{ customervehicle.model }}</td>
+              <td>{{ customervehicle.yom }}</td>
+              <td>{{ customervehicle.customercode }}</td>
+              <td>{{ customervehicle.remarks }}</td>
+              <td>{{ customervehicle.servicecount }}</td>
+              <td>{{ customervehicle.engNo }}</td>
+              <td>{{ customervehicle.chaNo }}</td>
+              <td>{{ customervehicle.milage }}</td>
+              <td>{{ customervehicle.lastservicedate | formatMediumDate }}</td>
+              <td>{{ customervehicle.nextservicedate | formatMediumDate }}</td>
+              <td>{{ customervehicle.lmu }}</td>
+              <td>{{ customervehicle.lmd | formatMediumDatetime }}</td>
+              <td>{{ customervehicle.nextgearoilmilage }}</td>
+              <td>{{ customervehicle.nextmilage }}</td>
+              <td>{{ customervehicle.serviceperiod }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/customervehicle', customervehicle.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline">View</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/customervehicle', customervehicle.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline">Edit</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(customervehicle)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+  @if (customervehicles && customervehicles.length > 0) {
+    <div>
+      <div class="d-flex justify-content-center">
+        <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <ngb-pagination
+          [collectionSize]="totalItems"
+          [page]="page"
+          [pageSize]="itemsPerPage"
+          [maxSize]="5"
+          [rotate]="true"
+          [boundaryLinks]="true"
+          (pageChange)="navigateToPage($event)"
+        ></ngb-pagination>
+      </div>
+    </div>
+  }
+</div>

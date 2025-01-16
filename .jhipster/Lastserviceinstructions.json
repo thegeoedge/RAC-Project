@@ -1,0 +1,44 @@
+{
+  "annotations": {
+    "changelogDate": "20241004104344"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "jobid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "instruction",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isactive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "ignore",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "vehicleid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "vehicleno",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Lastserviceinstructions",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

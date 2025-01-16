@@ -1,0 +1,11 @@
+entity Nextserviceinstructions {
+    jobid Integer // JobId
+    instruction String // Instruction
+    isactive Boolean // IsActive
+    lmu Integer // LMU
+    lmd Instant // LMD
+    ignore Boolean // Ignore
+    vehicleid Integer // VehicleId
+    vehicleno String // VehicleNo
+}
+paginate * with pagination

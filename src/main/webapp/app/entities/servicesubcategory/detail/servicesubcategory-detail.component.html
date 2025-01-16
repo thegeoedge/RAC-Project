@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (servicesubcategory()) {
+      <div>
+        <h2 data-cy="servicesubcategoryDetailsHeading"><span>Servicesubcategory</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ servicesubcategory()!.id }}</span>
+          </dd>
+          <dt><span>Name</span></dt>
+          <dd>
+            <span>{{ servicesubcategory()!.name }}</span>
+          </dd>
+          <dt><span>Description</span></dt>
+          <dd>
+            <span>{{ servicesubcategory()!.description }}</span>
+          </dd>
+          <dt><span>Mainid</span></dt>
+          <dd>
+            <span>{{ servicesubcategory()!.mainid }}</span>
+          </dd>
+          <dt><span>Mainname</span></dt>
+          <dd>
+            <span>{{ servicesubcategory()!.mainname }}</span>
+          </dd>
+          <dt><span>Lmu</span></dt>
+          <dd>
+            <span>{{ servicesubcategory()!.lmu }}</span>
+          </dd>
+          <dt><span>Lmd</span></dt>
+          <dd>
+            <span>{{ servicesubcategory()!.lmd | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Isactive</span></dt>
+          <dd>
+            <span>{{ servicesubcategory()!.isactive }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/servicesubcategory', servicesubcategory()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

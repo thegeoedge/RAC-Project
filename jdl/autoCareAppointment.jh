@@ -1,0 +1,31 @@
+filter * 
+
+entity Autocareappointment {
+    appointmenttype Integer // AppointmentType
+    appointmentdate Instant // AppointmentDate
+    addeddate Instant // AddedDate
+    conformdate Instant // ConformDate
+    appointmentnumber Integer // AppointmentNumber
+    vehiclenumber String // VehicleNumber
+    appointmenttime Instant // AppointmentTime
+    isconformed Boolean // IsConformed
+    conformedby Integer // ConformedBy
+    lmd Instant // LMD
+    lmu Integer // LMU
+    customerid Integer // CustomerId
+    contactnumber String // ContactNumber
+    customername String // CustomerName
+    issued Boolean // Issued
+    hoistid Integer // HoistId
+    isarrived Boolean // IsArrived
+    iscancel Boolean // IsCancel
+    isnoanswer Boolean // IsNoAnswer
+    missedappointmentcall String // MissedAppointmentCall
+    customermobileid Integer // CustomerMobileId
+    customermobilevehicleid Integer // CustomerMobileVehicleId
+    vehicleid Integer // VehicleId
+    ismobileappointment Boolean // IsMobileAppointment
+    advancepayment Float // AdvancePayment
+    jobid Integer // JobId
+}
+paginate * with pagination

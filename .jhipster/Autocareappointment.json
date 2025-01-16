@@ -1,0 +1,118 @@
+{
+  "annotations": {
+    "changelogDate": "20240820072600"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "appointmenttype",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "appointmentdate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "addeddate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "conformdate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "appointmentnumber",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "vehiclenumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "appointmenttime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "isconformed",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "conformedby",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "customerid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "contactnumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customername",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "issued",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "hoistid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "isarrived",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "iscancel",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "isnoanswer",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "missedappointmentcall",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customermobileid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "customermobilevehicleid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "vehicleid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "ismobileappointment",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "advancepayment",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "jobid",
+      "fieldType": "Integer"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Autocareappointment",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

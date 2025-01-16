@@ -1,0 +1,209 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-receipt-heading" data-cy="ReceiptCreateUpdateHeading">Create or edit a Receipt</h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_code">Code</label>
+          <input type="text" class="form-control" name="code" id="field_code" data-cy="code" formControlName="code" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_receiptdate">Receiptdate</label>
+          <div class="d-flex">
+            <input
+              id="field_receiptdate"
+              data-cy="receiptdate"
+              type="datetime-local"
+              class="form-control"
+              name="receiptdate"
+              formControlName="receiptdate"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_customername">Customername</label>
+          <input
+            type="text"
+            class="form-control"
+            name="customername"
+            id="field_customername"
+            data-cy="customername"
+            formControlName="customername"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_customeraddress">Customeraddress</label>
+          <input
+            type="text"
+            class="form-control"
+            name="customeraddress"
+            id="field_customeraddress"
+            data-cy="customeraddress"
+            formControlName="customeraddress"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_totalamount">Totalamount</label>
+          <input
+            type="number"
+            class="form-control"
+            name="totalamount"
+            id="field_totalamount"
+            data-cy="totalamount"
+            formControlName="totalamount"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_totalamountinword">Totalamountinword</label>
+          <input
+            type="text"
+            class="form-control"
+            name="totalamountinword"
+            id="field_totalamountinword"
+            data-cy="totalamountinword"
+            formControlName="totalamountinword"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_comments">Comments</label>
+          <input type="text" class="form-control" name="comments" id="field_comments" data-cy="comments" formControlName="comments" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lmu">Lmu</label>
+          <input type="number" class="form-control" name="lmu" id="field_lmu" data-cy="lmu" formControlName="lmu" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lmd">Lmd</label>
+          <div class="d-flex">
+            <input
+              id="field_lmd"
+              data-cy="lmd"
+              type="datetime-local"
+              class="form-control"
+              name="lmd"
+              formControlName="lmd"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_termid">Termid</label>
+          <input type="number" class="form-control" name="termid" id="field_termid" data-cy="termid" formControlName="termid" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_term">Term</label>
+          <input type="text" class="form-control" name="term" id="field_term" data-cy="term" formControlName="term" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_date">Date</label>
+          <div class="d-flex">
+            <input
+              id="field_date"
+              data-cy="date"
+              type="datetime-local"
+              class="form-control"
+              name="date"
+              formControlName="date"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_amount">Amount</label>
+          <input type="number" class="form-control" name="amount" id="field_amount" data-cy="amount" formControlName="amount" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_checkdate">Checkdate</label>
+          <div class="d-flex">
+            <input
+              id="field_checkdate"
+              data-cy="checkdate"
+              type="datetime-local"
+              class="form-control"
+              name="checkdate"
+              formControlName="checkdate"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_checkno">Checkno</label>
+          <input type="text" class="form-control" name="checkno" id="field_checkno" data-cy="checkno" formControlName="checkno" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_bank">Bank</label>
+          <input type="text" class="form-control" name="bank" id="field_bank" data-cy="bank" formControlName="bank" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_customerid">Customerid</label>
+          <input
+            type="number"
+            class="form-control"
+            name="customerid"
+            id="field_customerid"
+            data-cy="customerid"
+            formControlName="customerid"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_isactive">Isactive</label>
+          <input type="checkbox" class="form-check" name="isactive" id="field_isactive" data-cy="isactive" formControlName="isactive" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_deposited">Deposited</label>
+          <input type="checkbox" class="form-check" name="deposited" id="field_deposited" data-cy="deposited" formControlName="deposited" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_createdby">Createdby</label>
+          <input type="number" class="form-control" name="createdby" id="field_createdby" data-cy="createdby" formControlName="createdby" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span>Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span>Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

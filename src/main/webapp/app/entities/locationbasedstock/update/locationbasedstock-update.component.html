@@ -1,0 +1,135 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-locationbasedstock-heading" data-cy="LocationbasedstockCreateUpdateHeading">Create or edit a Locationbasedstock</h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_itemid">Itemid</label>
+          <input type="number" class="form-control" name="itemid" id="field_itemid" data-cy="itemid" formControlName="itemid" />
+          @if (editForm.get('itemid')!.invalid && (editForm.get('itemid')!.dirty || editForm.get('itemid')!.touched)) {
+            <div>
+              @if (editForm.get('itemid')?.errors?.required) {
+                <small class="form-text text-danger">This field is required.</small>
+              }
+              <small class="form-text text-danger" [hidden]="!editForm.get('itemid')?.errors?.number">This field should be a number.</small>
+            </div>
+          }
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_code">Code</label>
+          <input type="text" class="form-control" name="code" id="field_code" data-cy="code" formControlName="code" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_name">Name</label>
+          <input type="text" class="form-control" name="name" id="field_name" data-cy="name" formControlName="name" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_locationid">Locationid</label>
+          <input
+            type="number"
+            class="form-control"
+            name="locationid"
+            id="field_locationid"
+            data-cy="locationid"
+            formControlName="locationid"
+          />
+          @if (editForm.get('locationid')!.invalid && (editForm.get('locationid')!.dirty || editForm.get('locationid')!.touched)) {
+            <div>
+              @if (editForm.get('locationid')?.errors?.required) {
+                <small class="form-text text-danger">This field is required.</small>
+              }
+              <small class="form-text text-danger" [hidden]="!editForm.get('locationid')?.errors?.number"
+                >This field should be a number.</small
+              >
+            </div>
+          }
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_locationcode">Locationcode</label>
+          <input
+            type="text"
+            class="form-control"
+            name="locationcode"
+            id="field_locationcode"
+            data-cy="locationcode"
+            formControlName="locationcode"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_availablequantity">Availablequantity</label>
+          <input
+            type="number"
+            class="form-control"
+            name="availablequantity"
+            id="field_availablequantity"
+            data-cy="availablequantity"
+            formControlName="availablequantity"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_hasbatches">Hasbatches</label>
+          <input
+            type="checkbox"
+            class="form-check"
+            name="hasbatches"
+            id="field_hasbatches"
+            data-cy="hasbatches"
+            formControlName="hasbatches"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lmu">Lmu</label>
+          <input type="number" class="form-control" name="lmu" id="field_lmu" data-cy="lmu" formControlName="lmu" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lmd">Lmd</label>
+          <div class="d-flex">
+            <input
+              id="field_lmd"
+              data-cy="lmd"
+              type="datetime-local"
+              class="form-control"
+              name="lmd"
+              formControlName="lmd"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span>Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span>Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

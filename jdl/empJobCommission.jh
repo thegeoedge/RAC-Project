@@ -1,0 +1,10 @@
+entity EmpJobcommission {
+    vehcatid Long required // VehCatId
+    autojobcatid Long required // AutoJobCatId
+    firstcom Float // FirstCom
+    secondcom Float // SecondCom
+    thirdcom Float // ThirdCom
+    lmd Instant // LMD
+    lmu Integer // LMU
+}
+paginate * with pagination

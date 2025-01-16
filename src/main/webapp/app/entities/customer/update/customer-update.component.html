@@ -1,0 +1,916 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-customer-heading" data-cy="CustomerCreateUpdateHeading">Create or edit a Customer</h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_customertype">Customertype</label>
+          <input
+            type="number"
+            class="form-control"
+            name="customertype"
+            id="field_customertype"
+            data-cy="customertype"
+            formControlName="customertype"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_code">Code</label>
+          <input type="text" class="form-control" name="code" id="field_code" data-cy="code" formControlName="code" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_title">Title</label>
+          <input type="text" class="form-control" name="title" id="field_title" data-cy="title" formControlName="title" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_namewithinitials">Namewithinitials</label>
+          <input
+            type="text"
+            class="form-control"
+            name="namewithinitials"
+            id="field_namewithinitials"
+            data-cy="namewithinitials"
+            formControlName="namewithinitials"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_fullname">Fullname</label>
+          <input type="text" class="form-control" name="fullname" id="field_fullname" data-cy="fullname" formControlName="fullname" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_callingname">Callingname</label>
+          <input
+            type="text"
+            class="form-control"
+            name="callingname"
+            id="field_callingname"
+            data-cy="callingname"
+            formControlName="callingname"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nicno">Nicno</label>
+          <input type="text" class="form-control" name="nicno" id="field_nicno" data-cy="nicno" formControlName="nicno" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nicissueddate">Nicissueddate</label>
+          <div class="input-group">
+            <input
+              id="field_nicissueddate"
+              data-cy="nicissueddate"
+              type="text"
+              class="form-control"
+              name="nicissueddate"
+              ngbDatepicker
+              #nicissueddateDp="ngbDatepicker"
+              formControlName="nicissueddate"
+            />
+            <button type="button" class="btn btn-secondary" (click)="nicissueddateDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_dateofbirth">Dateofbirth</label>
+          <div class="input-group">
+            <input
+              id="field_dateofbirth"
+              data-cy="dateofbirth"
+              type="text"
+              class="form-control"
+              name="dateofbirth"
+              ngbDatepicker
+              #dateofbirthDp="ngbDatepicker"
+              formControlName="dateofbirth"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dateofbirthDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_bloodgroup">Bloodgroup</label>
+          <input
+            type="text"
+            class="form-control"
+            name="bloodgroup"
+            id="field_bloodgroup"
+            data-cy="bloodgroup"
+            formControlName="bloodgroup"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_gender">Gender</label>
+          <input type="text" class="form-control" name="gender" id="field_gender" data-cy="gender" formControlName="gender" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_maritalstatus">Maritalstatus</label>
+          <input
+            type="text"
+            class="form-control"
+            name="maritalstatus"
+            id="field_maritalstatus"
+            data-cy="maritalstatus"
+            formControlName="maritalstatus"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_marrieddate">Marrieddate</label>
+          <div class="input-group">
+            <input
+              id="field_marrieddate"
+              data-cy="marrieddate"
+              type="text"
+              class="form-control"
+              name="marrieddate"
+              ngbDatepicker
+              #marrieddateDp="ngbDatepicker"
+              formControlName="marrieddate"
+            />
+            <button type="button" class="btn btn-secondary" (click)="marrieddateDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nationality">Nationality</label>
+          <input
+            type="number"
+            class="form-control"
+            name="nationality"
+            id="field_nationality"
+            data-cy="nationality"
+            formControlName="nationality"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_territory">Territory</label>
+          <input type="text" class="form-control" name="territory" id="field_territory" data-cy="territory" formControlName="territory" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_religion">Religion</label>
+          <input type="number" class="form-control" name="religion" id="field_religion" data-cy="religion" formControlName="religion" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_team">Team</label>
+          <input type="text" class="form-control" name="team" id="field_team" data-cy="team" formControlName="team" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_businessname">Businessname</label>
+          <input
+            type="text"
+            class="form-control"
+            name="businessname"
+            id="field_businessname"
+            data-cy="businessname"
+            formControlName="businessname"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_businessregdate">Businessregdate</label>
+          <div class="input-group">
+            <input
+              id="field_businessregdate"
+              data-cy="businessregdate"
+              type="text"
+              class="form-control"
+              name="businessregdate"
+              ngbDatepicker
+              #businessregdateDp="ngbDatepicker"
+              formControlName="businessregdate"
+            />
+            <button type="button" class="btn btn-secondary" (click)="businessregdateDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_businessregno">Businessregno</label>
+          <input
+            type="text"
+            class="form-control"
+            name="businessregno"
+            id="field_businessregno"
+            data-cy="businessregno"
+            formControlName="businessregno"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_profilepicturepath">Profilepicturepath</label>
+          <input
+            type="text"
+            class="form-control"
+            name="profilepicturepath"
+            id="field_profilepicturepath"
+            data-cy="profilepicturepath"
+            formControlName="profilepicturepath"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_residencehouseno">Residencehouseno</label>
+          <input
+            type="text"
+            class="form-control"
+            name="residencehouseno"
+            id="field_residencehouseno"
+            data-cy="residencehouseno"
+            formControlName="residencehouseno"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_residenceaddress">Residenceaddress</label>
+          <input
+            type="text"
+            class="form-control"
+            name="residenceaddress"
+            id="field_residenceaddress"
+            data-cy="residenceaddress"
+            formControlName="residenceaddress"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_residencecity">Residencecity</label>
+          <input
+            type="text"
+            class="form-control"
+            name="residencecity"
+            id="field_residencecity"
+            data-cy="residencecity"
+            formControlName="residencecity"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_residencephone">Residencephone</label>
+          <input
+            type="text"
+            class="form-control"
+            name="residencephone"
+            id="field_residencephone"
+            data-cy="residencephone"
+            formControlName="residencephone"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_businesslocationno">Businesslocationno</label>
+          <input
+            type="text"
+            class="form-control"
+            name="businesslocationno"
+            id="field_businesslocationno"
+            data-cy="businesslocationno"
+            formControlName="businesslocationno"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_businessaddress">Businessaddress</label>
+          <input
+            type="text"
+            class="form-control"
+            name="businessaddress"
+            id="field_businessaddress"
+            data-cy="businessaddress"
+            formControlName="businessaddress"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_businesscity">Businesscity</label>
+          <input
+            type="text"
+            class="form-control"
+            name="businesscity"
+            id="field_businesscity"
+            data-cy="businesscity"
+            formControlName="businesscity"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_businessphone1">Businessphone 1</label>
+          <input
+            type="text"
+            class="form-control"
+            name="businessphone1"
+            id="field_businessphone1"
+            data-cy="businessphone1"
+            formControlName="businessphone1"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_businessphone2">Businessphone 2</label>
+          <input
+            type="text"
+            class="form-control"
+            name="businessphone2"
+            id="field_businessphone2"
+            data-cy="businessphone2"
+            formControlName="businessphone2"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_businessmobile">Businessmobile</label>
+          <input
+            type="text"
+            class="form-control"
+            name="businessmobile"
+            id="field_businessmobile"
+            data-cy="businessmobile"
+            formControlName="businessmobile"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_businessfax">Businessfax</label>
+          <input
+            type="text"
+            class="form-control"
+            name="businessfax"
+            id="field_businessfax"
+            data-cy="businessfax"
+            formControlName="businessfax"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_businessemail">Businessemail</label>
+          <input
+            type="text"
+            class="form-control"
+            name="businessemail"
+            id="field_businessemail"
+            data-cy="businessemail"
+            formControlName="businessemail"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_businessprovinceid">Businessprovinceid</label>
+          <input
+            type="number"
+            class="form-control"
+            name="businessprovinceid"
+            id="field_businessprovinceid"
+            data-cy="businessprovinceid"
+            formControlName="businessprovinceid"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_businessdistrictid">Businessdistrictid</label>
+          <input
+            type="number"
+            class="form-control"
+            name="businessdistrictid"
+            id="field_businessdistrictid"
+            data-cy="businessdistrictid"
+            formControlName="businessdistrictid"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_contactpersonname">Contactpersonname</label>
+          <input
+            type="text"
+            class="form-control"
+            name="contactpersonname"
+            id="field_contactpersonname"
+            data-cy="contactpersonname"
+            formControlName="contactpersonname"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_contactpersonphone">Contactpersonphone</label>
+          <input
+            type="text"
+            class="form-control"
+            name="contactpersonphone"
+            id="field_contactpersonphone"
+            data-cy="contactpersonphone"
+            formControlName="contactpersonphone"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_contactpersonmobile">Contactpersonmobile</label>
+          <input
+            type="text"
+            class="form-control"
+            name="contactpersonmobile"
+            id="field_contactpersonmobile"
+            data-cy="contactpersonmobile"
+            formControlName="contactpersonmobile"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_contactpersonemail">Contactpersonemail</label>
+          <input
+            type="text"
+            class="form-control"
+            name="contactpersonemail"
+            id="field_contactpersonemail"
+            data-cy="contactpersonemail"
+            formControlName="contactpersonemail"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_rootmappath">Rootmappath</label>
+          <input
+            type="text"
+            class="form-control"
+            name="rootmappath"
+            id="field_rootmappath"
+            data-cy="rootmappath"
+            formControlName="rootmappath"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_website">Website</label>
+          <input type="text" class="form-control" name="website" id="field_website" data-cy="website" formControlName="website" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_registrationdate">Registrationdate</label>
+          <div class="d-flex">
+            <input
+              id="field_registrationdate"
+              data-cy="registrationdate"
+              type="datetime-local"
+              class="form-control"
+              name="registrationdate"
+              formControlName="registrationdate"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_isactive">Isactive</label>
+          <input type="number" class="form-control" name="isactive" id="field_isactive" data-cy="isactive" formControlName="isactive" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_isinternalcustomer">Isinternalcustomer</label>
+          <input
+            type="number"
+            class="form-control"
+            name="isinternalcustomer"
+            id="field_isinternalcustomer"
+            data-cy="isinternalcustomer"
+            formControlName="isinternalcustomer"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_description">Description</label>
+          <input
+            type="text"
+            class="form-control"
+            name="description"
+            id="field_description"
+            data-cy="description"
+            formControlName="description"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lmu">Lmu</label>
+          <input type="number" class="form-control" name="lmu" id="field_lmu" data-cy="lmu" formControlName="lmu" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lmd">Lmd</label>
+          <div class="d-flex">
+            <input
+              id="field_lmd"
+              data-cy="lmd"
+              type="datetime-local"
+              class="form-control"
+              name="lmd"
+              formControlName="lmd"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_maximumdiscount">Maximumdiscount</label>
+          <input
+            type="number"
+            class="form-control"
+            name="maximumdiscount"
+            id="field_maximumdiscount"
+            data-cy="maximumdiscount"
+            formControlName="maximumdiscount"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_creditlimit">Creditlimit</label>
+          <input
+            type="number"
+            class="form-control"
+            name="creditlimit"
+            id="field_creditlimit"
+            data-cy="creditlimit"
+            formControlName="creditlimit"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_hassecuritydeposit">Hassecuritydeposit</label>
+          <input
+            type="checkbox"
+            class="form-check"
+            name="hassecuritydeposit"
+            id="field_hassecuritydeposit"
+            data-cy="hassecuritydeposit"
+            formControlName="hassecuritydeposit"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_securitydepositamount">Securitydepositamount</label>
+          <input
+            type="number"
+            class="form-control"
+            name="securitydepositamount"
+            id="field_securitydepositamount"
+            data-cy="securitydepositamount"
+            formControlName="securitydepositamount"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_paybycash">Paybycash</label>
+          <input type="checkbox" class="form-check" name="paybycash" id="field_paybycash" data-cy="paybycash" formControlName="paybycash" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_cashpaymentbeforeload">Cashpaymentbeforeload</label>
+          <input
+            type="checkbox"
+            class="form-check"
+            name="cashpaymentbeforeload"
+            id="field_cashpaymentbeforeload"
+            data-cy="cashpaymentbeforeload"
+            formControlName="cashpaymentbeforeload"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_cashlastinvoicebeforeload">Cashlastinvoicebeforeload</label>
+          <input
+            type="checkbox"
+            class="form-check"
+            name="cashlastinvoicebeforeload"
+            id="field_cashlastinvoicebeforeload"
+            data-cy="cashlastinvoicebeforeload"
+            formControlName="cashlastinvoicebeforeload"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_paybycredit">Paybycredit</label>
+          <input
+            type="checkbox"
+            class="form-check"
+            name="paybycredit"
+            id="field_paybycredit"
+            data-cy="paybycredit"
+            formControlName="paybycredit"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_creditoneweekcheck">Creditoneweekcheck</label>
+          <input
+            type="checkbox"
+            class="form-check"
+            name="creditoneweekcheck"
+            id="field_creditoneweekcheck"
+            data-cy="creditoneweekcheck"
+            formControlName="creditoneweekcheck"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_creditpaymentbydays">Creditpaymentbydays</label>
+          <input
+            type="number"
+            class="form-control"
+            name="creditpaymentbydays"
+            id="field_creditpaymentbydays"
+            data-cy="creditpaymentbydays"
+            formControlName="creditpaymentbydays"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_haspurchasingdeposit">Haspurchasingdeposit</label>
+          <input
+            type="checkbox"
+            class="form-check"
+            name="haspurchasingdeposit"
+            id="field_haspurchasingdeposit"
+            data-cy="haspurchasingdeposit"
+            formControlName="haspurchasingdeposit"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_hassecuritydepositbond">Hassecuritydepositbond</label>
+          <input
+            type="checkbox"
+            class="form-check"
+            name="hassecuritydepositbond"
+            id="field_hassecuritydepositbond"
+            data-cy="hassecuritydepositbond"
+            formControlName="hassecuritydepositbond"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_hasassestsdeposit">Hasassestsdeposit</label>
+          <input
+            type="checkbox"
+            class="form-check"
+            name="hasassestsdeposit"
+            id="field_hasassestsdeposit"
+            data-cy="hasassestsdeposit"
+            formControlName="hasassestsdeposit"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_customerrootmappath">Customerrootmappath</label>
+          <input
+            type="text"
+            class="form-control"
+            name="customerrootmappath"
+            id="field_customerrootmappath"
+            data-cy="customerrootmappath"
+            formControlName="customerrootmappath"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_employername">Employername</label>
+          <input
+            type="text"
+            class="form-control"
+            name="employername"
+            id="field_employername"
+            data-cy="employername"
+            formControlName="employername"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_employeraddress">Employeraddress</label>
+          <input
+            type="text"
+            class="form-control"
+            name="employeraddress"
+            id="field_employeraddress"
+            data-cy="employeraddress"
+            formControlName="employeraddress"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_employerphone">Employerphone</label>
+          <input
+            type="text"
+            class="form-control"
+            name="employerphone"
+            id="field_employerphone"
+            data-cy="employerphone"
+            formControlName="employerphone"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_employerdesignation">Employerdesignation</label>
+          <input
+            type="text"
+            class="form-control"
+            name="employerdesignation"
+            id="field_employerdesignation"
+            data-cy="employerdesignation"
+            formControlName="employerdesignation"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_previousemployername">Previousemployername</label>
+          <input
+            type="text"
+            class="form-control"
+            name="previousemployername"
+            id="field_previousemployername"
+            data-cy="previousemployername"
+            formControlName="previousemployername"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_previousemployeraddress">Previousemployeraddress</label>
+          <input
+            type="text"
+            class="form-control"
+            name="previousemployeraddress"
+            id="field_previousemployeraddress"
+            data-cy="previousemployeraddress"
+            formControlName="previousemployeraddress"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_previousindustry">Previousindustry</label>
+          <input
+            type="text"
+            class="form-control"
+            name="previousindustry"
+            id="field_previousindustry"
+            data-cy="previousindustry"
+            formControlName="previousindustry"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_previousperiod">Previousperiod</label>
+          <input
+            type="text"
+            class="form-control"
+            name="previousperiod"
+            id="field_previousperiod"
+            data-cy="previousperiod"
+            formControlName="previousperiod"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_previouspositions">Previouspositions</label>
+          <input
+            type="text"
+            class="form-control"
+            name="previouspositions"
+            id="field_previouspositions"
+            data-cy="previouspositions"
+            formControlName="previouspositions"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_previousresionforleaving">Previousresionforleaving</label>
+          <input
+            type="text"
+            class="form-control"
+            name="previousresionforleaving"
+            id="field_previousresionforleaving"
+            data-cy="previousresionforleaving"
+            formControlName="previousresionforleaving"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_hascreaditlimit">Hascreaditlimit</label>
+          <input
+            type="checkbox"
+            class="form-check"
+            name="hascreaditlimit"
+            id="field_hascreaditlimit"
+            data-cy="hascreaditlimit"
+            formControlName="hascreaditlimit"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_accountid">Accountid</label>
+          <input type="number" class="form-control" name="accountid" id="field_accountid" data-cy="accountid" formControlName="accountid" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_accountcode">Accountcode</label>
+          <input
+            type="text"
+            class="form-control"
+            name="accountcode"
+            id="field_accountcode"
+            data-cy="accountcode"
+            formControlName="accountcode"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_isregistered">Isregistered</label>
+          <input
+            type="checkbox"
+            class="form-check"
+            name="isregistered"
+            id="field_isregistered"
+            data-cy="isregistered"
+            formControlName="isregistered"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_vatregnumber">Vatregnumber</label>
+          <input
+            type="text"
+            class="form-control"
+            name="vatregnumber"
+            id="field_vatregnumber"
+            data-cy="vatregnumber"
+            formControlName="vatregnumber"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_tinnumber">Tinnumber</label>
+          <input type="text" class="form-control" name="tinnumber" id="field_tinnumber" data-cy="tinnumber" formControlName="tinnumber" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lat">Lat</label>
+          <input type="text" class="form-control" name="lat" id="field_lat" data-cy="lat" formControlName="lat" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lon">Lon</label>
+          <input type="text" class="form-control" name="lon" id="field_lon" data-cy="lon" formControlName="lon" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_creditperiod">Creditperiod</label>
+          <input
+            type="number"
+            class="form-control"
+            name="creditperiod"
+            id="field_creditperiod"
+            data-cy="creditperiod"
+            formControlName="creditperiod"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span>Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span>Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

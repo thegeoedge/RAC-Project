@@ -1,0 +1,16 @@
+entity Autojobempallocation {
+    jobid Integer // JobId
+    categoryid Integer // CategoryId
+    empposition Integer // EmpPosition
+    empid Integer // EmpId
+    empname String // EmpName
+    allocatetime Instant // AllocateTime
+    lmu Integer // LMU
+    lmd Instant // LMD
+    jobdate Instant // JobDate
+    commission Float // Commission
+    iscommissionpaid Boolean // IsCommissionPaid
+    starttime Instant // StartTime
+    endtime Instant // EndTime
+}
+paginate * with pagination

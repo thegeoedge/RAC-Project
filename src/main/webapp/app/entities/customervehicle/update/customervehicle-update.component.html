@@ -1,0 +1,250 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-customervehicle-heading" data-cy="CustomervehicleCreateUpdateHeading">Create or edit a Customervehicle</h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_customerid">Customerid</label>
+          <input
+            type="number"
+            class="form-control"
+            name="customerid"
+            id="field_customerid"
+            data-cy="customerid"
+            formControlName="customerid"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_vehiclenumber">Vehiclenumber</label>
+          <input
+            type="text"
+            class="form-control"
+            name="vehiclenumber"
+            id="field_vehiclenumber"
+            data-cy="vehiclenumber"
+            formControlName="vehiclenumber"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_categoryid">Categoryid</label>
+          <input
+            type="number"
+            class="form-control"
+            name="categoryid"
+            id="field_categoryid"
+            data-cy="categoryid"
+            formControlName="categoryid"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_categoryname">Categoryname</label>
+          <input
+            type="text"
+            class="form-control"
+            name="categoryname"
+            id="field_categoryname"
+            data-cy="categoryname"
+            formControlName="categoryname"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_typeid">Typeid</label>
+          <input type="number" class="form-control" name="typeid" id="field_typeid" data-cy="typeid" formControlName="typeid" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_typename">Typename</label>
+          <input type="text" class="form-control" name="typename" id="field_typename" data-cy="typename" formControlName="typename" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_makeid">Makeid</label>
+          <input type="number" class="form-control" name="makeid" id="field_makeid" data-cy="makeid" formControlName="makeid" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_makename">Makename</label>
+          <input type="text" class="form-control" name="makename" id="field_makename" data-cy="makename" formControlName="makename" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_model">Model</label>
+          <input type="text" class="form-control" name="model" id="field_model" data-cy="model" formControlName="model" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_yom">Yom</label>
+          <input type="text" class="form-control" name="yom" id="field_yom" data-cy="yom" formControlName="yom" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_customercode">Customercode</label>
+          <input
+            type="text"
+            class="form-control"
+            name="customercode"
+            id="field_customercode"
+            data-cy="customercode"
+            formControlName="customercode"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_remarks">Remarks</label>
+          <input type="text" class="form-control" name="remarks" id="field_remarks" data-cy="remarks" formControlName="remarks" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_servicecount">Servicecount</label>
+          <input
+            type="number"
+            class="form-control"
+            name="servicecount"
+            id="field_servicecount"
+            data-cy="servicecount"
+            formControlName="servicecount"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_engNo">Eng No</label>
+          <input type="text" class="form-control" name="engNo" id="field_engNo" data-cy="engNo" formControlName="engNo" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_chaNo">Cha No</label>
+          <input type="text" class="form-control" name="chaNo" id="field_chaNo" data-cy="chaNo" formControlName="chaNo" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_milage">Milage</label>
+          <input type="text" class="form-control" name="milage" id="field_milage" data-cy="milage" formControlName="milage" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lastservicedate">Lastservicedate</label>
+          <div class="input-group">
+            <input
+              id="field_lastservicedate"
+              data-cy="lastservicedate"
+              type="text"
+              class="form-control"
+              name="lastservicedate"
+              ngbDatepicker
+              #lastservicedateDp="ngbDatepicker"
+              formControlName="lastservicedate"
+            />
+            <button type="button" class="btn btn-secondary" (click)="lastservicedateDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nextservicedate">Nextservicedate</label>
+          <div class="input-group">
+            <input
+              id="field_nextservicedate"
+              data-cy="nextservicedate"
+              type="text"
+              class="form-control"
+              name="nextservicedate"
+              ngbDatepicker
+              #nextservicedateDp="ngbDatepicker"
+              formControlName="nextservicedate"
+            />
+            <button type="button" class="btn btn-secondary" (click)="nextservicedateDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lmu">Lmu</label>
+          <input type="number" class="form-control" name="lmu" id="field_lmu" data-cy="lmu" formControlName="lmu" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lmd">Lmd</label>
+          <div class="d-flex">
+            <input
+              id="field_lmd"
+              data-cy="lmd"
+              type="datetime-local"
+              class="form-control"
+              name="lmd"
+              formControlName="lmd"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nextgearoilmilage">Nextgearoilmilage</label>
+          <input
+            type="text"
+            class="form-control"
+            name="nextgearoilmilage"
+            id="field_nextgearoilmilage"
+            data-cy="nextgearoilmilage"
+            formControlName="nextgearoilmilage"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nextmilage">Nextmilage</label>
+          <input
+            type="text"
+            class="form-control"
+            name="nextmilage"
+            id="field_nextmilage"
+            data-cy="nextmilage"
+            formControlName="nextmilage"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_serviceperiod">Serviceperiod</label>
+          <input
+            type="number"
+            class="form-control"
+            name="serviceperiod"
+            id="field_serviceperiod"
+            data-cy="serviceperiod"
+            formControlName="serviceperiod"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span>Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span>Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

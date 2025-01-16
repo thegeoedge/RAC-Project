@@ -1,0 +1,90 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (autocarecompany()) {
+      <div>
+        <h2 data-cy="autocarecompanyDetailsHeading"><span>Autocarecompany</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ autocarecompany()!.id }}</span>
+          </dd>
+          <dt><span>Name</span></dt>
+          <dd>
+            <span>{{ autocarecompany()!.name }}</span>
+          </dd>
+          <dt><span>Address</span></dt>
+          <dd>
+            <span>{{ autocarecompany()!.address }}</span>
+          </dd>
+          <dt><span>Servicephone</span></dt>
+          <dd>
+            <span>{{ autocarecompany()!.servicephone }}</span>
+          </dd>
+          <dt><span>Sparepartphone</span></dt>
+          <dd>
+            <span>{{ autocarecompany()!.sparepartphone }}</span>
+          </dd>
+          <dt><span>Bodypaint</span></dt>
+          <dd>
+            <span>{{ autocarecompany()!.bodypaint }}</span>
+          </dd>
+          <dt><span>Generalphone</span></dt>
+          <dd>
+            <span>{{ autocarecompany()!.generalphone }}</span>
+          </dd>
+          <dt><span>Fax</span></dt>
+          <dd>
+            <span>{{ autocarecompany()!.fax }}</span>
+          </dd>
+          <dt><span>Email</span></dt>
+          <dd>
+            <span>{{ autocarecompany()!.email }}</span>
+          </dd>
+          <dt><span>Description</span></dt>
+          <dd>
+            <span>{{ autocarecompany()!.description }}</span>
+          </dd>
+          <dt><span>Lmu</span></dt>
+          <dd>
+            <span>{{ autocarecompany()!.lmu }}</span>
+          </dd>
+          <dt><span>Lmd</span></dt>
+          <dd>
+            <span>{{ autocarecompany()!.lmd | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Vatregnumber</span></dt>
+          <dd>
+            <span>{{ autocarecompany()!.vatregnumber }}</span>
+          </dd>
+          <dt><span>Tinnumber</span></dt>
+          <dd>
+            <span>{{ autocarecompany()!.tinnumber }}</span>
+          </dd>
+          <dt><span>Accountcode</span></dt>
+          <dd>
+            <span>{{ autocarecompany()!.accountcode }}</span>
+          </dd>
+          <dt><span>Accountid</span></dt>
+          <dd>
+            <span>{{ autocarecompany()!.accountid }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/autocarecompany', autocarecompany()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

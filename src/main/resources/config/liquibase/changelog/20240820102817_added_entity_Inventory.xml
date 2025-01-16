@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity Inventory.
+    -->
+    <changeSet id="20240820102817-1" author="jhipster">
+        <createTable tableName="inventory">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="code" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="partnumber" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="description" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="type" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="classification_1" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="classification_2" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="classification_3" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="classification_4" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="classification_5" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="unitofmeasurement" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="decimalplaces" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="isassemblyunit" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="assemblyunitof" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="reorderlevel" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="lastcost" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="lastsellingprice" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="lmu" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="lmd" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="availablequantity" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="hasbatches" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="itemspecfilepath" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="itemimagepath" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="returnprice" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="activeitem" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="minstock" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="maxstock" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="dailyaverage" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="bufferlevel" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="leadtime" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="buffertime" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="saftydays" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="accountcode" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="accountid" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="casepackqty" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="isregistered" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="defaultstocklocationid" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="rackno" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="barcodeimage" type="${blobType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="barcodeimage_content_type" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="commissionempid" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="checktypeid" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="checktype" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="reorderqty" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="notininvoice" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="inventory" columnName="lmd" columnDataType="${datetimeType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20240820102817-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/inventory.csv"
+                  separator=";"
+                  tableName="inventory"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="code" type="string"/>
+            <column name="partnumber" type="string"/>
+            <column name="name" type="string"/>
+            <column name="description" type="string"/>
+            <column name="type" type="numeric"/>
+            <column name="classification_1" type="string"/>
+            <column name="classification_2" type="string"/>
+            <column name="classification_3" type="string"/>
+            <column name="classification_4" type="string"/>
+            <column name="classification_5" type="string"/>
+            <column name="unitofmeasurement" type="string"/>
+            <column name="decimalplaces" type="numeric"/>
+            <column name="isassemblyunit" type="boolean"/>
+            <column name="assemblyunitof" type="numeric"/>
+            <column name="reorderlevel" type="numeric"/>
+            <column name="lastcost" type="numeric"/>
+            <column name="lastsellingprice" type="numeric"/>
+            <column name="lmu" type="numeric"/>
+            <column name="lmd" type="date"/>
+            <column name="availablequantity" type="numeric"/>
+            <column name="hasbatches" type="boolean"/>
+            <column name="itemspecfilepath" type="string"/>
+            <column name="itemimagepath" type="string"/>
+            <column name="returnprice" type="numeric"/>
+            <column name="activeitem" type="boolean"/>
+            <column name="minstock" type="numeric"/>
+            <column name="maxstock" type="numeric"/>
+            <column name="dailyaverage" type="numeric"/>
+            <column name="bufferlevel" type="numeric"/>
+            <column name="leadtime" type="numeric"/>
+            <column name="buffertime" type="numeric"/>
+            <column name="saftydays" type="numeric"/>
+            <column name="accountcode" type="string"/>
+            <column name="accountid" type="numeric"/>
+            <column name="casepackqty" type="numeric"/>
+            <column name="isregistered" type="boolean"/>
+            <column name="defaultstocklocationid" type="numeric"/>
+            <column name="rackno" type="string"/>
+            <column name="barcodeimage" type="blob"/>
+            <column name="barcodeimage_content_type" type="string"/>
+            <column name="commissionempid" type="numeric"/>
+            <column name="checktypeid" type="numeric"/>
+            <column name="checktype" type="string"/>
+            <column name="reorderqty" type="numeric"/>
+            <column name="notininvoice" type="boolean"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

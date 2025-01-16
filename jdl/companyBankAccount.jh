@@ -1,0 +1,17 @@
+entity Companybankaccount {
+    companyid Integer // CompanyId
+    accountnumber String // AccountNumber
+    accountname String // AccountName
+    bankname String // BankName
+    bankid Integer // BankId
+    branchname String // BranchName
+    branchid Integer // BranchId
+    amount Float // Amount
+    accountcode String // AccountCode
+    accountid Integer // AccountId
+    lmd Instant // LMD
+    lmu String // LMU
+    isactive Boolean // IsActive
+    accounttypeid Integer // AccountTypeId
+}
+paginate * with pagination

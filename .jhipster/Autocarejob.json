@@ -1,0 +1,184 @@
+{
+  "annotations": {
+    "changelogDate": "20240820064617"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "jobnumber",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "vehicleid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "vehiclenumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "millage",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "nextmillage",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "nextservicedate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "vehicletypeid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "jobtypeid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "jobtypename",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "jobopenby",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "jobopentime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "specialrquirments",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "specialinstructions",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "remarks",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nextserviceinstructions",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastserviceinstructions",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isadvisorchecked",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "isempallocated",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "jobclosetime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "isjobclose",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "isfeedback",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "feedbackstatusid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "customername",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customertel",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "advisorfinalcheck",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "jobdate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "iscompanyservice",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "freeservicenumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "companyid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "updatetocustomer",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "nextgearoilmilage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isjobinvoiced",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "iswaiting",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "iscustomercomment",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "imagefolder",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "frontimage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "leftimage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rightimage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "backimage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dashboardimage",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Autocarejob",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

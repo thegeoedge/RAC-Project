@@ -1,0 +1,110 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (receipt()) {
+      <div>
+        <h2 data-cy="receiptDetailsHeading"><span>Receipt</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ receipt()!.id }}</span>
+          </dd>
+          <dt><span>Code</span></dt>
+          <dd>
+            <span>{{ receipt()!.code }}</span>
+          </dd>
+          <dt><span>Receiptdate</span></dt>
+          <dd>
+            <span>{{ receipt()!.receiptdate | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Customername</span></dt>
+          <dd>
+            <span>{{ receipt()!.customername }}</span>
+          </dd>
+          <dt><span>Customeraddress</span></dt>
+          <dd>
+            <span>{{ receipt()!.customeraddress }}</span>
+          </dd>
+          <dt><span>Totalamount</span></dt>
+          <dd>
+            <span>{{ receipt()!.totalamount }}</span>
+          </dd>
+          <dt><span>Totalamountinword</span></dt>
+          <dd>
+            <span>{{ receipt()!.totalamountinword }}</span>
+          </dd>
+          <dt><span>Comments</span></dt>
+          <dd>
+            <span>{{ receipt()!.comments }}</span>
+          </dd>
+          <dt><span>Lmu</span></dt>
+          <dd>
+            <span>{{ receipt()!.lmu }}</span>
+          </dd>
+          <dt><span>Lmd</span></dt>
+          <dd>
+            <span>{{ receipt()!.lmd | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Termid</span></dt>
+          <dd>
+            <span>{{ receipt()!.termid }}</span>
+          </dd>
+          <dt><span>Term</span></dt>
+          <dd>
+            <span>{{ receipt()!.term }}</span>
+          </dd>
+          <dt><span>Date</span></dt>
+          <dd>
+            <span>{{ receipt()!.date | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Amount</span></dt>
+          <dd>
+            <span>{{ receipt()!.amount }}</span>
+          </dd>
+          <dt><span>Checkdate</span></dt>
+          <dd>
+            <span>{{ receipt()!.checkdate | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Checkno</span></dt>
+          <dd>
+            <span>{{ receipt()!.checkno }}</span>
+          </dd>
+          <dt><span>Bank</span></dt>
+          <dd>
+            <span>{{ receipt()!.bank }}</span>
+          </dd>
+          <dt><span>Customerid</span></dt>
+          <dd>
+            <span>{{ receipt()!.customerid }}</span>
+          </dd>
+          <dt><span>Isactive</span></dt>
+          <dd>
+            <span>{{ receipt()!.isactive }}</span>
+          </dd>
+          <dt><span>Deposited</span></dt>
+          <dd>
+            <span>{{ receipt()!.deposited }}</span>
+          </dd>
+          <dt><span>Createdby</span></dt>
+          <dd>
+            <span>{{ receipt()!.createdby }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/receipt', receipt()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

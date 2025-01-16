@@ -1,0 +1,23 @@
+entity Accounts {
+    code String // Code
+    date Instant // Date
+    name String // Name
+    description String // Description
+    type Integer // Type
+    parent Integer // Parent
+    balance Float // Balance
+    lmu Integer // LMU
+    lmd Instant // LMD
+    hasbatches Boolean // HasBatches
+    accountvalue Float // AccountValue
+    accountlevel Integer // AccountLevel
+    accountsnumberingsystem Long // AccountsNumberingSystem
+    subparentid Integer // SubParentID
+    canedit Boolean // CanEdit
+    amount Float // Amount
+    creditamount Float // CreditAmount
+    debitamount Float // DebitAmount
+    debitorcredit String // DebitOrCredit
+    reporttype Integer // ReportType
+}
+paginate * with pagination

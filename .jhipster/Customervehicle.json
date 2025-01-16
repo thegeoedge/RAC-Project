@@ -1,0 +1,106 @@
+{
+  "annotations": {
+    "changelogDate": "20240820060841"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "customerid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "vehiclenumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "categoryid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "categoryname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "typeid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "typename",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "makeid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "makename",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "model",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "yom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customercode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "remarks",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "servicecount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "engNo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "chaNo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "milage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastservicedate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "nextservicedate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "nextgearoilmilage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nextmilage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "serviceperiod",
+      "fieldType": "Integer"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Customervehicle",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

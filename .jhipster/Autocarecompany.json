@@ -1,0 +1,72 @@
+{
+  "annotations": {
+    "changelogDate": "20241004114142"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "address",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "servicephone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sparepartphone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bodypaint",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "generalphone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fax",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "vatregnumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tinnumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "accountcode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "accountid",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Autocarecompany",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

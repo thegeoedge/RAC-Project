@@ -1,0 +1,72 @@
+{
+  "annotations": {
+    "changelogDate": "20240823112025"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "jobid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "vehicleid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "customerid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "customername",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contactno",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "vehicleno",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "vehiclebrand",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "vehiclemodel",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mileage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "addeddate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "iscalltocustomer",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "remarks",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "calldate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "Workshopvehiclework",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

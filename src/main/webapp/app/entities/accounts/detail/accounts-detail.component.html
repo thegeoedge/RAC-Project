@@ -1,0 +1,110 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (accounts()) {
+      <div>
+        <h2 data-cy="accountsDetailsHeading"><span>Accounts</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ accounts()!.id }}</span>
+          </dd>
+          <dt><span>Code</span></dt>
+          <dd>
+            <span>{{ accounts()!.code }}</span>
+          </dd>
+          <dt><span>Date</span></dt>
+          <dd>
+            <span>{{ accounts()!.date | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Name</span></dt>
+          <dd>
+            <span>{{ accounts()!.name }}</span>
+          </dd>
+          <dt><span>Description</span></dt>
+          <dd>
+            <span>{{ accounts()!.description }}</span>
+          </dd>
+          <dt><span>Type</span></dt>
+          <dd>
+            <span>{{ accounts()!.type }}</span>
+          </dd>
+          <dt><span>Parent</span></dt>
+          <dd>
+            <span>{{ accounts()!.parent }}</span>
+          </dd>
+          <dt><span>Balance</span></dt>
+          <dd>
+            <span>{{ accounts()!.balance }}</span>
+          </dd>
+          <dt><span>Lmu</span></dt>
+          <dd>
+            <span>{{ accounts()!.lmu }}</span>
+          </dd>
+          <dt><span>Lmd</span></dt>
+          <dd>
+            <span>{{ accounts()!.lmd | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Hasbatches</span></dt>
+          <dd>
+            <span>{{ accounts()!.hasbatches }}</span>
+          </dd>
+          <dt><span>Accountvalue</span></dt>
+          <dd>
+            <span>{{ accounts()!.accountvalue }}</span>
+          </dd>
+          <dt><span>Accountlevel</span></dt>
+          <dd>
+            <span>{{ accounts()!.accountlevel }}</span>
+          </dd>
+          <dt><span>Accountsnumberingsystem</span></dt>
+          <dd>
+            <span>{{ accounts()!.accountsnumberingsystem }}</span>
+          </dd>
+          <dt><span>Subparentid</span></dt>
+          <dd>
+            <span>{{ accounts()!.subparentid }}</span>
+          </dd>
+          <dt><span>Canedit</span></dt>
+          <dd>
+            <span>{{ accounts()!.canedit }}</span>
+          </dd>
+          <dt><span>Amount</span></dt>
+          <dd>
+            <span>{{ accounts()!.amount }}</span>
+          </dd>
+          <dt><span>Creditamount</span></dt>
+          <dd>
+            <span>{{ accounts()!.creditamount }}</span>
+          </dd>
+          <dt><span>Debitamount</span></dt>
+          <dd>
+            <span>{{ accounts()!.debitamount }}</span>
+          </dd>
+          <dt><span>Debitorcredit</span></dt>
+          <dd>
+            <span>{{ accounts()!.debitorcredit }}</span>
+          </dd>
+          <dt><span>Reporttype</span></dt>
+          <dd>
+            <span>{{ accounts()!.reporttype }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/accounts', accounts()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

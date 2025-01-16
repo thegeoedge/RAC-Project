@@ -1,0 +1,16 @@
+{
+  "annotations": {
+    "changelogDate": "20241004105944"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "millage",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Autocareservicemillages",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

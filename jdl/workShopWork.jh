@@ -1,0 +1,8 @@
+entity Workshopworklist {
+    workshopwork String // WorkShopWork
+    workshopworkdescription String // WorkShopWorkDescription
+    isactive Boolean // IsActive
+    lmd Instant // LMD
+    lmu Integer // LMU
+}
+paginate * with pagination

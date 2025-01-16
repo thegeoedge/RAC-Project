@@ -1,0 +1,150 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (autojobsinvoice()) {
+      <div>
+        <h2 data-cy="autojobsinvoiceDetailsHeading"><span>Autojobsinvoice</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.id }}</span>
+          </dd>
+          <dt><span>Code</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.code }}</span>
+          </dd>
+          <dt><span>Invoicedate</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.invoicedate | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Createddate</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.createddate | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Jobid</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.jobid }}</span>
+          </dd>
+          <dt><span>Quoteid</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.quoteid }}</span>
+          </dd>
+          <dt><span>Orderid</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.orderid }}</span>
+          </dd>
+          <dt><span>Delieverydate</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.delieverydate | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Autojobsrepid</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.autojobsrepid }}</span>
+          </dd>
+          <dt><span>Autojobsrepname</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.autojobsrepname }}</span>
+          </dd>
+          <dt><span>Delieverfrom</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.delieverfrom }}</span>
+          </dd>
+          <dt><span>Customerid</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.customerid }}</span>
+          </dd>
+          <dt><span>Customername</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.customername }}</span>
+          </dd>
+          <dt><span>Customeraddress</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.customeraddress }}</span>
+          </dd>
+          <dt><span>Deliveryaddress</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.deliveryaddress }}</span>
+          </dd>
+          <dt><span>Subtotal</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.subtotal }}</span>
+          </dd>
+          <dt><span>Totaltax</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.totaltax }}</span>
+          </dd>
+          <dt><span>Totaldiscount</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.totaldiscount }}</span>
+          </dd>
+          <dt><span>Nettotal</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.nettotal }}</span>
+          </dd>
+          <dt><span>Message</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.message }}</span>
+          </dd>
+          <dt><span>Lmu</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.lmu }}</span>
+          </dd>
+          <dt><span>Lmd</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.lmd | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Paidamount</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.paidamount }}</span>
+          </dd>
+          <dt><span>Amountowing</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.amountowing }}</span>
+          </dd>
+          <dt><span>Isactive</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.isactive }}</span>
+          </dd>
+          <dt><span>Locationid</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.locationid }}</span>
+          </dd>
+          <dt><span>Locationcode</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.locationcode }}</span>
+          </dd>
+          <dt><span>Referencecode</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.referencecode }}</span>
+          </dd>
+          <dt><span>Createdbyid</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.createdbyid }}</span>
+          </dd>
+          <dt><span>Createdbyname</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.createdbyname }}</span>
+          </dd>
+          <dt><span>Autocarecompanyid</span></dt>
+          <dd>
+            <span>{{ autojobsinvoice()!.autocarecompanyid }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/autojobsinvoice', autojobsinvoice()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

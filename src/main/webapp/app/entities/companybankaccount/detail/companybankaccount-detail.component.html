@@ -1,0 +1,86 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (companybankaccount()) {
+      <div>
+        <h2 data-cy="companybankaccountDetailsHeading"><span>Companybankaccount</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ companybankaccount()!.id }}</span>
+          </dd>
+          <dt><span>Companyid</span></dt>
+          <dd>
+            <span>{{ companybankaccount()!.companyid }}</span>
+          </dd>
+          <dt><span>Accountnumber</span></dt>
+          <dd>
+            <span>{{ companybankaccount()!.accountnumber }}</span>
+          </dd>
+          <dt><span>Accountname</span></dt>
+          <dd>
+            <span>{{ companybankaccount()!.accountname }}</span>
+          </dd>
+          <dt><span>Bankname</span></dt>
+          <dd>
+            <span>{{ companybankaccount()!.bankname }}</span>
+          </dd>
+          <dt><span>Bankid</span></dt>
+          <dd>
+            <span>{{ companybankaccount()!.bankid }}</span>
+          </dd>
+          <dt><span>Branchname</span></dt>
+          <dd>
+            <span>{{ companybankaccount()!.branchname }}</span>
+          </dd>
+          <dt><span>Branchid</span></dt>
+          <dd>
+            <span>{{ companybankaccount()!.branchid }}</span>
+          </dd>
+          <dt><span>Amount</span></dt>
+          <dd>
+            <span>{{ companybankaccount()!.amount }}</span>
+          </dd>
+          <dt><span>Accountcode</span></dt>
+          <dd>
+            <span>{{ companybankaccount()!.accountcode }}</span>
+          </dd>
+          <dt><span>Accountid</span></dt>
+          <dd>
+            <span>{{ companybankaccount()!.accountid }}</span>
+          </dd>
+          <dt><span>Lmd</span></dt>
+          <dd>
+            <span>{{ companybankaccount()!.lmd | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Lmu</span></dt>
+          <dd>
+            <span>{{ companybankaccount()!.lmu }}</span>
+          </dd>
+          <dt><span>Isactive</span></dt>
+          <dd>
+            <span>{{ companybankaccount()!.isactive }}</span>
+          </dd>
+          <dt><span>Accounttypeid</span></dt>
+          <dd>
+            <span>{{ companybankaccount()!.accounttypeid }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/companybankaccount', companybankaccount()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

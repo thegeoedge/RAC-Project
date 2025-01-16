@@ -1,0 +1,20 @@
+entity Inventorybatches {
+    itemid Integer // ItemID
+    code String // Code
+    txdate Instant // TxDate
+    cost Float // Cost
+    price Float // Price
+    costwithoutvat Float // CostWithoutVat
+    pricewithoutvat Float // PriceWithoutVat
+    notes String // Notes
+    lmu Integer // LMU
+    lmd Instant // LMD
+    lineid Integer // LineId
+    manufacturedate Instant // ManufactureDate
+    expiredate Instant // ExpireDate
+    quantity Float // Quantity
+    addeddate Instant // AddedDate
+    costtotal Float // CostTotal
+    returnprice Float // ReturnPrice
+}
+paginate * with pagination

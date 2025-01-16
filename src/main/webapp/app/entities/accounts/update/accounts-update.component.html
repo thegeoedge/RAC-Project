@@ -1,0 +1,224 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-accounts-heading" data-cy="AccountsCreateUpdateHeading">Create or edit a Accounts</h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_code">Code</label>
+          <input type="text" class="form-control" name="code" id="field_code" data-cy="code" formControlName="code" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_date">Date</label>
+          <div class="d-flex">
+            <input
+              id="field_date"
+              data-cy="date"
+              type="datetime-local"
+              class="form-control"
+              name="date"
+              formControlName="date"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_name">Name</label>
+          <input type="text" class="form-control" name="name" id="field_name" data-cy="name" formControlName="name" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_description">Description</label>
+          <input
+            type="text"
+            class="form-control"
+            name="description"
+            id="field_description"
+            data-cy="description"
+            formControlName="description"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_type">Type</label>
+          <input type="number" class="form-control" name="type" id="field_type" data-cy="type" formControlName="type" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_parent">Parent</label>
+          <input type="number" class="form-control" name="parent" id="field_parent" data-cy="parent" formControlName="parent" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_balance">Balance</label>
+          <input type="number" class="form-control" name="balance" id="field_balance" data-cy="balance" formControlName="balance" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lmu">Lmu</label>
+          <input type="number" class="form-control" name="lmu" id="field_lmu" data-cy="lmu" formControlName="lmu" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lmd">Lmd</label>
+          <div class="d-flex">
+            <input
+              id="field_lmd"
+              data-cy="lmd"
+              type="datetime-local"
+              class="form-control"
+              name="lmd"
+              formControlName="lmd"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_hasbatches">Hasbatches</label>
+          <input
+            type="checkbox"
+            class="form-check"
+            name="hasbatches"
+            id="field_hasbatches"
+            data-cy="hasbatches"
+            formControlName="hasbatches"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_accountvalue">Accountvalue</label>
+          <input
+            type="number"
+            class="form-control"
+            name="accountvalue"
+            id="field_accountvalue"
+            data-cy="accountvalue"
+            formControlName="accountvalue"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_accountlevel">Accountlevel</label>
+          <input
+            type="number"
+            class="form-control"
+            name="accountlevel"
+            id="field_accountlevel"
+            data-cy="accountlevel"
+            formControlName="accountlevel"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_accountsnumberingsystem">Accountsnumberingsystem</label>
+          <input
+            type="number"
+            class="form-control"
+            name="accountsnumberingsystem"
+            id="field_accountsnumberingsystem"
+            data-cy="accountsnumberingsystem"
+            formControlName="accountsnumberingsystem"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_subparentid">Subparentid</label>
+          <input
+            type="number"
+            class="form-control"
+            name="subparentid"
+            id="field_subparentid"
+            data-cy="subparentid"
+            formControlName="subparentid"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_canedit">Canedit</label>
+          <input type="checkbox" class="form-check" name="canedit" id="field_canedit" data-cy="canedit" formControlName="canedit" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_amount">Amount</label>
+          <input type="number" class="form-control" name="amount" id="field_amount" data-cy="amount" formControlName="amount" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_creditamount">Creditamount</label>
+          <input
+            type="number"
+            class="form-control"
+            name="creditamount"
+            id="field_creditamount"
+            data-cy="creditamount"
+            formControlName="creditamount"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_debitamount">Debitamount</label>
+          <input
+            type="number"
+            class="form-control"
+            name="debitamount"
+            id="field_debitamount"
+            data-cy="debitamount"
+            formControlName="debitamount"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_debitorcredit">Debitorcredit</label>
+          <input
+            type="text"
+            class="form-control"
+            name="debitorcredit"
+            id="field_debitorcredit"
+            data-cy="debitorcredit"
+            formControlName="debitorcredit"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_reporttype">Reporttype</label>
+          <input
+            type="number"
+            class="form-control"
+            name="reporttype"
+            id="field_reporttype"
+            data-cy="reporttype"
+            formControlName="reporttype"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span>Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span>Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

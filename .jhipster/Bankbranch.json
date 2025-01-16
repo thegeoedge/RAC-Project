@@ -1,0 +1,24 @@
+{
+  "annotations": {
+    "changelogDate": "20241003083148"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "bankcode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "branchcode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "branchname",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Bankbranch",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

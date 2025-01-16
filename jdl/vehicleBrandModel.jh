@@ -1,0 +1,8 @@
+entity Vehiclebrandmodel {
+    brandid Integer // BrandId
+    brandname String // BrandName
+    model String // Model
+    lmu Integer // LMU
+    lmd Instant // LMD
+}
+paginate * with pagination

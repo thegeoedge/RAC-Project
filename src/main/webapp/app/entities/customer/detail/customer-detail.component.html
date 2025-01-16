@@ -1,0 +1,350 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (customer()) {
+      <div>
+        <h2 data-cy="customerDetailsHeading"><span>Customer</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ customer()!.id }}</span>
+          </dd>
+          <dt><span>Customertype</span></dt>
+          <dd>
+            <span>{{ customer()!.customertype }}</span>
+          </dd>
+          <dt><span>Code</span></dt>
+          <dd>
+            <span>{{ customer()!.code }}</span>
+          </dd>
+          <dt><span>Title</span></dt>
+          <dd>
+            <span>{{ customer()!.title }}</span>
+          </dd>
+          <dt><span>Namewithinitials</span></dt>
+          <dd>
+            <span>{{ customer()!.namewithinitials }}</span>
+          </dd>
+          <dt><span>Fullname</span></dt>
+          <dd>
+            <span>{{ customer()!.fullname }}</span>
+          </dd>
+          <dt><span>Callingname</span></dt>
+          <dd>
+            <span>{{ customer()!.callingname }}</span>
+          </dd>
+          <dt><span>Nicno</span></dt>
+          <dd>
+            <span>{{ customer()!.nicno }}</span>
+          </dd>
+          <dt><span>Nicissueddate</span></dt>
+          <dd>
+            <span>{{ customer()!.nicissueddate | formatMediumDate }}</span>
+          </dd>
+          <dt><span>Dateofbirth</span></dt>
+          <dd>
+            <span>{{ customer()!.dateofbirth | formatMediumDate }}</span>
+          </dd>
+          <dt><span>Bloodgroup</span></dt>
+          <dd>
+            <span>{{ customer()!.bloodgroup }}</span>
+          </dd>
+          <dt><span>Gender</span></dt>
+          <dd>
+            <span>{{ customer()!.gender }}</span>
+          </dd>
+          <dt><span>Maritalstatus</span></dt>
+          <dd>
+            <span>{{ customer()!.maritalstatus }}</span>
+          </dd>
+          <dt><span>Marrieddate</span></dt>
+          <dd>
+            <span>{{ customer()!.marrieddate | formatMediumDate }}</span>
+          </dd>
+          <dt><span>Nationality</span></dt>
+          <dd>
+            <span>{{ customer()!.nationality }}</span>
+          </dd>
+          <dt><span>Territory</span></dt>
+          <dd>
+            <span>{{ customer()!.territory }}</span>
+          </dd>
+          <dt><span>Religion</span></dt>
+          <dd>
+            <span>{{ customer()!.religion }}</span>
+          </dd>
+          <dt><span>Team</span></dt>
+          <dd>
+            <span>{{ customer()!.team }}</span>
+          </dd>
+          <dt><span>Businessname</span></dt>
+          <dd>
+            <span>{{ customer()!.businessname }}</span>
+          </dd>
+          <dt><span>Businessregdate</span></dt>
+          <dd>
+            <span>{{ customer()!.businessregdate | formatMediumDate }}</span>
+          </dd>
+          <dt><span>Businessregno</span></dt>
+          <dd>
+            <span>{{ customer()!.businessregno }}</span>
+          </dd>
+          <dt><span>Profilepicturepath</span></dt>
+          <dd>
+            <span>{{ customer()!.profilepicturepath }}</span>
+          </dd>
+          <dt><span>Residencehouseno</span></dt>
+          <dd>
+            <span>{{ customer()!.residencehouseno }}</span>
+          </dd>
+          <dt><span>Residenceaddress</span></dt>
+          <dd>
+            <span>{{ customer()!.residenceaddress }}</span>
+          </dd>
+          <dt><span>Residencecity</span></dt>
+          <dd>
+            <span>{{ customer()!.residencecity }}</span>
+          </dd>
+          <dt><span>Residencephone</span></dt>
+          <dd>
+            <span>{{ customer()!.residencephone }}</span>
+          </dd>
+          <dt><span>Businesslocationno</span></dt>
+          <dd>
+            <span>{{ customer()!.businesslocationno }}</span>
+          </dd>
+          <dt><span>Businessaddress</span></dt>
+          <dd>
+            <span>{{ customer()!.businessaddress }}</span>
+          </dd>
+          <dt><span>Businesscity</span></dt>
+          <dd>
+            <span>{{ customer()!.businesscity }}</span>
+          </dd>
+          <dt><span>Businessphone 1</span></dt>
+          <dd>
+            <span>{{ customer()!.businessphone1 }}</span>
+          </dd>
+          <dt><span>Businessphone 2</span></dt>
+          <dd>
+            <span>{{ customer()!.businessphone2 }}</span>
+          </dd>
+          <dt><span>Businessmobile</span></dt>
+          <dd>
+            <span>{{ customer()!.businessmobile }}</span>
+          </dd>
+          <dt><span>Businessfax</span></dt>
+          <dd>
+            <span>{{ customer()!.businessfax }}</span>
+          </dd>
+          <dt><span>Businessemail</span></dt>
+          <dd>
+            <span>{{ customer()!.businessemail }}</span>
+          </dd>
+          <dt><span>Businessprovinceid</span></dt>
+          <dd>
+            <span>{{ customer()!.businessprovinceid }}</span>
+          </dd>
+          <dt><span>Businessdistrictid</span></dt>
+          <dd>
+            <span>{{ customer()!.businessdistrictid }}</span>
+          </dd>
+          <dt><span>Contactpersonname</span></dt>
+          <dd>
+            <span>{{ customer()!.contactpersonname }}</span>
+          </dd>
+          <dt><span>Contactpersonphone</span></dt>
+          <dd>
+            <span>{{ customer()!.contactpersonphone }}</span>
+          </dd>
+          <dt><span>Contactpersonmobile</span></dt>
+          <dd>
+            <span>{{ customer()!.contactpersonmobile }}</span>
+          </dd>
+          <dt><span>Contactpersonemail</span></dt>
+          <dd>
+            <span>{{ customer()!.contactpersonemail }}</span>
+          </dd>
+          <dt><span>Rootmappath</span></dt>
+          <dd>
+            <span>{{ customer()!.rootmappath }}</span>
+          </dd>
+          <dt><span>Website</span></dt>
+          <dd>
+            <span>{{ customer()!.website }}</span>
+          </dd>
+          <dt><span>Registrationdate</span></dt>
+          <dd>
+            <span>{{ customer()!.registrationdate | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Isactive</span></dt>
+          <dd>
+            <span>{{ customer()!.isactive }}</span>
+          </dd>
+          <dt><span>Isinternalcustomer</span></dt>
+          <dd>
+            <span>{{ customer()!.isinternalcustomer }}</span>
+          </dd>
+          <dt><span>Description</span></dt>
+          <dd>
+            <span>{{ customer()!.description }}</span>
+          </dd>
+          <dt><span>Lmu</span></dt>
+          <dd>
+            <span>{{ customer()!.lmu }}</span>
+          </dd>
+          <dt><span>Lmd</span></dt>
+          <dd>
+            <span>{{ customer()!.lmd | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Maximumdiscount</span></dt>
+          <dd>
+            <span>{{ customer()!.maximumdiscount }}</span>
+          </dd>
+          <dt><span>Creditlimit</span></dt>
+          <dd>
+            <span>{{ customer()!.creditlimit }}</span>
+          </dd>
+          <dt><span>Hassecuritydeposit</span></dt>
+          <dd>
+            <span>{{ customer()!.hassecuritydeposit }}</span>
+          </dd>
+          <dt><span>Securitydepositamount</span></dt>
+          <dd>
+            <span>{{ customer()!.securitydepositamount }}</span>
+          </dd>
+          <dt><span>Paybycash</span></dt>
+          <dd>
+            <span>{{ customer()!.paybycash }}</span>
+          </dd>
+          <dt><span>Cashpaymentbeforeload</span></dt>
+          <dd>
+            <span>{{ customer()!.cashpaymentbeforeload }}</span>
+          </dd>
+          <dt><span>Cashlastinvoicebeforeload</span></dt>
+          <dd>
+            <span>{{ customer()!.cashlastinvoicebeforeload }}</span>
+          </dd>
+          <dt><span>Paybycredit</span></dt>
+          <dd>
+            <span>{{ customer()!.paybycredit }}</span>
+          </dd>
+          <dt><span>Creditoneweekcheck</span></dt>
+          <dd>
+            <span>{{ customer()!.creditoneweekcheck }}</span>
+          </dd>
+          <dt><span>Creditpaymentbydays</span></dt>
+          <dd>
+            <span>{{ customer()!.creditpaymentbydays }}</span>
+          </dd>
+          <dt><span>Haspurchasingdeposit</span></dt>
+          <dd>
+            <span>{{ customer()!.haspurchasingdeposit }}</span>
+          </dd>
+          <dt><span>Hassecuritydepositbond</span></dt>
+          <dd>
+            <span>{{ customer()!.hassecuritydepositbond }}</span>
+          </dd>
+          <dt><span>Hasassestsdeposit</span></dt>
+          <dd>
+            <span>{{ customer()!.hasassestsdeposit }}</span>
+          </dd>
+          <dt><span>Customerrootmappath</span></dt>
+          <dd>
+            <span>{{ customer()!.customerrootmappath }}</span>
+          </dd>
+          <dt><span>Employername</span></dt>
+          <dd>
+            <span>{{ customer()!.employername }}</span>
+          </dd>
+          <dt><span>Employeraddress</span></dt>
+          <dd>
+            <span>{{ customer()!.employeraddress }}</span>
+          </dd>
+          <dt><span>Employerphone</span></dt>
+          <dd>
+            <span>{{ customer()!.employerphone }}</span>
+          </dd>
+          <dt><span>Employerdesignation</span></dt>
+          <dd>
+            <span>{{ customer()!.employerdesignation }}</span>
+          </dd>
+          <dt><span>Previousemployername</span></dt>
+          <dd>
+            <span>{{ customer()!.previousemployername }}</span>
+          </dd>
+          <dt><span>Previousemployeraddress</span></dt>
+          <dd>
+            <span>{{ customer()!.previousemployeraddress }}</span>
+          </dd>
+          <dt><span>Previousindustry</span></dt>
+          <dd>
+            <span>{{ customer()!.previousindustry }}</span>
+          </dd>
+          <dt><span>Previousperiod</span></dt>
+          <dd>
+            <span>{{ customer()!.previousperiod }}</span>
+          </dd>
+          <dt><span>Previouspositions</span></dt>
+          <dd>
+            <span>{{ customer()!.previouspositions }}</span>
+          </dd>
+          <dt><span>Previousresionforleaving</span></dt>
+          <dd>
+            <span>{{ customer()!.previousresionforleaving }}</span>
+          </dd>
+          <dt><span>Hascreaditlimit</span></dt>
+          <dd>
+            <span>{{ customer()!.hascreaditlimit }}</span>
+          </dd>
+          <dt><span>Accountid</span></dt>
+          <dd>
+            <span>{{ customer()!.accountid }}</span>
+          </dd>
+          <dt><span>Accountcode</span></dt>
+          <dd>
+            <span>{{ customer()!.accountcode }}</span>
+          </dd>
+          <dt><span>Isregistered</span></dt>
+          <dd>
+            <span>{{ customer()!.isregistered }}</span>
+          </dd>
+          <dt><span>Vatregnumber</span></dt>
+          <dd>
+            <span>{{ customer()!.vatregnumber }}</span>
+          </dd>
+          <dt><span>Tinnumber</span></dt>
+          <dd>
+            <span>{{ customer()!.tinnumber }}</span>
+          </dd>
+          <dt><span>Lat</span></dt>
+          <dd>
+            <span>{{ customer()!.lat }}</span>
+          </dd>
+          <dt><span>Lon</span></dt>
+          <dd>
+            <span>{{ customer()!.lon }}</span>
+          </dd>
+          <dt><span>Creditperiod</span></dt>
+          <dd>
+            <span>{{ customer()!.creditperiod }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/customer', customer()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

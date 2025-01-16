@@ -1,0 +1,6 @@
+entity Autocaretimetable {
+    hoisttypeid Integer // HoistTypeId
+    hoisttypename String // HoistTypeName
+    hoisttime Instant // HoistTime
+}
+paginate * with pagination

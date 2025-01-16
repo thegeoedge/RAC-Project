@@ -1,0 +1,190 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-inventorybatches-heading" data-cy="InventorybatchesCreateUpdateHeading">Create or edit a Inventorybatches</h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_itemid">Itemid</label>
+          <input type="number" class="form-control" name="itemid" id="field_itemid" data-cy="itemid" formControlName="itemid" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_code">Code</label>
+          <input type="text" class="form-control" name="code" id="field_code" data-cy="code" formControlName="code" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_txdate">Txdate</label>
+          <div class="d-flex">
+            <input
+              id="field_txdate"
+              data-cy="txdate"
+              type="datetime-local"
+              class="form-control"
+              name="txdate"
+              formControlName="txdate"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_cost">Cost</label>
+          <input type="number" class="form-control" name="cost" id="field_cost" data-cy="cost" formControlName="cost" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_price">Price</label>
+          <input type="number" class="form-control" name="price" id="field_price" data-cy="price" formControlName="price" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_costwithoutvat">Costwithoutvat</label>
+          <input
+            type="number"
+            class="form-control"
+            name="costwithoutvat"
+            id="field_costwithoutvat"
+            data-cy="costwithoutvat"
+            formControlName="costwithoutvat"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_pricewithoutvat">Pricewithoutvat</label>
+          <input
+            type="number"
+            class="form-control"
+            name="pricewithoutvat"
+            id="field_pricewithoutvat"
+            data-cy="pricewithoutvat"
+            formControlName="pricewithoutvat"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_notes">Notes</label>
+          <input type="text" class="form-control" name="notes" id="field_notes" data-cy="notes" formControlName="notes" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lmu">Lmu</label>
+          <input type="number" class="form-control" name="lmu" id="field_lmu" data-cy="lmu" formControlName="lmu" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lmd">Lmd</label>
+          <div class="d-flex">
+            <input
+              id="field_lmd"
+              data-cy="lmd"
+              type="datetime-local"
+              class="form-control"
+              name="lmd"
+              formControlName="lmd"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lineid">Lineid</label>
+          <input type="number" class="form-control" name="lineid" id="field_lineid" data-cy="lineid" formControlName="lineid" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_manufacturedate">Manufacturedate</label>
+          <div class="d-flex">
+            <input
+              id="field_manufacturedate"
+              data-cy="manufacturedate"
+              type="datetime-local"
+              class="form-control"
+              name="manufacturedate"
+              formControlName="manufacturedate"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_expiredate">Expiredate</label>
+          <div class="d-flex">
+            <input
+              id="field_expiredate"
+              data-cy="expiredate"
+              type="datetime-local"
+              class="form-control"
+              name="expiredate"
+              formControlName="expiredate"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_quantity">Quantity</label>
+          <input type="number" class="form-control" name="quantity" id="field_quantity" data-cy="quantity" formControlName="quantity" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_addeddate">Addeddate</label>
+          <div class="d-flex">
+            <input
+              id="field_addeddate"
+              data-cy="addeddate"
+              type="datetime-local"
+              class="form-control"
+              name="addeddate"
+              formControlName="addeddate"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_costtotal">Costtotal</label>
+          <input type="number" class="form-control" name="costtotal" id="field_costtotal" data-cy="costtotal" formControlName="costtotal" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_returnprice">Returnprice</label>
+          <input
+            type="number"
+            class="form-control"
+            name="returnprice"
+            id="field_returnprice"
+            data-cy="returnprice"
+            formControlName="returnprice"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span>Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span>Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

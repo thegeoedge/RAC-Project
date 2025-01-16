@@ -1,0 +1,217 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (inventory()) {
+      <div>
+        <h2 data-cy="inventoryDetailsHeading"><span>Inventory</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ inventory()!.id }}</span>
+          </dd>
+          <dt><span>Code</span></dt>
+          <dd>
+            <span>{{ inventory()!.code }}</span>
+          </dd>
+          <dt><span>Partnumber</span></dt>
+          <dd>
+            <span>{{ inventory()!.partnumber }}</span>
+          </dd>
+          <dt><span>Name</span></dt>
+          <dd>
+            <span>{{ inventory()!.name }}</span>
+          </dd>
+          <dt><span>Description</span></dt>
+          <dd>
+            <span>{{ inventory()!.description }}</span>
+          </dd>
+          <dt><span>Type</span></dt>
+          <dd>
+            <span>{{ inventory()!.type }}</span>
+          </dd>
+          <dt><span>Classification 1</span></dt>
+          <dd>
+            <span>{{ inventory()!.classification1 }}</span>
+          </dd>
+          <dt><span>Classification 2</span></dt>
+          <dd>
+            <span>{{ inventory()!.classification2 }}</span>
+          </dd>
+          <dt><span>Classification 3</span></dt>
+          <dd>
+            <span>{{ inventory()!.classification3 }}</span>
+          </dd>
+          <dt><span>Classification 4</span></dt>
+          <dd>
+            <span>{{ inventory()!.classification4 }}</span>
+          </dd>
+          <dt><span>Classification 5</span></dt>
+          <dd>
+            <span>{{ inventory()!.classification5 }}</span>
+          </dd>
+          <dt><span>Unitofmeasurement</span></dt>
+          <dd>
+            <span>{{ inventory()!.unitofmeasurement }}</span>
+          </dd>
+          <dt><span>Decimalplaces</span></dt>
+          <dd>
+            <span>{{ inventory()!.decimalplaces }}</span>
+          </dd>
+          <dt><span>Isassemblyunit</span></dt>
+          <dd>
+            <span>{{ inventory()!.isassemblyunit }}</span>
+          </dd>
+          <dt><span>Assemblyunitof</span></dt>
+          <dd>
+            <span>{{ inventory()!.assemblyunitof }}</span>
+          </dd>
+          <dt><span>Reorderlevel</span></dt>
+          <dd>
+            <span>{{ inventory()!.reorderlevel }}</span>
+          </dd>
+          <dt><span>Lastcost</span></dt>
+          <dd>
+            <span>{{ inventory()!.lastcost }}</span>
+          </dd>
+          <dt><span>Lastsellingprice</span></dt>
+          <dd>
+            <span>{{ inventory()!.lastsellingprice }}</span>
+          </dd>
+          <dt><span>Lmu</span></dt>
+          <dd>
+            <span>{{ inventory()!.lmu }}</span>
+          </dd>
+          <dt><span>Lmd</span></dt>
+          <dd>
+            <span>{{ inventory()!.lmd | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Availablequantity</span></dt>
+          <dd>
+            <span>{{ inventory()!.availablequantity }}</span>
+          </dd>
+          <dt><span>Hasbatches</span></dt>
+          <dd>
+            <span>{{ inventory()!.hasbatches }}</span>
+          </dd>
+          <dt><span>Itemspecfilepath</span></dt>
+          <dd>
+            <span>{{ inventory()!.itemspecfilepath }}</span>
+          </dd>
+          <dt><span>Itemimagepath</span></dt>
+          <dd>
+            <span>{{ inventory()!.itemimagepath }}</span>
+          </dd>
+          <dt><span>Returnprice</span></dt>
+          <dd>
+            <span>{{ inventory()!.returnprice }}</span>
+          </dd>
+          <dt><span>Activeitem</span></dt>
+          <dd>
+            <span>{{ inventory()!.activeitem }}</span>
+          </dd>
+          <dt><span>Minstock</span></dt>
+          <dd>
+            <span>{{ inventory()!.minstock }}</span>
+          </dd>
+          <dt><span>Maxstock</span></dt>
+          <dd>
+            <span>{{ inventory()!.maxstock }}</span>
+          </dd>
+          <dt><span>Dailyaverage</span></dt>
+          <dd>
+            <span>{{ inventory()!.dailyaverage }}</span>
+          </dd>
+          <dt><span>Bufferlevel</span></dt>
+          <dd>
+            <span>{{ inventory()!.bufferlevel }}</span>
+          </dd>
+          <dt><span>Leadtime</span></dt>
+          <dd>
+            <span>{{ inventory()!.leadtime }}</span>
+          </dd>
+          <dt><span>Buffertime</span></dt>
+          <dd>
+            <span>{{ inventory()!.buffertime }}</span>
+          </dd>
+          <dt><span>Saftydays</span></dt>
+          <dd>
+            <span>{{ inventory()!.saftydays }}</span>
+          </dd>
+          <dt><span>Accountcode</span></dt>
+          <dd>
+            <span>{{ inventory()!.accountcode }}</span>
+          </dd>
+          <dt><span>Accountid</span></dt>
+          <dd>
+            <span>{{ inventory()!.accountid }}</span>
+          </dd>
+          <dt><span>Casepackqty</span></dt>
+          <dd>
+            <span>{{ inventory()!.casepackqty }}</span>
+          </dd>
+          <dt><span>Isregistered</span></dt>
+          <dd>
+            <span>{{ inventory()!.isregistered }}</span>
+          </dd>
+          <dt><span>Defaultstocklocationid</span></dt>
+          <dd>
+            <span>{{ inventory()!.defaultstocklocationid }}</span>
+          </dd>
+          <dt><span>Rackno</span></dt>
+          <dd>
+            <span>{{ inventory()!.rackno }}</span>
+          </dd>
+          <dt><span>Barcodeimage</span></dt>
+          <dd>
+            @if (inventory()!.barcodeimage) {
+              <div>
+                <a (click)="openFile(inventory()!.barcodeimage ?? '', inventory()!.barcodeimageContentType)">
+                  <img
+                    [src]="'data:' + inventory()!.barcodeimageContentType + ';base64,' + inventory()!.barcodeimage"
+                    style="max-width: 100%"
+                    alt="inventory"
+                  />
+                </a>
+                {{ inventory()!.barcodeimageContentType }}, {{ byteSize(inventory()!.barcodeimage ?? '') }}
+              </div>
+            }
+          </dd>
+          <dt><span>Commissionempid</span></dt>
+          <dd>
+            <span>{{ inventory()!.commissionempid }}</span>
+          </dd>
+          <dt><span>Checktypeid</span></dt>
+          <dd>
+            <span>{{ inventory()!.checktypeid }}</span>
+          </dd>
+          <dt><span>Checktype</span></dt>
+          <dd>
+            <span>{{ inventory()!.checktype }}</span>
+          </dd>
+          <dt><span>Reorderqty</span></dt>
+          <dd>
+            <span>{{ inventory()!.reorderqty }}</span>
+          </dd>
+          <dt><span>Notininvoice</span></dt>
+          <dd>
+            <span>{{ inventory()!.notininvoice }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/inventory', inventory()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,241 @@
+<div>
+  <h2 id="page-heading" data-cy="InventorybatchesHeading">
+    <span>Inventorybatches</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span>Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-inventorybatches"
+        [routerLink]="['/inventorybatches/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span>Create a new Inventorybatches</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (inventorybatches?.length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span>No Inventorybatches found</span>
+    </div>
+  }
+
+  @if (inventorybatches && inventorybatches.length > 0) {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [sortState]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span>ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="itemid">
+              <div class="d-flex">
+                <span>Itemid</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="code">
+              <div class="d-flex">
+                <span>Code</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="txdate">
+              <div class="d-flex">
+                <span>Txdate</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="cost">
+              <div class="d-flex">
+                <span>Cost</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="price">
+              <div class="d-flex">
+                <span>Price</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="costwithoutvat">
+              <div class="d-flex">
+                <span>Costwithoutvat</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="pricewithoutvat">
+              <div class="d-flex">
+                <span>Pricewithoutvat</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="notes">
+              <div class="d-flex">
+                <span>Notes</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="lmu">
+              <div class="d-flex">
+                <span>Lmu</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="lmd">
+              <div class="d-flex">
+                <span>Lmd</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="lineid">
+              <div class="d-flex">
+                <span>Lineid</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="manufacturedate">
+              <div class="d-flex">
+                <span>Manufacturedate</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="expiredate">
+              <div class="d-flex">
+                <span>Expiredate</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="quantity">
+              <div class="d-flex">
+                <span>Quantity</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="addeddate">
+              <div class="d-flex">
+                <span>Addeddate</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="costtotal">
+              <div class="d-flex">
+                <span>Costtotal</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="returnprice">
+              <div class="d-flex">
+                <span>Returnprice</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (inventorybatches of inventorybatches; track trackId) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/inventorybatches', inventorybatches.id, 'view']">{{ inventorybatches.id }}</a>
+              </td>
+              <td>{{ inventorybatches.itemid }}</td>
+              <td>{{ inventorybatches.code }}</td>
+              <td>{{ inventorybatches.txdate | formatMediumDatetime }}</td>
+              <td>{{ inventorybatches.cost }}</td>
+              <td>{{ inventorybatches.price }}</td>
+              <td>{{ inventorybatches.costwithoutvat }}</td>
+              <td>{{ inventorybatches.pricewithoutvat }}</td>
+              <td>{{ inventorybatches.notes }}</td>
+              <td>{{ inventorybatches.lmu }}</td>
+              <td>{{ inventorybatches.lmd | formatMediumDatetime }}</td>
+              <td>{{ inventorybatches.lineid }}</td>
+              <td>{{ inventorybatches.manufacturedate | formatMediumDatetime }}</td>
+              <td>{{ inventorybatches.expiredate | formatMediumDatetime }}</td>
+              <td>{{ inventorybatches.quantity }}</td>
+              <td>{{ inventorybatches.addeddate | formatMediumDatetime }}</td>
+              <td>{{ inventorybatches.costtotal }}</td>
+              <td>{{ inventorybatches.returnprice }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/inventorybatches', inventorybatches.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline">View</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/inventorybatches', inventorybatches.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline">Edit</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(inventorybatches)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+  @if (inventorybatches && inventorybatches.length > 0) {
+    <div>
+      <div class="d-flex justify-content-center">
+        <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <ngb-pagination
+          [collectionSize]="totalItems"
+          [page]="page"
+          [pageSize]="itemsPerPage"
+          [maxSize]="5"
+          [rotate]="true"
+          [boundaryLinks]="true"
+          (pageChange)="navigateToPage($event)"
+        ></ngb-pagination>
+      </div>
+    </div>
+  }
+</div>

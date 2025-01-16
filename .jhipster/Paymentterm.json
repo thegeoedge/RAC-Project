@@ -1,0 +1,20 @@
+{
+  "annotations": {
+    "changelogDate": "20241003063956"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "paymenttype",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "forvoucher",
+      "fieldType": "Boolean"
+    }
+  ],
+  "name": "Paymentterm",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

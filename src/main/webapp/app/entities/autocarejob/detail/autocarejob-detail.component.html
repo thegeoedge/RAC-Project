@@ -1,0 +1,202 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (autocarejob()) {
+      <div>
+        <h2 data-cy="autocarejobDetailsHeading"><span>Autocarejob</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.id }}</span>
+          </dd>
+          <dt><span>Jobnumber</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.jobnumber }}</span>
+          </dd>
+          <dt><span>Vehicleid</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.vehicleid }}</span>
+          </dd>
+          <dt><span>Vehiclenumber</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.vehiclenumber }}</span>
+          </dd>
+          <dt><span>Millage</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.millage }}</span>
+          </dd>
+          <dt><span>Nextmillage</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.nextmillage }}</span>
+          </dd>
+          <dt><span>Nextservicedate</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.nextservicedate | formatMediumDate }}</span>
+          </dd>
+          <dt><span>Vehicletypeid</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.vehicletypeid }}</span>
+          </dd>
+          <dt><span>Jobtypeid</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.jobtypeid }}</span>
+          </dd>
+          <dt><span>Jobtypename</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.jobtypename }}</span>
+          </dd>
+          <dt><span>Jobopenby</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.jobopenby }}</span>
+          </dd>
+          <dt><span>Jobopentime</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.jobopentime | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Lmu</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.lmu }}</span>
+          </dd>
+          <dt><span>Lmd</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.lmd | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Specialrquirments</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.specialrquirments }}</span>
+          </dd>
+          <dt><span>Specialinstructions</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.specialinstructions }}</span>
+          </dd>
+          <dt><span>Remarks</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.remarks }}</span>
+          </dd>
+          <dt><span>Nextserviceinstructions</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.nextserviceinstructions }}</span>
+          </dd>
+          <dt><span>Lastserviceinstructions</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.lastserviceinstructions }}</span>
+          </dd>
+          <dt><span>Isadvisorchecked</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.isadvisorchecked }}</span>
+          </dd>
+          <dt><span>Isempallocated</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.isempallocated }}</span>
+          </dd>
+          <dt><span>Jobclosetime</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.jobclosetime | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Isjobclose</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.isjobclose }}</span>
+          </dd>
+          <dt><span>Isfeedback</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.isfeedback }}</span>
+          </dd>
+          <dt><span>Feedbackstatusid</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.feedbackstatusid }}</span>
+          </dd>
+          <dt><span>Customername</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.customername }}</span>
+          </dd>
+          <dt><span>Customertel</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.customertel }}</span>
+          </dd>
+          <dt><span>Customerid</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.customerid }}</span>
+          </dd>
+          <dt><span>Advisorfinalcheck</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.advisorfinalcheck }}</span>
+          </dd>
+          <dt><span>Jobdate</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.jobdate | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Iscompanyservice</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.iscompanyservice }}</span>
+          </dd>
+          <dt><span>Freeservicenumber</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.freeservicenumber }}</span>
+          </dd>
+          <dt><span>Companyid</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.companyid }}</span>
+          </dd>
+          <dt><span>Updatetocustomer</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.updatetocustomer }}</span>
+          </dd>
+          <dt><span>Nextgearoilmilage</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.nextgearoilmilage }}</span>
+          </dd>
+          <dt><span>Isjobinvoiced</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.isjobinvoiced }}</span>
+          </dd>
+          <dt><span>Iswaiting</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.iswaiting }}</span>
+          </dd>
+          <dt><span>Iscustomercomment</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.iscustomercomment }}</span>
+          </dd>
+          <dt><span>Imagefolder</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.imagefolder }}</span>
+          </dd>
+          <dt><span>Frontimage</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.frontimage }}</span>
+          </dd>
+          <dt><span>Leftimage</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.leftimage }}</span>
+          </dd>
+          <dt><span>Rightimage</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.rightimage }}</span>
+          </dd>
+          <dt><span>Backimage</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.backimage }}</span>
+          </dd>
+          <dt><span>Dashboardimage</span></dt>
+          <dd>
+            <span>{{ autocarejob()!.dashboardimage }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/autocarejob', autocarejob()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

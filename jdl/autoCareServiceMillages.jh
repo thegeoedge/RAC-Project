@@ -1,0 +1,4 @@
+entity Autocareservicemillages {
+    millage Integer // Millage
+}
+paginate * with pagination

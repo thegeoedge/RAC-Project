@@ -1,0 +1,93 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-lastserviceinstructions-heading" data-cy="LastserviceinstructionsCreateUpdateHeading">
+        Create or edit a Lastserviceinstructions
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_jobid">Jobid</label>
+          <input type="number" class="form-control" name="jobid" id="field_jobid" data-cy="jobid" formControlName="jobid" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_instruction">Instruction</label>
+          <input
+            type="text"
+            class="form-control"
+            name="instruction"
+            id="field_instruction"
+            data-cy="instruction"
+            formControlName="instruction"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_isactive">Isactive</label>
+          <input type="checkbox" class="form-check" name="isactive" id="field_isactive" data-cy="isactive" formControlName="isactive" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lmu">Lmu</label>
+          <input type="number" class="form-control" name="lmu" id="field_lmu" data-cy="lmu" formControlName="lmu" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lmd">Lmd</label>
+          <div class="d-flex">
+            <input
+              id="field_lmd"
+              data-cy="lmd"
+              type="datetime-local"
+              class="form-control"
+              name="lmd"
+              formControlName="lmd"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ignore">Ignore</label>
+          <input type="checkbox" class="form-check" name="ignore" id="field_ignore" data-cy="ignore" formControlName="ignore" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_vehicleid">Vehicleid</label>
+          <input type="number" class="form-control" name="vehicleid" id="field_vehicleid" data-cy="vehicleid" formControlName="vehicleid" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_vehicleno">Vehicleno</label>
+          <input type="text" class="form-control" name="vehicleno" id="field_vehicleno" data-cy="vehicleno" formControlName="vehicleno" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span>Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span>Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

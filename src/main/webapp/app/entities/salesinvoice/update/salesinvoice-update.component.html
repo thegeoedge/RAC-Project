@@ -1,0 +1,551 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-salesinvoice-heading" data-cy="SalesinvoiceCreateUpdateHeading">Create or edit a Salesinvoice</h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_code">Code</label>
+          <input type="text" class="form-control" name="code" id="field_code" data-cy="code" formControlName="code" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_invoicedate">Invoicedate</label>
+          <div class="d-flex">
+            <input
+              id="field_invoicedate"
+              data-cy="invoicedate"
+              type="datetime-local"
+              class="form-control"
+              name="invoicedate"
+              formControlName="invoicedate"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_createddate">Createddate</label>
+          <div class="d-flex">
+            <input
+              id="field_createddate"
+              data-cy="createddate"
+              type="datetime-local"
+              class="form-control"
+              name="createddate"
+              formControlName="createddate"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_quoteid">Quoteid</label>
+          <input type="number" class="form-control" name="quoteid" id="field_quoteid" data-cy="quoteid" formControlName="quoteid" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_orderid">Orderid</label>
+          <input type="number" class="form-control" name="orderid" id="field_orderid" data-cy="orderid" formControlName="orderid" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_delieverydate">Delieverydate</label>
+          <div class="d-flex">
+            <input
+              id="field_delieverydate"
+              data-cy="delieverydate"
+              type="datetime-local"
+              class="form-control"
+              name="delieverydate"
+              formControlName="delieverydate"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_salesrepid">Salesrepid</label>
+          <input
+            type="number"
+            class="form-control"
+            name="salesrepid"
+            id="field_salesrepid"
+            data-cy="salesrepid"
+            formControlName="salesrepid"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_salesrepname">Salesrepname</label>
+          <input
+            type="text"
+            class="form-control"
+            name="salesrepname"
+            id="field_salesrepname"
+            data-cy="salesrepname"
+            formControlName="salesrepname"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_delieverfrom">Delieverfrom</label>
+          <input
+            type="text"
+            class="form-control"
+            name="delieverfrom"
+            id="field_delieverfrom"
+            data-cy="delieverfrom"
+            formControlName="delieverfrom"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_customerid">Customerid</label>
+          <input
+            type="number"
+            class="form-control"
+            name="customerid"
+            id="field_customerid"
+            data-cy="customerid"
+            formControlName="customerid"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_customername">Customername</label>
+          <input
+            type="text"
+            class="form-control"
+            name="customername"
+            id="field_customername"
+            data-cy="customername"
+            formControlName="customername"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_customeraddress">Customeraddress</label>
+          <input
+            type="text"
+            class="form-control"
+            name="customeraddress"
+            id="field_customeraddress"
+            data-cy="customeraddress"
+            formControlName="customeraddress"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_deliveryaddress">Deliveryaddress</label>
+          <input
+            type="text"
+            class="form-control"
+            name="deliveryaddress"
+            id="field_deliveryaddress"
+            data-cy="deliveryaddress"
+            formControlName="deliveryaddress"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_subtotal">Subtotal</label>
+          <input type="number" class="form-control" name="subtotal" id="field_subtotal" data-cy="subtotal" formControlName="subtotal" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_totaltax">Totaltax</label>
+          <input type="number" class="form-control" name="totaltax" id="field_totaltax" data-cy="totaltax" formControlName="totaltax" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_totaldiscount">Totaldiscount</label>
+          <input
+            type="number"
+            class="form-control"
+            name="totaldiscount"
+            id="field_totaldiscount"
+            data-cy="totaldiscount"
+            formControlName="totaldiscount"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nettotal">Nettotal</label>
+          <input type="number" class="form-control" name="nettotal" id="field_nettotal" data-cy="nettotal" formControlName="nettotal" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_message">Message</label>
+          <input type="text" class="form-control" name="message" id="field_message" data-cy="message" formControlName="message" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lmu">Lmu</label>
+          <input type="number" class="form-control" name="lmu" id="field_lmu" data-cy="lmu" formControlName="lmu" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lmd">Lmd</label>
+          <div class="d-flex">
+            <input
+              id="field_lmd"
+              data-cy="lmd"
+              type="datetime-local"
+              class="form-control"
+              name="lmd"
+              formControlName="lmd"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_paidamount">Paidamount</label>
+          <input
+            type="number"
+            class="form-control"
+            name="paidamount"
+            id="field_paidamount"
+            data-cy="paidamount"
+            formControlName="paidamount"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_amountowing">Amountowing</label>
+          <input
+            type="number"
+            class="form-control"
+            name="amountowing"
+            id="field_amountowing"
+            data-cy="amountowing"
+            formControlName="amountowing"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_isactive">Isactive</label>
+          <input type="checkbox" class="form-check" name="isactive" id="field_isactive" data-cy="isactive" formControlName="isactive" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_locationid">Locationid</label>
+          <input
+            type="number"
+            class="form-control"
+            name="locationid"
+            id="field_locationid"
+            data-cy="locationid"
+            formControlName="locationid"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_locationcode">Locationcode</label>
+          <input
+            type="text"
+            class="form-control"
+            name="locationcode"
+            id="field_locationcode"
+            data-cy="locationcode"
+            formControlName="locationcode"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_referencecode">Referencecode</label>
+          <input
+            type="text"
+            class="form-control"
+            name="referencecode"
+            id="field_referencecode"
+            data-cy="referencecode"
+            formControlName="referencecode"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_createdbyid">Createdbyid</label>
+          <input
+            type="number"
+            class="form-control"
+            name="createdbyid"
+            id="field_createdbyid"
+            data-cy="createdbyid"
+            formControlName="createdbyid"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_createdbyname">Createdbyname</label>
+          <input
+            type="text"
+            class="form-control"
+            name="createdbyname"
+            id="field_createdbyname"
+            data-cy="createdbyname"
+            formControlName="createdbyname"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_autocarecharges">Autocarecharges</label>
+          <input
+            type="number"
+            class="form-control"
+            name="autocarecharges"
+            id="field_autocarecharges"
+            data-cy="autocarecharges"
+            formControlName="autocarecharges"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_autocarejobid">Autocarejobid</label>
+          <input
+            type="number"
+            class="form-control"
+            name="autocarejobid"
+            id="field_autocarejobid"
+            data-cy="autocarejobid"
+            formControlName="autocarejobid"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_vehicleno">Vehicleno</label>
+          <input type="text" class="form-control" name="vehicleno" id="field_vehicleno" data-cy="vehicleno" formControlName="vehicleno" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nextmeter">Nextmeter</label>
+          <input type="text" class="form-control" name="nextmeter" id="field_nextmeter" data-cy="nextmeter" formControlName="nextmeter" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_currentmeter">Currentmeter</label>
+          <input
+            type="text"
+            class="form-control"
+            name="currentmeter"
+            id="field_currentmeter"
+            data-cy="currentmeter"
+            formControlName="currentmeter"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_remarks">Remarks</label>
+          <input type="text" class="form-control" name="remarks" id="field_remarks" data-cy="remarks" formControlName="remarks" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_hasdummybill">Hasdummybill</label>
+          <input
+            type="checkbox"
+            class="form-check"
+            name="hasdummybill"
+            id="field_hasdummybill"
+            data-cy="hasdummybill"
+            formControlName="hasdummybill"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_dummybillid">Dummybillid</label>
+          <input
+            type="number"
+            class="form-control"
+            name="dummybillid"
+            id="field_dummybillid"
+            data-cy="dummybillid"
+            formControlName="dummybillid"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_dummybillamount">Dummybillamount</label>
+          <input
+            type="number"
+            class="form-control"
+            name="dummybillamount"
+            id="field_dummybillamount"
+            data-cy="dummybillamount"
+            formControlName="dummybillamount"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_dummycommision">Dummycommision</label>
+          <input
+            type="number"
+            class="form-control"
+            name="dummycommision"
+            id="field_dummycommision"
+            data-cy="dummycommision"
+            formControlName="dummycommision"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_isserviceinvoice">Isserviceinvoice</label>
+          <input
+            type="checkbox"
+            class="form-check"
+            name="isserviceinvoice"
+            id="field_isserviceinvoice"
+            data-cy="isserviceinvoice"
+            formControlName="isserviceinvoice"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nbtamount">Nbtamount</label>
+          <input type="number" class="form-control" name="nbtamount" id="field_nbtamount" data-cy="nbtamount" formControlName="nbtamount" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_vatamount">Vatamount</label>
+          <input type="number" class="form-control" name="vatamount" id="field_vatamount" data-cy="vatamount" formControlName="vatamount" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_autocarecompanyid">Autocarecompanyid</label>
+          <input
+            type="number"
+            class="form-control"
+            name="autocarecompanyid"
+            id="field_autocarecompanyid"
+            data-cy="autocarecompanyid"
+            formControlName="autocarecompanyid"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_iscompanyinvoice">Iscompanyinvoice</label>
+          <input
+            type="checkbox"
+            class="form-check"
+            name="iscompanyinvoice"
+            id="field_iscompanyinvoice"
+            data-cy="iscompanyinvoice"
+            formControlName="iscompanyinvoice"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_invcanceldate">Invcanceldate</label>
+          <div class="d-flex">
+            <input
+              id="field_invcanceldate"
+              data-cy="invcanceldate"
+              type="datetime-local"
+              class="form-control"
+              name="invcanceldate"
+              formControlName="invcanceldate"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_invcancelby">Invcancelby</label>
+          <input
+            type="number"
+            class="form-control"
+            name="invcancelby"
+            id="field_invcancelby"
+            data-cy="invcancelby"
+            formControlName="invcancelby"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_isvatinvoice">Isvatinvoice</label>
+          <input
+            type="checkbox"
+            class="form-check"
+            name="isvatinvoice"
+            id="field_isvatinvoice"
+            data-cy="isvatinvoice"
+            formControlName="isvatinvoice"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_paymenttype">Paymenttype</label>
+          <input
+            type="text"
+            class="form-control"
+            name="paymenttype"
+            id="field_paymenttype"
+            data-cy="paymenttype"
+            formControlName="paymenttype"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_pendingamount">Pendingamount</label>
+          <input
+            type="number"
+            class="form-control"
+            name="pendingamount"
+            id="field_pendingamount"
+            data-cy="pendingamount"
+            formControlName="pendingamount"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_advancepayment">Advancepayment</label>
+          <input
+            type="number"
+            class="form-control"
+            name="advancepayment"
+            id="field_advancepayment"
+            data-cy="advancepayment"
+            formControlName="advancepayment"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_discountcode">Discountcode</label>
+          <input
+            type="text"
+            class="form-control"
+            name="discountcode"
+            id="field_discountcode"
+            data-cy="discountcode"
+            formControlName="discountcode"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span>Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span>Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

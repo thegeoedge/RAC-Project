@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (autocarejobinimages()) {
+      <div>
+        <h2 data-cy="autocarejobinimagesDetailsHeading"><span>Autocarejobinimages</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ autocarejobinimages()!.id }}</span>
+          </dd>
+          <dt><span>Jobid</span></dt>
+          <dd>
+            <span>{{ autocarejobinimages()!.jobid }}</span>
+          </dd>
+          <dt><span>Imagefolder</span></dt>
+          <dd>
+            <span>{{ autocarejobinimages()!.imagefolder }}</span>
+          </dd>
+          <dt><span>Imagename</span></dt>
+          <dd>
+            <span>{{ autocarejobinimages()!.imagename }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/autocarejobinimages', autocarejobinimages()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

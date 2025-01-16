@@ -1,0 +1,212 @@
+{
+  "annotations": {
+    "changelogDate": "20241003065323"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "invoicedate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createddate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "quoteid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "orderid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "delieverydate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "salesrepid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "salesrepname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "delieverfrom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "customername",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customeraddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "deliveryaddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "subtotal",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "totaltax",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "totaldiscount",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "nettotal",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "message",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "paidamount",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "amountowing",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "isactive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "locationid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "locationcode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "referencecode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdbyid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "createdbyname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "autocarecharges",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "autocarejobid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "vehicleno",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nextmeter",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "currentmeter",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "remarks",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "hasdummybill",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "dummybillid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "dummybillamount",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "dummycommision",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "isserviceinvoice",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "nbtamount",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "vatamount",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "autocarecompanyid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "iscompanyinvoice",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "invcanceldate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "invcancelby",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "isvatinvoice",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "paymenttype",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "pendingamount",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "advancepayment",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "discountcode",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Salesinvoice",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

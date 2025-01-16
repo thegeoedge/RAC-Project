@@ -1,0 +1,6 @@
+entity Autocarejobinimages {
+    jobid Integer // JobId
+    imagefolder String // ImageFolder
+    imagename String // ImageName
+}
+paginate * with pagination

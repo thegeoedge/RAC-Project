@@ -1,0 +1,64 @@
+{
+  "annotations": {
+    "changelogDate": "20240826043756"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "jobid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "categoryid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "empposition",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "empid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "empname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "allocatetime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "jobdate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "commission",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "iscommissionpaid",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "starttime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "endtime",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "Autojobempallocation",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

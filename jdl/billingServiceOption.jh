@@ -1,0 +1,10 @@
+entity Billingserviceoption {
+    servicename String // ServiceName
+    servicediscription String // ServiceDiscription
+    isactive Boolean // IsActive
+    lmd Instant // LMD
+    lmu Integer // LMU
+    orderby Integer // OrderBy
+    billtocustomer Boolean // BillToCustomer
+}
+paginate * with pagination

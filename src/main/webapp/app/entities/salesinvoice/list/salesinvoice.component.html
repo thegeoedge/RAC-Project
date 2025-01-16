@@ -1,0 +1,497 @@
+<div>
+  <h2 id="page-heading" data-cy="SalesinvoiceHeading">
+    <span>Salesinvoices</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span>Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-salesinvoice"
+        [routerLink]="['/salesinvoice/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span>Create a new Salesinvoice</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (salesinvoices?.length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span>No Salesinvoices found</span>
+    </div>
+  }
+
+  @if (salesinvoices && salesinvoices.length > 0) {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [sortState]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span>ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="code">
+              <div class="d-flex">
+                <span>Code</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="invoicedate">
+              <div class="d-flex">
+                <span>Invoicedate</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="createddate">
+              <div class="d-flex">
+                <span>Createddate</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="quoteid">
+              <div class="d-flex">
+                <span>Quoteid</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="orderid">
+              <div class="d-flex">
+                <span>Orderid</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="delieverydate">
+              <div class="d-flex">
+                <span>Delieverydate</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="salesrepid">
+              <div class="d-flex">
+                <span>Salesrepid</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="salesrepname">
+              <div class="d-flex">
+                <span>Salesrepname</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="delieverfrom">
+              <div class="d-flex">
+                <span>Delieverfrom</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="customerid">
+              <div class="d-flex">
+                <span>Customerid</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="customername">
+              <div class="d-flex">
+                <span>Customername</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="customeraddress">
+              <div class="d-flex">
+                <span>Customeraddress</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="deliveryaddress">
+              <div class="d-flex">
+                <span>Deliveryaddress</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="subtotal">
+              <div class="d-flex">
+                <span>Subtotal</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="totaltax">
+              <div class="d-flex">
+                <span>Totaltax</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="totaldiscount">
+              <div class="d-flex">
+                <span>Totaldiscount</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nettotal">
+              <div class="d-flex">
+                <span>Nettotal</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="message">
+              <div class="d-flex">
+                <span>Message</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="lmu">
+              <div class="d-flex">
+                <span>Lmu</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="lmd">
+              <div class="d-flex">
+                <span>Lmd</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="paidamount">
+              <div class="d-flex">
+                <span>Paidamount</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="amountowing">
+              <div class="d-flex">
+                <span>Amountowing</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="isactive">
+              <div class="d-flex">
+                <span>Isactive</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="locationid">
+              <div class="d-flex">
+                <span>Locationid</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="locationcode">
+              <div class="d-flex">
+                <span>Locationcode</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="referencecode">
+              <div class="d-flex">
+                <span>Referencecode</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="createdbyid">
+              <div class="d-flex">
+                <span>Createdbyid</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="createdbyname">
+              <div class="d-flex">
+                <span>Createdbyname</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="autocarecharges">
+              <div class="d-flex">
+                <span>Autocarecharges</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="autocarejobid">
+              <div class="d-flex">
+                <span>Autocarejobid</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="vehicleno">
+              <div class="d-flex">
+                <span>Vehicleno</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nextmeter">
+              <div class="d-flex">
+                <span>Nextmeter</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="currentmeter">
+              <div class="d-flex">
+                <span>Currentmeter</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="remarks">
+              <div class="d-flex">
+                <span>Remarks</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="hasdummybill">
+              <div class="d-flex">
+                <span>Hasdummybill</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dummybillid">
+              <div class="d-flex">
+                <span>Dummybillid</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dummybillamount">
+              <div class="d-flex">
+                <span>Dummybillamount</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dummycommision">
+              <div class="d-flex">
+                <span>Dummycommision</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="isserviceinvoice">
+              <div class="d-flex">
+                <span>Isserviceinvoice</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nbtamount">
+              <div class="d-flex">
+                <span>Nbtamount</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="vatamount">
+              <div class="d-flex">
+                <span>Vatamount</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="autocarecompanyid">
+              <div class="d-flex">
+                <span>Autocarecompanyid</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="iscompanyinvoice">
+              <div class="d-flex">
+                <span>Iscompanyinvoice</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="invcanceldate">
+              <div class="d-flex">
+                <span>Invcanceldate</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="invcancelby">
+              <div class="d-flex">
+                <span>Invcancelby</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="isvatinvoice">
+              <div class="d-flex">
+                <span>Isvatinvoice</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="paymenttype">
+              <div class="d-flex">
+                <span>Paymenttype</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="pendingamount">
+              <div class="d-flex">
+                <span>Pendingamount</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="advancepayment">
+              <div class="d-flex">
+                <span>Advancepayment</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="discountcode">
+              <div class="d-flex">
+                <span>Discountcode</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (salesinvoice of salesinvoices; track trackId) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/salesinvoice', salesinvoice.id, 'view']">{{ salesinvoice.id }}</a>
+              </td>
+              <td>{{ salesinvoice.code }}</td>
+              <td>{{ salesinvoice.invoicedate | formatMediumDatetime }}</td>
+              <td>{{ salesinvoice.createddate | formatMediumDatetime }}</td>
+              <td>{{ salesinvoice.quoteid }}</td>
+              <td>{{ salesinvoice.orderid }}</td>
+              <td>{{ salesinvoice.delieverydate | formatMediumDatetime }}</td>
+              <td>{{ salesinvoice.salesrepid }}</td>
+              <td>{{ salesinvoice.salesrepname }}</td>
+              <td>{{ salesinvoice.delieverfrom }}</td>
+              <td>{{ salesinvoice.customerid }}</td>
+              <td>{{ salesinvoice.customername }}</td>
+              <td>{{ salesinvoice.customeraddress }}</td>
+              <td>{{ salesinvoice.deliveryaddress }}</td>
+              <td>{{ salesinvoice.subtotal }}</td>
+              <td>{{ salesinvoice.totaltax }}</td>
+              <td>{{ salesinvoice.totaldiscount }}</td>
+              <td>{{ salesinvoice.nettotal }}</td>
+              <td>{{ salesinvoice.message }}</td>
+              <td>{{ salesinvoice.lmu }}</td>
+              <td>{{ salesinvoice.lmd | formatMediumDatetime }}</td>
+              <td>{{ salesinvoice.paidamount }}</td>
+              <td>{{ salesinvoice.amountowing }}</td>
+              <td>{{ salesinvoice.isactive }}</td>
+              <td>{{ salesinvoice.locationid }}</td>
+              <td>{{ salesinvoice.locationcode }}</td>
+              <td>{{ salesinvoice.referencecode }}</td>
+              <td>{{ salesinvoice.createdbyid }}</td>
+              <td>{{ salesinvoice.createdbyname }}</td>
+              <td>{{ salesinvoice.autocarecharges }}</td>
+              <td>{{ salesinvoice.autocarejobid }}</td>
+              <td>{{ salesinvoice.vehicleno }}</td>
+              <td>{{ salesinvoice.nextmeter }}</td>
+              <td>{{ salesinvoice.currentmeter }}</td>
+              <td>{{ salesinvoice.remarks }}</td>
+              <td>{{ salesinvoice.hasdummybill }}</td>
+              <td>{{ salesinvoice.dummybillid }}</td>
+              <td>{{ salesinvoice.dummybillamount }}</td>
+              <td>{{ salesinvoice.dummycommision }}</td>
+              <td>{{ salesinvoice.isserviceinvoice }}</td>
+              <td>{{ salesinvoice.nbtamount }}</td>
+              <td>{{ salesinvoice.vatamount }}</td>
+              <td>{{ salesinvoice.autocarecompanyid }}</td>
+              <td>{{ salesinvoice.iscompanyinvoice }}</td>
+              <td>{{ salesinvoice.invcanceldate | formatMediumDatetime }}</td>
+              <td>{{ salesinvoice.invcancelby }}</td>
+              <td>{{ salesinvoice.isvatinvoice }}</td>
+              <td>{{ salesinvoice.paymenttype }}</td>
+              <td>{{ salesinvoice.pendingamount }}</td>
+              <td>{{ salesinvoice.advancepayment }}</td>
+              <td>{{ salesinvoice.discountcode }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a [routerLink]="['/salesinvoice', salesinvoice.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline">View</span>
+                  </a>
+
+                  <a [routerLink]="['/salesinvoice', salesinvoice.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline">Edit</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(salesinvoice)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+  @if (salesinvoices && salesinvoices.length > 0) {
+    <div>
+      <div class="d-flex justify-content-center">
+        <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <ngb-pagination
+          [collectionSize]="totalItems"
+          [page]="page"
+          [pageSize]="itemsPerPage"
+          [maxSize]="5"
+          [rotate]="true"
+          [boundaryLinks]="true"
+          (pageChange)="navigateToPage($event)"
+        ></ngb-pagination>
+      </div>
+    </div>
+  }
+</div>

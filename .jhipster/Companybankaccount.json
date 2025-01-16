@@ -1,0 +1,68 @@
+{
+  "annotations": {
+    "changelogDate": "20241003120039"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "companyid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "accountnumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "accountname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bankname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bankid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "branchname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "branchid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "accountcode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "accountid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isactive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "accounttypeid",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Companybankaccount",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

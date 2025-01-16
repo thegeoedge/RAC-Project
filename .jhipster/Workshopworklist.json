@@ -1,0 +1,32 @@
+{
+  "annotations": {
+    "changelogDate": "20240823110351"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "workshopwork",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "workshopworkdescription",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isactive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Workshopworklist",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

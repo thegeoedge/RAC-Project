@@ -1,0 +1,13 @@
+entity Taxes {
+    code String // Code
+    description String // Description
+    effectivefrom LocalDate // EffectiveFrom
+    effectiveto LocalDate // EffectiveTo
+    percentage BigDecimal // Percentage
+    fixedamount Float // FixedAmount
+    ismanual Boolean // IsManual
+    isactive Boolean // IsActive
+    lmu Integer // LMU
+    lmd Instant // LMD
+}
+paginate * with pagination

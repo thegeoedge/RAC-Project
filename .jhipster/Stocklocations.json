@@ -1,0 +1,24 @@
+{
+  "annotations": {
+    "changelogDate": "20240821042931"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "locationname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "locationcode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Stocklocations",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

@@ -1,0 +1,230 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (salesinvoice()) {
+      <div>
+        <h2 data-cy="salesinvoiceDetailsHeading"><span>Salesinvoice</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.id }}</span>
+          </dd>
+          <dt><span>Code</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.code }}</span>
+          </dd>
+          <dt><span>Invoicedate</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.invoicedate | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Createddate</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.createddate | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Quoteid</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.quoteid }}</span>
+          </dd>
+          <dt><span>Orderid</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.orderid }}</span>
+          </dd>
+          <dt><span>Delieverydate</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.delieverydate | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Salesrepid</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.salesrepid }}</span>
+          </dd>
+          <dt><span>Salesrepname</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.salesrepname }}</span>
+          </dd>
+          <dt><span>Delieverfrom</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.delieverfrom }}</span>
+          </dd>
+          <dt><span>Customerid</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.customerid }}</span>
+          </dd>
+          <dt><span>Customername</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.customername }}</span>
+          </dd>
+          <dt><span>Customeraddress</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.customeraddress }}</span>
+          </dd>
+          <dt><span>Deliveryaddress</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.deliveryaddress }}</span>
+          </dd>
+          <dt><span>Subtotal</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.subtotal }}</span>
+          </dd>
+          <dt><span>Totaltax</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.totaltax }}</span>
+          </dd>
+          <dt><span>Totaldiscount</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.totaldiscount }}</span>
+          </dd>
+          <dt><span>Nettotal</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.nettotal }}</span>
+          </dd>
+          <dt><span>Message</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.message }}</span>
+          </dd>
+          <dt><span>Lmu</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.lmu }}</span>
+          </dd>
+          <dt><span>Lmd</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.lmd | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Paidamount</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.paidamount }}</span>
+          </dd>
+          <dt><span>Amountowing</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.amountowing }}</span>
+          </dd>
+          <dt><span>Isactive</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.isactive }}</span>
+          </dd>
+          <dt><span>Locationid</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.locationid }}</span>
+          </dd>
+          <dt><span>Locationcode</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.locationcode }}</span>
+          </dd>
+          <dt><span>Referencecode</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.referencecode }}</span>
+          </dd>
+          <dt><span>Createdbyid</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.createdbyid }}</span>
+          </dd>
+          <dt><span>Createdbyname</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.createdbyname }}</span>
+          </dd>
+          <dt><span>Autocarecharges</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.autocarecharges }}</span>
+          </dd>
+          <dt><span>Autocarejobid</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.autocarejobid }}</span>
+          </dd>
+          <dt><span>Vehicleno</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.vehicleno }}</span>
+          </dd>
+          <dt><span>Nextmeter</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.nextmeter }}</span>
+          </dd>
+          <dt><span>Currentmeter</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.currentmeter }}</span>
+          </dd>
+          <dt><span>Remarks</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.remarks }}</span>
+          </dd>
+          <dt><span>Hasdummybill</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.hasdummybill }}</span>
+          </dd>
+          <dt><span>Dummybillid</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.dummybillid }}</span>
+          </dd>
+          <dt><span>Dummybillamount</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.dummybillamount }}</span>
+          </dd>
+          <dt><span>Dummycommision</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.dummycommision }}</span>
+          </dd>
+          <dt><span>Isserviceinvoice</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.isserviceinvoice }}</span>
+          </dd>
+          <dt><span>Nbtamount</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.nbtamount }}</span>
+          </dd>
+          <dt><span>Vatamount</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.vatamount }}</span>
+          </dd>
+          <dt><span>Autocarecompanyid</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.autocarecompanyid }}</span>
+          </dd>
+          <dt><span>Iscompanyinvoice</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.iscompanyinvoice }}</span>
+          </dd>
+          <dt><span>Invcanceldate</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.invcanceldate | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Invcancelby</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.invcancelby }}</span>
+          </dd>
+          <dt><span>Isvatinvoice</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.isvatinvoice }}</span>
+          </dd>
+          <dt><span>Paymenttype</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.paymenttype }}</span>
+          </dd>
+          <dt><span>Pendingamount</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.pendingamount }}</span>
+          </dd>
+          <dt><span>Advancepayment</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.advancepayment }}</span>
+          </dd>
+          <dt><span>Discountcode</span></dt>
+          <dd>
+            <span>{{ salesinvoice()!.discountcode }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/salesinvoice', salesinvoice()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

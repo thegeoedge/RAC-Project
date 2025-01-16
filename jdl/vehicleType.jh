@@ -1,0 +1,9 @@
+entity Vehicletype {
+    vehicletype String // VehicleType
+    vehicletypediscription String // VehicleTypeDiscription
+    lmu Integer // LMU
+    lmd Instant // LMD
+    catid Integer // CatId
+    catname String // CatName
+}
+paginate * with pagination

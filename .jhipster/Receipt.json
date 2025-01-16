@@ -1,0 +1,92 @@
+{
+  "annotations": {
+    "changelogDate": "20241003125649"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "receiptdate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "customername",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customeraddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "totalamount",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "totalamountinword",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "comments",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "termid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "term",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "checkdate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "checkno",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bank",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "isactive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "deposited",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "createdby",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Receipt",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

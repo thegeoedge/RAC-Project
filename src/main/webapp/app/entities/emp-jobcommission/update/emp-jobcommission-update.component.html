@@ -1,0 +1,106 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-emp-jobcommission-heading" data-cy="EmpJobcommissionCreateUpdateHeading">Create or edit a Emp Jobcommission</h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_vehcatid">Vehcatid</label>
+          <input type="number" class="form-control" name="vehcatid" id="field_vehcatid" data-cy="vehcatid" formControlName="vehcatid" />
+          @if (editForm.get('vehcatid')!.invalid && (editForm.get('vehcatid')!.dirty || editForm.get('vehcatid')!.touched)) {
+            <div>
+              @if (editForm.get('vehcatid')?.errors?.required) {
+                <small class="form-text text-danger">This field is required.</small>
+              }
+              <small class="form-text text-danger" [hidden]="!editForm.get('vehcatid')?.errors?.number"
+                >This field should be a number.</small
+              >
+            </div>
+          }
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_autojobcatid">Autojobcatid</label>
+          <input
+            type="number"
+            class="form-control"
+            name="autojobcatid"
+            id="field_autojobcatid"
+            data-cy="autojobcatid"
+            formControlName="autojobcatid"
+          />
+          @if (editForm.get('autojobcatid')!.invalid && (editForm.get('autojobcatid')!.dirty || editForm.get('autojobcatid')!.touched)) {
+            <div>
+              @if (editForm.get('autojobcatid')?.errors?.required) {
+                <small class="form-text text-danger">This field is required.</small>
+              }
+              <small class="form-text text-danger" [hidden]="!editForm.get('autojobcatid')?.errors?.number"
+                >This field should be a number.</small
+              >
+            </div>
+          }
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_firstcom">Firstcom</label>
+          <input type="number" class="form-control" name="firstcom" id="field_firstcom" data-cy="firstcom" formControlName="firstcom" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_secondcom">Secondcom</label>
+          <input type="number" class="form-control" name="secondcom" id="field_secondcom" data-cy="secondcom" formControlName="secondcom" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_thirdcom">Thirdcom</label>
+          <input type="number" class="form-control" name="thirdcom" id="field_thirdcom" data-cy="thirdcom" formControlName="thirdcom" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lmd">Lmd</label>
+          <div class="d-flex">
+            <input
+              id="field_lmd"
+              data-cy="lmd"
+              type="datetime-local"
+              class="form-control"
+              name="lmd"
+              formControlName="lmd"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lmu">Lmu</label>
+          <input type="number" class="form-control" name="lmu" id="field_lmu" data-cy="lmu" formControlName="lmu" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span>Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span>Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

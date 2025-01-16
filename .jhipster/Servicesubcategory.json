@@ -1,0 +1,40 @@
+{
+  "annotations": {
+    "changelogDate": "20240821040929"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mainid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "mainname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "isactive",
+      "fieldType": "Boolean"
+    }
+  ],
+  "name": "Servicesubcategory",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

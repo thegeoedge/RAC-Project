@@ -1,0 +1,54 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (vehicletype()) {
+      <div>
+        <h2 data-cy="vehicletypeDetailsHeading"><span>Vehicletype</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ vehicletype()!.id }}</span>
+          </dd>
+          <dt><span>Vehicletype</span></dt>
+          <dd>
+            <span>{{ vehicletype()!.vehicletype }}</span>
+          </dd>
+          <dt><span>Vehicletypediscription</span></dt>
+          <dd>
+            <span>{{ vehicletype()!.vehicletypediscription }}</span>
+          </dd>
+          <dt><span>Lmu</span></dt>
+          <dd>
+            <span>{{ vehicletype()!.lmu }}</span>
+          </dd>
+          <dt><span>Lmd</span></dt>
+          <dd>
+            <span>{{ vehicletype()!.lmd | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Catid</span></dt>
+          <dd>
+            <span>{{ vehicletype()!.catid }}</span>
+          </dd>
+          <dt><span>Catname</span></dt>
+          <dd>
+            <span>{{ vehicletype()!.catname }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/vehicletype', vehicletype()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (billingserviceoption()) {
+      <div>
+        <h2 data-cy="billingserviceoptionDetailsHeading"><span>Billingserviceoption</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ billingserviceoption()!.id }}</span>
+          </dd>
+          <dt><span>Servicename</span></dt>
+          <dd>
+            <span>{{ billingserviceoption()!.servicename }}</span>
+          </dd>
+          <dt><span>Servicediscription</span></dt>
+          <dd>
+            <span>{{ billingserviceoption()!.servicediscription }}</span>
+          </dd>
+          <dt><span>Isactive</span></dt>
+          <dd>
+            <span>{{ billingserviceoption()!.isactive }}</span>
+          </dd>
+          <dt><span>Lmd</span></dt>
+          <dd>
+            <span>{{ billingserviceoption()!.lmd | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Lmu</span></dt>
+          <dd>
+            <span>{{ billingserviceoption()!.lmu }}</span>
+          </dd>
+          <dt><span>Orderby</span></dt>
+          <dd>
+            <span>{{ billingserviceoption()!.orderby }}</span>
+          </dd>
+          <dt><span>Billtocustomer</span></dt>
+          <dd>
+            <span>{{ billingserviceoption()!.billtocustomer }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/billingserviceoption', billingserviceoption()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

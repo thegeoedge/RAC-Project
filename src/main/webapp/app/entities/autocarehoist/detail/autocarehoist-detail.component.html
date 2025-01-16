@@ -1,0 +1,54 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (autocarehoist()) {
+      <div>
+        <h2 data-cy="autocarehoistDetailsHeading"><span>Autocarehoist</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ autocarehoist()!.id }}</span>
+          </dd>
+          <dt><span>Hoistname</span></dt>
+          <dd>
+            <span>{{ autocarehoist()!.hoistname }}</span>
+          </dd>
+          <dt><span>Hoistcode</span></dt>
+          <dd>
+            <span>{{ autocarehoist()!.hoistcode }}</span>
+          </dd>
+          <dt><span>Hoisttypeid</span></dt>
+          <dd>
+            <span>{{ autocarehoist()!.hoisttypeid }}</span>
+          </dd>
+          <dt><span>Hoisttypename</span></dt>
+          <dd>
+            <span>{{ autocarehoist()!.hoisttypename }}</span>
+          </dd>
+          <dt><span>Lmu</span></dt>
+          <dd>
+            <span>{{ autocarehoist()!.lmu }}</span>
+          </dd>
+          <dt><span>Lmd</span></dt>
+          <dd>
+            <span>{{ autocarehoist()!.lmd | formatMediumDatetime }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/autocarehoist', autocarehoist()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

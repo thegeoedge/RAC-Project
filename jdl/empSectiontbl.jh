@@ -1,0 +1,7 @@
+entity EmpSectiontbl {
+    empid Long// maps to [EmpId] [int]
+    sectionid Integer // maps to [SectionId] [int]
+    lmd Instant // maps to [LMD] [datetime]
+    lmu Integer // maps to [LMU] [int]
+}
+paginate * with pagination

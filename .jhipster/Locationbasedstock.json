@@ -1,0 +1,50 @@
+{
+  "annotations": {
+    "changelogDate": "20241004063018"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "itemid",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "locationid",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "locationcode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "availablequantity",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "hasbatches",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "Locationbasedstock",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

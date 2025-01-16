@@ -1,0 +1,122 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (customervehicle()) {
+      <div>
+        <h2 data-cy="customervehicleDetailsHeading"><span>Customervehicle</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ customervehicle()!.id }}</span>
+          </dd>
+          <dt><span>Customerid</span></dt>
+          <dd>
+            <span>{{ customervehicle()!.customerid }}</span>
+          </dd>
+          <dt><span>Vehiclenumber</span></dt>
+          <dd>
+            <span>{{ customervehicle()!.vehiclenumber }}</span>
+          </dd>
+          <dt><span>Categoryid</span></dt>
+          <dd>
+            <span>{{ customervehicle()!.categoryid }}</span>
+          </dd>
+          <dt><span>Categoryname</span></dt>
+          <dd>
+            <span>{{ customervehicle()!.categoryname }}</span>
+          </dd>
+          <dt><span>Typeid</span></dt>
+          <dd>
+            <span>{{ customervehicle()!.typeid }}</span>
+          </dd>
+          <dt><span>Typename</span></dt>
+          <dd>
+            <span>{{ customervehicle()!.typename }}</span>
+          </dd>
+          <dt><span>Makeid</span></dt>
+          <dd>
+            <span>{{ customervehicle()!.makeid }}</span>
+          </dd>
+          <dt><span>Makename</span></dt>
+          <dd>
+            <span>{{ customervehicle()!.makename }}</span>
+          </dd>
+          <dt><span>Model</span></dt>
+          <dd>
+            <span>{{ customervehicle()!.model }}</span>
+          </dd>
+          <dt><span>Yom</span></dt>
+          <dd>
+            <span>{{ customervehicle()!.yom }}</span>
+          </dd>
+          <dt><span>Customercode</span></dt>
+          <dd>
+            <span>{{ customervehicle()!.customercode }}</span>
+          </dd>
+          <dt><span>Remarks</span></dt>
+          <dd>
+            <span>{{ customervehicle()!.remarks }}</span>
+          </dd>
+          <dt><span>Servicecount</span></dt>
+          <dd>
+            <span>{{ customervehicle()!.servicecount }}</span>
+          </dd>
+          <dt><span>Eng No</span></dt>
+          <dd>
+            <span>{{ customervehicle()!.engNo }}</span>
+          </dd>
+          <dt><span>Cha No</span></dt>
+          <dd>
+            <span>{{ customervehicle()!.chaNo }}</span>
+          </dd>
+          <dt><span>Milage</span></dt>
+          <dd>
+            <span>{{ customervehicle()!.milage }}</span>
+          </dd>
+          <dt><span>Lastservicedate</span></dt>
+          <dd>
+            <span>{{ customervehicle()!.lastservicedate | formatMediumDate }}</span>
+          </dd>
+          <dt><span>Nextservicedate</span></dt>
+          <dd>
+            <span>{{ customervehicle()!.nextservicedate | formatMediumDate }}</span>
+          </dd>
+          <dt><span>Lmu</span></dt>
+          <dd>
+            <span>{{ customervehicle()!.lmu }}</span>
+          </dd>
+          <dt><span>Lmd</span></dt>
+          <dd>
+            <span>{{ customervehicle()!.lmd | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Nextgearoilmilage</span></dt>
+          <dd>
+            <span>{{ customervehicle()!.nextgearoilmilage }}</span>
+          </dd>
+          <dt><span>Nextmilage</span></dt>
+          <dd>
+            <span>{{ customervehicle()!.nextmilage }}</span>
+          </dd>
+          <dt><span>Serviceperiod</span></dt>
+          <dd>
+            <span>{{ customervehicle()!.serviceperiod }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/customervehicle', customervehicle()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

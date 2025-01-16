@@ -1,0 +1,86 @@
+filter * 
+
+entity Customer{
+    customertype Integer // customertype
+    code String
+    title String
+    namewithinitials String
+    fullname String
+    callingname String
+    nicno String
+    nicissueddate LocalDate
+    dateofbirth LocalDate
+    bloodgroup String
+    gender String
+    maritalstatus String
+    marrieddate LocalDate
+    nationality Integer
+    territory String
+    religion Integer
+    team String
+    businessname String
+    businessregdate LocalDate
+    businessregno String
+    profilepicturepath String
+    residencehouseno String
+    residenceaddress String
+    residencecity String
+    residencephone String
+    businesslocationno String
+    businessaddress String
+    businesscity String
+    businessphone1 String
+    businessphone2 String
+    businessmobile String
+    businessfax String
+    businessemail String
+    businessprovinceid Integer
+    businessdistrictid Integer
+    contactpersonname String
+    contactpersonphone String
+    contactpersonmobile String
+    contactpersonemail String
+    rootmappath String
+    website String
+    registrationdate Instant
+    isactive Integer
+    isinternalcustomer Integer
+    description String
+    lmu Integer
+    lmd Instant
+    maximumdiscount Float
+    creditlimit Float
+    hassecuritydeposit Boolean
+    securitydepositamount Float
+    paybycash Boolean
+    cashpaymentbeforeload Boolean
+    cashlastinvoicebeforeload Boolean
+    paybycredit Boolean
+    creditoneweekcheck Boolean
+    creditpaymentbydays Integer
+    haspurchasingdeposit Boolean
+    hassecuritydepositbond Boolean
+    hasassestsdeposit Boolean
+    customerrootmappath String
+    employername String
+    employeraddress String
+    employerphone String
+    employerdesignation String
+    previousemployername String
+    previousemployeraddress String
+    previousindustry String
+    previousperiod String
+    previouspositions String
+    previousresionforleaving String
+    hascreaditlimit Boolean
+    accountid Integer
+    accountcode String
+    isregistered Boolean
+    vatregnumber String
+    tinnumber String
+    lat String
+    lon String
+    creditperiod Integer
+
+}
+paginate * with pagination

@@ -1,0 +1,57 @@
+import dayjs from 'dayjs/esm';
+
+export interface ISalesinvoice {
+  id: number;
+  code?: string | null;
+  invoicedate?: dayjs.Dayjs | null;
+  createddate?: dayjs.Dayjs | null;
+  quoteid?: number | null;
+  orderid?: number | null;
+  delieverydate?: dayjs.Dayjs | null;
+  salesrepid?: number | null;
+  salesrepname?: string | null;
+  delieverfrom?: string | null;
+  customerid?: number | null;
+  customername?: string | null;
+  customeraddress?: string | null;
+  deliveryaddress?: string | null;
+  subtotal?: number | null;
+  totaltax?: number | null;
+  totaldiscount?: number | null;
+  nettotal?: number | null;
+  message?: string | null;
+  lmu?: number | null;
+  lmd?: dayjs.Dayjs | null;
+  paidamount?: number | null;
+  amountowing?: number | null;
+  isactive?: boolean | null;
+  locationid?: number | null;
+  locationcode?: string | null;
+  referencecode?: string | null;
+  createdbyid?: number | null;
+  createdbyname?: string | null;
+  autocarecharges?: number | null;
+  autocarejobid?: number | null;
+  vehicleno?: string | null;
+  nextmeter?: string | null;
+  currentmeter?: string | null;
+  remarks?: string | null;
+  hasdummybill?: boolean | null;
+  dummybillid?: number | null;
+  dummybillamount?: number | null;
+  dummycommision?: number | null;
+  isserviceinvoice?: boolean | null;
+  nbtamount?: number | null;
+  vatamount?: number | null;
+  autocarecompanyid?: number | null;
+  iscompanyinvoice?: boolean | null;
+  invcanceldate?: dayjs.Dayjs | null;
+  invcancelby?: number | null;
+  isvatinvoice?: boolean | null;
+  paymenttype?: string | null;
+  pendingamount?: number | null;
+  advancepayment?: number | null;
+  discountcode?: string | null;
+}
+
+export type NewSalesinvoice = Omit<ISalesinvoice, 'id'> & { id: null };

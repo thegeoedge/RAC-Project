@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (stocklocations()) {
+      <div>
+        <h2 data-cy="stocklocationsDetailsHeading"><span>Stocklocations</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ stocklocations()!.id }}</span>
+          </dd>
+          <dt><span>Locationname</span></dt>
+          <dd>
+            <span>{{ stocklocations()!.locationname }}</span>
+          </dd>
+          <dt><span>Locationcode</span></dt>
+          <dd>
+            <span>{{ stocklocations()!.locationcode }}</span>
+          </dd>
+          <dt><span>Description</span></dt>
+          <dd>
+            <span>{{ stocklocations()!.description }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/stocklocations', stocklocations()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

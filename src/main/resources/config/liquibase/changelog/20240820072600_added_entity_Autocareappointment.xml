@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity Autocareappointment.
+    -->
+    <changeSet id="20240820072600-1" author="jhipster">
+        <createTable tableName="autocareappointment">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="appointmenttype" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="appointmentdate" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="addeddate" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="conformdate" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="appointmentnumber" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="vehiclenumber" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="appointmenttime" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="isconformed" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="conformedby" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="lmd" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="lmu" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="customerid" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="contactnumber" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="customername" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="issued" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="hoistid" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="isarrived" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="iscancel" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="isnoanswer" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="missedappointmentcall" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="customermobileid" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="customermobilevehicleid" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="vehicleid" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="ismobileappointment" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="advancepayment" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="jobid" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="autocareappointment" columnName="appointmentdate" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="autocareappointment" columnName="addeddate" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="autocareappointment" columnName="conformdate" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="autocareappointment" columnName="appointmenttime" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="autocareappointment" columnName="lmd" columnDataType="${datetimeType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20240820072600-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/autocareappointment.csv"
+                  separator=";"
+                  tableName="autocareappointment"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="appointmenttype" type="numeric"/>
+            <column name="appointmentdate" type="date"/>
+            <column name="addeddate" type="date"/>
+            <column name="conformdate" type="date"/>
+            <column name="appointmentnumber" type="numeric"/>
+            <column name="vehiclenumber" type="string"/>
+            <column name="appointmenttime" type="date"/>
+            <column name="isconformed" type="boolean"/>
+            <column name="conformedby" type="numeric"/>
+            <column name="lmd" type="date"/>
+            <column name="lmu" type="numeric"/>
+            <column name="customerid" type="numeric"/>
+            <column name="contactnumber" type="string"/>
+            <column name="customername" type="string"/>
+            <column name="issued" type="boolean"/>
+            <column name="hoistid" type="numeric"/>
+            <column name="isarrived" type="boolean"/>
+            <column name="iscancel" type="boolean"/>
+            <column name="isnoanswer" type="boolean"/>
+            <column name="missedappointmentcall" type="string"/>
+            <column name="customermobileid" type="numeric"/>
+            <column name="customermobilevehicleid" type="numeric"/>
+            <column name="vehicleid" type="numeric"/>
+            <column name="ismobileappointment" type="boolean"/>
+            <column name="advancepayment" type="numeric"/>
+            <column name="jobid" type="numeric"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

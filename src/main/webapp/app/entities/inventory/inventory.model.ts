@@ -1,0 +1,52 @@
+import dayjs from 'dayjs/esm';
+
+export interface IInventory {
+  id: number;
+  code?: string | null;
+  partnumber?: string | null;
+  name?: string | null;
+  description?: string | null;
+  type?: number | null;
+  classification1?: string | null;
+  classification2?: string | null;
+  classification3?: string | null;
+  classification4?: string | null;
+  classification5?: string | null;
+  unitofmeasurement?: string | null;
+  decimalplaces?: number | null;
+  isassemblyunit?: boolean | null;
+  assemblyunitof?: number | null;
+  reorderlevel?: number | null;
+  lastcost?: number | null;
+  lastsellingprice?: number | null;
+  lmu?: number | null;
+  lmd?: dayjs.Dayjs | null;
+  availablequantity?: number | null;
+  hasbatches?: boolean | null;
+  itemspecfilepath?: string | null;
+  itemimagepath?: string | null;
+  returnprice?: number | null;
+  activeitem?: boolean | null;
+  minstock?: number | null;
+  maxstock?: number | null;
+  dailyaverage?: number | null;
+  bufferlevel?: number | null;
+  leadtime?: number | null;
+  buffertime?: number | null;
+  saftydays?: number | null;
+  accountcode?: string | null;
+  accountid?: number | null;
+  casepackqty?: number | null;
+  isregistered?: boolean | null;
+  defaultstocklocationid?: number | null;
+  rackno?: string | null;
+  barcodeimage?: string | null;
+  barcodeimageContentType?: string | null;
+  commissionempid?: number | null;
+  checktypeid?: number | null;
+  checktype?: string | null;
+  reorderqty?: number | null;
+  notininvoice?: boolean | null;
+}
+
+export type NewInventory = Omit<IInventory, 'id'> & { id: null };

@@ -1,0 +1,24 @@
+{
+  "annotations": {
+    "changelogDate": "20240820073545"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "jobid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "imagefolder",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "imagename",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Autocarejobinimages",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

@@ -1,0 +1,517 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-autocareappointment-heading" data-cy="AutocareappointmentCreateUpdateHeading">Add or Edit a Service Appointment</h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <!-- @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        } -->
+
+        <div class="row">
+          <div class="mb-3 col-4">
+            <label class="form-label" for="field_appointmenttype">Appointment Type</label>
+            <select class="form-control" formControlName="appointmenttype">
+              <option *ngFor="let item of autocareappointmenttypes" [value]="item.id">
+                {{ item.typename }}
+              </option>
+            </select>
+          </div>
+
+          <div class="mb-3 col-4">
+            <label class="form-label" for="field_appointmentdate">Appointment Date</label>
+            <div class="d-flex">
+              <input
+                id="field_appointmentdate"
+                data-cy="appointmentdate"
+                type="date"
+                class="form-control"
+                name="appointmentdate"
+                formControlName="appointmentdate"
+                placeholder="YYYY-MM-DD"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- <div class="mb-3 col-4">
+            <label class="form-label" for="field_vehiclenumber">Vehiclenumber</label>
+            <input
+              list="vehiclenumber"
+              type="text"
+              class="form-control"
+              name="vehiclenumber"
+              id="field_vehiclenumber"
+              data-cy="vehiclenumber"
+              formControlName="vehiclenumber"
+              autocomplete="off"
+            />
+            <datalist id="vehiclenumber">
+              <option *ngFor="let item of customervehicles" [value]="item.vehiclenumber">
+                {{ item.milage }}KM - {{ item.nextmilage }}KM
+              </option>
+            </datalist>
+          </div> -->
+
+          <div class="mb-3 col-4">
+            <label class="form-label" for="field_vehiclenumber">Vehiclenumber</label>
+            <input
+              type="text"
+              class="form-control"
+              name="vehiclenumber"
+              id="field_vehiclenumber"
+              data-cy="vehiclenumber"
+              formControlName="vehiclenumber"
+              autocomplete="off"
+              list="vehiclenumberList"
+              (change)="onVehicleSelect($event)"
+              (input)="onVehicleSearch($event)"
+            />
+            <datalist id="vehiclenumberList">
+              <option *ngFor="let item of filteredVehicles" [value]="item.vehiclenumber">
+                {{ item.milage }}KM - {{ item.nextmilage }}KM
+              </option>
+            </datalist>
+          </div>
+
+          <div class="mb-3 col-4">
+            <label class="form-label" for="field_customername">Customername</label>
+            <input
+              type="text"
+              class="form-control"
+              name="customername"
+              id="field_customername"
+              data-cy="customername"
+              formControlName="customername"
+            />
+          </div>
+          <div class="mb-3 col-4">
+            <label class="form-label" for="field_contactnumber">Contactnumber</label>
+            <input
+              type="text"
+              class="form-control"
+              name="contactnumber"
+              id="field_contactnumber"
+              data-cy="contactnumber"
+              formControlName="contactnumber"
+            />
+          </div>
+        </div>
+        <div>
+          <!-- <table>
+            <div *ngFor="let hoistType of hoistTypeData">
+              <tr>
+                <th style="width: 100px">{{ hoistType.hoisttype }}</th>
+                <div *ngFor="let hoist of hoistData">
+                  <ng-container *ngIf="hoist.hoisttypeid === hoistType.id">
+                    <td>Hoist {{ hoist.id }}</td>
+                    <td>
+                      <div *ngFor="let timetable of timetableData" style="flex-direction: row">
+                        <button style="width: 100px">
+                          {{ timetable.hoisttime | date: 'hh:mm a' : '+0000' }}
+                        </button>
+                      </div>
+                    </td>
+                  </ng-container>
+                </div>
+              </tr>
+            </div>
+          </table> -->
+
+          <!-- 
+          <div class="accordion" id="accordionExample">
+            <div *ngFor="let hoistType of hoistTypeData; let i = index" class="accordion-item">
+              <h2 class="accordion-header" [id]="'heading' + i">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  [attr.data-bs-target]="'#collapse' + i"
+                  [attr.aria-expanded]="i === 0 ? 'true' : 'false'"
+                  [attr.aria-controls]="'collapse' + i"
+                >
+                  {{ hoistType.hoisttype }}
+                </button>
+              </h2>
+              <div
+                [id]="'collapse' + i"
+                class="accordion-collapse collapse"
+                [class.show]="i === 0"
+                [attr.aria-labelledby]="'heading' + i"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <div *ngFor="let hoist of hoistData" class="mb-3">
+                    <ng-container *ngIf="hoist.hoisttypeid === hoistType.id">
+                      <p>Hoist {{ hoist.id }}</p>
+                      <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                        <ng-container *ngFor="let timetable of timetableData">
+                          <ng-container *ngIf="timetable.hoistid === hoist.id">
+                            <button style="width: 100px">
+                              {{ timetable.hoisttime | date: 'hh:mm a' : '+0000' }}
+                            </button>
+                          </ng-container>
+                        </ng-container>
+                      </div>
+                    </ng-container>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+          <div class="accordion" id="accordionExample">
+            <div *ngFor="let hoistType of hoistTypeData; let i = index" class="accordion-item">
+              <h2 class="accordion-header" [id]="'heading' + i">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  [attr.data-bs-target]="'#collapse' + i"
+                  [attr.aria-expanded]="i === 0 ? 'true' : 'false'"
+                  [attr.aria-controls]="'collapse' + i"
+                >
+                  {{ hoistType.hoisttype }}
+                </button>
+              </h2>
+              <div
+                [id]="'collapse' + i"
+                class="accordion-collapse collapse"
+                [class.show]="i === 0"
+                [attr.aria-labelledby]="'heading' + i"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <div *ngFor="let hoist of hoistData" class="mb-3">
+                    <ng-container *ngIf="hoist.hoisttypeid === hoistType.id">
+                      <p>Hoist {{ hoist.id }}</p>
+
+                      <!-- Nested accordion for time slots -->
+                      <div class="accordion" [id]="'hoistAccordion' + hoist.id">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" [id]="'headingHoist' + hoist.id">
+                            <button
+                              class="accordion-button collapsed"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              [attr.data-bs-target]="'#collapseHoist' + hoist.id"
+                              [attr.aria-expanded]="false"
+                              [attr.aria-controls]="'collapseHoist' + hoist.id"
+                            >
+                              Show Timeslots
+                            </button>
+                          </h2>
+                          <div
+                            [id]="'collapseHoist' + hoist.id"
+                            class="accordion-collapse collapse"
+                            [attr.aria-labelledby]="'headingHoist' + hoist.id"
+                            [attr.data-bs-parent]="'#hoistAccordion' + hoist.id"
+                          >
+                            <div class="accordion-body">
+                              <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                                <ng-container *ngFor="let timetable of timetableData">
+                                  <ng-container *ngIf="timetable.hoisttypename === hoistType.hoisttype">
+                                    <button
+                                      type="button"
+                                      style="width: 100px"
+                                      (click)="selectTime(timetable, hoist.id)"
+                                      class="btn btn-primary"
+                                    >
+                                      {{ timetable.hoisttime | date: 'hh:mm' : '+0000' }}
+                                      <!-- {{ timetable.hoisttime }} -->
+                                    </button>
+                                  </ng-container>
+                                </ng-container>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </ng-container>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="table-responsive table-entities" id="entities" style="max-height: 339px; overflow-y: auto">
+          <table>
+            <div *ngFor="let hoist of hoists" class="hoist-section">
+              <tr>
+                <th style="width: 15%">{{ hoist.name }} (Hoist {{ hoist.id }})</th>
+                <td class="time-buttons" style="justify-items: start">
+                  <button style="width: 80px" type="button" *ngFor="let time of hoist.times" (click)="onTimeClick(hoist.id, time)">
+                    {{ time }}
+                  </button>
+                </td>
+              </tr>
+            </div>
+          </table>
+        </div> -->
+
+        <!-- <div class="table-responsive table-entities" id="entities" style="max-height: 339px; overflow-y: auto">
+          <table>
+            <div *ngFor="let hoist of hoists" class="hoist-section">
+              <tr>
+                <th style="width: 15%">{{ hoist.name }} (Hoist {{ hoist.id }})</th>
+                <td class="time-buttons" style="justify-items: start">
+                  <button
+                    style="width: 80px"
+                    type="button"
+                    *ngFor="let time of hoist.times"
+                    [ngStyle]="{
+                      'background-color': selectedTime === time && selectedHoist === hoist.id ? '#333' : '#f0f0f0',
+                      border: selectedTime === time && selectedHoist === hoist.id ? '2px solid red' : '1px solid #ccc',
+                      color: selectedTime === time && selectedHoist === hoist.id ? 'white' : 'black'
+                    }"
+                    (click)="onTimeClick(hoist.id, time)"
+                  >
+                    {{ time }}
+                  </button>
+                </td>
+              </tr>
+            </div>
+          </table>
+        </div> -->
+
+        <div class="mb-3">
+          <label class="form-label" for="field_addeddate">Addeddate</label>
+          <div class="d-flex">
+            <input
+              id="field_addeddate"
+              data-cy="addeddate"
+              type="datetime-local"
+              class="form-control"
+              name="addeddate"
+              formControlName="addeddate"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_conformdate">Conformdate</label>
+          <div class="d-flex">
+            <input
+              id="field_conformdate"
+              data-cy="conformdate"
+              type="datetime-local"
+              class="form-control"
+              name="conformdate"
+              formControlName="conformdate"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_appointmentnumber">Appointmentnumber</label>
+          <input
+            type="number"
+            class="form-control"
+            name="appointmentnumber"
+            id="field_appointmentnumber"
+            data-cy="appointmentnumber"
+            formControlName="appointmentnumber"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_appointmenttime">Appointmenttime</label>
+          <div class="d-flex">
+            <input
+              id="field_appointmenttime"
+              data-cy="appointmenttime"
+              type="datetime-local"
+              class="form-control"
+              name="appointmenttime"
+              formControlName="appointmenttime"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_isconformed">Isconformed</label>
+          <input
+            type="checkbox"
+            class="form-check"
+            name="isconformed"
+            id="field_isconformed"
+            data-cy="isconformed"
+            formControlName="isconformed"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_conformedby">Conformedby</label>
+          <input
+            type="number"
+            class="form-control"
+            name="conformedby"
+            id="field_conformedby"
+            data-cy="conformedby"
+            formControlName="conformedby"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lmd">Lmd</label>
+          <div class="d-flex">
+            <input
+              id="field_lmd"
+              data-cy="lmd"
+              type="datetime-local"
+              class="form-control"
+              name="lmd"
+              formControlName="lmd"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lmu">Lmu</label>
+          <input type="number" class="form-control" name="lmu" id="field_lmu" data-cy="lmu" formControlName="lmu" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_customerid">Customerid</label>
+          <input
+            type="number"
+            class="form-control"
+            name="customerid"
+            id="field_customerid"
+            data-cy="customerid"
+            formControlName="customerid"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_issued">Issued</label>
+          <input type="checkbox" class="form-check" name="issued" id="field_issued" data-cy="issued" formControlName="issued" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_hoistid">Hoistid</label>
+          <input type="number" class="form-control" name="hoistid" id="field_hoistid" data-cy="hoistid" formControlName="hoistid" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_isarrived">Isarrived</label>
+          <input type="checkbox" class="form-check" name="isarrived" id="field_isarrived" data-cy="isarrived" formControlName="isarrived" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_iscancel">Iscancel</label>
+          <input type="checkbox" class="form-check" name="iscancel" id="field_iscancel" data-cy="iscancel" formControlName="iscancel" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_isnoanswer">Isnoanswer</label>
+          <input
+            type="checkbox"
+            class="form-check"
+            name="isnoanswer"
+            id="field_isnoanswer"
+            data-cy="isnoanswer"
+            formControlName="isnoanswer"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_missedappointmentcall">Missedappointmentcall</label>
+          <input
+            type="text"
+            class="form-control"
+            name="missedappointmentcall"
+            id="field_missedappointmentcall"
+            data-cy="missedappointmentcall"
+            formControlName="missedappointmentcall"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_customermobileid">Customermobileid</label>
+          <input
+            type="number"
+            class="form-control"
+            name="customermobileid"
+            id="field_customermobileid"
+            data-cy="customermobileid"
+            formControlName="customermobileid"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_customermobilevehicleid">Customermobilevehicleid</label>
+          <input
+            type="number"
+            class="form-control"
+            name="customermobilevehicleid"
+            id="field_customermobilevehicleid"
+            data-cy="customermobilevehicleid"
+            formControlName="customermobilevehicleid"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_vehicleid">Vehicleid</label>
+          <input type="number" class="form-control" name="vehicleid" id="field_vehicleid" data-cy="vehicleid" formControlName="vehicleid" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ismobileappointment">Ismobileappointment</label>
+          <input
+            type="checkbox"
+            class="form-check"
+            name="ismobileappointment"
+            id="field_ismobileappointment"
+            data-cy="ismobileappointment"
+            formControlName="ismobileappointment"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_advancepayment">Advancepayment</label>
+          <input
+            type="number"
+            class="form-control"
+            name="advancepayment"
+            id="field_advancepayment"
+            data-cy="advancepayment"
+            formControlName="advancepayment"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_jobid">Jobid</label>
+          <input type="number" class="form-control" name="jobid" id="field_jobid" data-cy="jobid" formControlName="jobid" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span>Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span>Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

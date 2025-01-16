@@ -1,0 +1,18 @@
+entity Autocarecompany {
+    name String // Name
+    address String // Address
+    servicephone String // ServicePhone
+    sparepartphone String // SparePartPhone
+    bodypaint String // BodyPaint
+    generalphone String // GeneralPhone
+    fax String // Fax
+    email String // Email
+    description String // Description
+    lmu Integer // LMU
+    lmd Instant // LMD
+    vatregnumber String // VATRegNumber
+    tinnumber String // TinNumber
+    accountcode String // AccountCode
+    accountid Integer // AccountId
+}
+paginate * with pagination

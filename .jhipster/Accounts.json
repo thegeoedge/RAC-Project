@@ -1,0 +1,92 @@
+{
+  "annotations": {
+    "changelogDate": "20241003085351"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "parent",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "balance",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "lmu",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lmd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "hasbatches",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "accountvalue",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "accountlevel",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "accountsnumberingsystem",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "subparentid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "canedit",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "creditamount",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "debitamount",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "debitorcredit",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "reporttype",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Accounts",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no"
+}

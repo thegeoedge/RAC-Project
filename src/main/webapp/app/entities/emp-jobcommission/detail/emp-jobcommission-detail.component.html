@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (empJobcommission()) {
+      <div>
+        <h2 data-cy="empJobcommissionDetailsHeading"><span>Emp Jobcommission</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ empJobcommission()!.id }}</span>
+          </dd>
+          <dt><span>Vehcatid</span></dt>
+          <dd>
+            <span>{{ empJobcommission()!.vehcatid }}</span>
+          </dd>
+          <dt><span>Autojobcatid</span></dt>
+          <dd>
+            <span>{{ empJobcommission()!.autojobcatid }}</span>
+          </dd>
+          <dt><span>Firstcom</span></dt>
+          <dd>
+            <span>{{ empJobcommission()!.firstcom }}</span>
+          </dd>
+          <dt><span>Secondcom</span></dt>
+          <dd>
+            <span>{{ empJobcommission()!.secondcom }}</span>
+          </dd>
+          <dt><span>Thirdcom</span></dt>
+          <dd>
+            <span>{{ empJobcommission()!.thirdcom }}</span>
+          </dd>
+          <dt><span>Lmd</span></dt>
+          <dd>
+            <span>{{ empJobcommission()!.lmd | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Lmu</span></dt>
+          <dd>
+            <span>{{ empJobcommission()!.lmu }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/emp-jobcommission', empJobcommission()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>
